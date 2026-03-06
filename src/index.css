@@ -117,3 +117,7 @@
     background-color: hsl(var(--sand));
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
