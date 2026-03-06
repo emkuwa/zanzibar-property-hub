@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import pajeImg from "@/assets/paje-villa.jpg";
 import nungwiImg from "@/assets/nungwi-apartments.jpg";
@@ -9,22 +10,25 @@ const properties = [
     name: "Paje Beach Villas",
     location: "Paje, East Coast",
     price: "$120,000 – $250,000",
-    description: "Modern beachfront villas with infinity pools, steps from Zanzibar's famous kite-surfing beach.",
+    description: "Modern beachfront villas with infinity pools.",
     image: pajeImg,
+    link: "/paje-villas-for-sale"
   },
   {
     name: "Nungwi Ocean Apartments",
     location: "Nungwi, North Coast",
     price: "$85,000 – $180,000",
-    description: "Contemporary ocean-view apartments in Zanzibar's most popular tourist destination.",
+    description: "Contemporary ocean-view apartments.",
     image: nungwiImg,
+    link: "/nungwi-beachfront-property"
   },
   {
     name: "Jambiani Luxury Villas",
     location: "Jambiani, Southeast",
     price: "$150,000 – $350,000",
-    description: "Exclusive private villas with direct beach access in an unspoiled coastal village.",
+    description: "Exclusive private villas with beach access.",
     image: jambianiImg,
+    link: "/jambiani-villas-for-sale"
   },
 ];
 
@@ -125,8 +129,12 @@ const FeaturedProperties = () => {
                 </p>
 
                 <button className="mt-5 w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
-                  View Investment Details
-                </button>
+                  <Link
+  to={p.link}
+  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+>
+  View Investment Details
+</Link>
               </div>
             </motion.div>
           ))}
