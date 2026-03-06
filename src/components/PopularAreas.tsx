@@ -3,9 +3,21 @@ import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const areas = [
-  { name: "Paje", description: "Beach villas and kite-surf tourism hotspot." },
-  { name: "Nungwi", description: "Luxury resort area with strong tourism demand." },
-  { name: "Jambiani", description: "Emerging beachfront investment location." },
+  {
+    name: "Paje",
+    description: "Beach villas and kite-surf tourism hotspot.",
+    link: "/paje-villas-for-sale",
+  },
+  {
+    name: "Nungwi",
+    description: "Luxury resort area with strong tourism demand.",
+    link: "/nungwi-beachfront-property",
+  },
+  {
+    name: "Jambiani",
+    description: "Emerging beachfront investment location.",
+    link: "/buy-property-in-zanzibar",
+  },
 ];
 
 const container = {
@@ -32,6 +44,7 @@ const PopularAreas = () => {
             Popular Investment Areas in Zanzibar
           </h2>
         </motion.div>
+
         <motion.div
           variants={container}
           initial="hidden"
@@ -48,8 +61,21 @@ const PopularAreas = () => {
               <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-5">
                 <MapPin className="w-7 h-7 text-accent-foreground" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{a.name}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{a.description}</p>
+
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                {a.name}
+              </h3>
+
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {a.description}
+              </p>
+
+              <Link
+                to={a.link}
+                className="inline-block mt-4 text-secondary font-semibold hover:underline"
+              >
+                Explore investment opportunities →
+              </Link>
             </motion.div>
           ))}
         </motion.div>
