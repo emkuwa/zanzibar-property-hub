@@ -30,6 +30,8 @@ const App = () => (
 
   <Route path="/zanzibar-property-investment-guide" element={<ZanzibarInvestmentGuide />} />
 
+          <Route path="/:slug" element={<PropertySEOPage />} />
+
   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
   <Route path="*" element={<NotFound />} />
 </Routes>
