@@ -36,7 +36,7 @@ const item = {
 
 const WhyInvest = () => {
   return (
-    <section className="py-24 bg-sand">
+    <section id="why-zanzibar" className="py-24 bg-sand">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,12 @@ const WhyInvest = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
             Why Invest in Zanzibar?
           </h2>
+
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             A unique combination of growth, affordability, and global appeal makes Zanzibar one of the most exciting property markets today.
           </p>
         </motion.div>
+
         <motion.div
           variants={container}
           initial="hidden"
@@ -67,8 +69,14 @@ const WhyInvest = () => {
               <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-5">
                 <b.icon className="w-7 h-7 text-accent-foreground" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{b.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
+
+              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                {b.title}
+              </h3>
+
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {b.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
