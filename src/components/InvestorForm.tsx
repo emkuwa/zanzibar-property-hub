@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const InvestorForm = () => {
-  const { toast } = useToast();
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    budget: "",
-    timeline: ""
-  });
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  whatsapp: "",
+  country: "",
+  preferredArea: "",
+  propertyType: "",
+  budget: "",
+  timeline: ""
+});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
