@@ -9,6 +9,7 @@ import BuyPropertyZanzibar from "./pages/BuyPropertyZanzibar";
 import PajeVillas from "./pages/PajeVillas";
 import NungwiBeachfront from "./pages/NungwiBeachfront";
 import ZanzibarInvestmentGuide from "./pages/ZanzibarInvestmentGuide";
+import PropertySEOPage from "./pages/PropertySEOPage";
 
 const queryClient = new QueryClient();
 
