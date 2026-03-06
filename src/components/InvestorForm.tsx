@@ -19,46 +19,50 @@ const InvestorForm = () => {
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
+  const formData = new FormData();
 
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(form)
-        }
-      );
+  Object.entries(form).forEach(([key, value]) => {
+    formData.append(key, value as string);
+  });
 
-      toast({
-        title: "Thank you!",
-        description: "We'll send you investment opportunities soon."
-      });
+  try {
 
-      setForm({
-        name: "",
-        email: "",
-        whatsapp: "",
-        country: "",
-        preferredArea: "",
-        propertyType: "",
-        budget: "",
-        timeline: ""
-      });
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
+      {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+      }
+    );
 
-    } catch (error) {
+    toast({
+      title: "Thank you!",
+      description: "We'll send you investment opportunities soon."
+    });
 
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again."
-      });
+    setForm({
+      name: "",
+      email: "",
+      whatsapp: "",
+      country: "",
+      preferredArea: "",
+      propertyType: "",
+      budget: "",
+      timeline: ""
+    });
 
-    }
-  };
+  } catch (error) {
+
+    toast({
+      title: "Error",
+      description: "Something went wrong. Please try again."
+    });
+
+  }
+};
 
   return (
     <section id="contact" className="py-24 bg-background">
