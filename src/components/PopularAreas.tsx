@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const areas = [
   { name: "Paje", description: "Beach villas and kite-surf tourism hotspot." },
