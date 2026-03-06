@@ -1,3 +1,4 @@
+// build fix
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyInvest from "@/components/WhyInvest";
