@@ -103,9 +103,10 @@ const FeaturedProperties = () => {
                 </p>
 
                 {/* Button hii sasa inapeleka mteja kwenye form kwa smooth scroll */}
-                <a
+                // NDANI YA FeaturedProperties.tsx
+<a
   href="#investor-form"
-  className="relative z-20 mt-5 block w-full ..."
+  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
 >
   View Investment Details
 </a>
