@@ -25,6 +25,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+
+  <InvestorPopup />
+
+  <Navbar />
+  <Hero />
+  <WhyInvest />
+  <InvestorReasons />
+  <FeaturedProperties />
+  <ROICalculator />
+  <AIAdvisor />
+  <InvestorForm />
+  <PopularAreas />
+  <DeveloperSection />
+  <Footer />
+
+</div>
       
 <script
   type="application/ld+json"
