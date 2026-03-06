@@ -104,11 +104,11 @@ const FeaturedProperties = () => {
 
                 {/* Button hii sasa inapeleka mteja kwenye form kwa smooth scroll */}
                 <a
-                  href="#investor-form"
-                  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
-                >
-                  View Investment Details
-                </a>
+  href="#investor-form"
+  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+>
+  View Investment Details
+</a>
               </div>
             </motion.div>
           ))}
