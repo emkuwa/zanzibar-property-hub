@@ -24,6 +24,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+/>
+      
       <Navbar />
       <Hero />
       <WhyInvest />
