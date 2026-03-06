@@ -19,53 +19,52 @@ const InvestorForm = () => {
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
 
-  const formData = new FormData();
+    e.preventDefault();
 
-  Object.entries(form).forEach(([key, value]) => {
-    formData.append(key, value as string);
-  });
+    try {
 
-  try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(form),
+          mode: "no-cors"
+        }
+      );
 
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
-      {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-      }
-    );
+      toast({
+        title: "Thank you!",
+        description: "We will contact you with investment opportunities."
+      });
 
-    toast({
-      title: "Thank you!",
-      description: "We'll send you investment opportunities soon."
-    });
+      setForm({
+        name: "",
+        email: "",
+        whatsapp: "",
+        country: "",
+        preferredArea: "",
+        propertyType: "",
+        budget: "",
+        timeline: ""
+      });
 
-    setForm({
-      name: "",
-      email: "",
-      whatsapp: "",
-      country: "",
-      preferredArea: "",
-      propertyType: "",
-      budget: "",
-      timeline: ""
-    });
+    } catch (error) {
 
-  } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again."
+      });
 
-    toast({
-      title: "Error",
-      description: "Something went wrong. Please try again."
-    });
-
-  }
-};
+    }
+  };
 
   return (
     <section id="contact" className="py-24 bg-background">
+
       <div className="container mx-auto px-6">
 
         <motion.div
@@ -76,6 +75,7 @@ const InvestorForm = () => {
         >
 
           <div className="text-center mb-12">
+
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
               Get Zanzibar Investment Opportunities
             </h2>
@@ -83,14 +83,13 @@ const InvestorForm = () => {
             <p className="mt-4 text-muted-foreground text-lg">
               Join investors receiving curated Zanzibar property deals.
             </p>
+
           </div>
 
           <form
             onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-8 md:p-10 shadow-lg space-y-5"
           >
-
-            {/* Name */}
 
             <input
               required
@@ -99,8 +98,6 @@ const InvestorForm = () => {
               className="w-full rounded-lg border border-input bg-background px-4 py-3"
               placeholder="Full Name"
             />
-
-            {/* Email */}
 
             <input
               required
@@ -111,8 +108,6 @@ const InvestorForm = () => {
               placeholder="Email Address"
             />
 
-            {/* WhatsApp */}
-
             <input
               required
               value={form.whatsapp}
@@ -120,8 +115,6 @@ const InvestorForm = () => {
               className="w-full rounded-lg border border-input bg-background px-4 py-3"
               placeholder="WhatsApp Number"
             />
-
-            {/* Country */}
 
             <select
               required
@@ -137,17 +130,12 @@ const InvestorForm = () => {
               <option value="France">France</option>
               <option value="Italy">Italy</option>
               <option value="Spain">Spain</option>
-              <option value="Sweden">Sweden</option>
-              <option value="Norway">Norway</option>
-              <option value="Denmark">Denmark</option>
               <option value="Canada">Canada</option>
               <option value="Australia">Australia</option>
               <option value="UAE">United Arab Emirates</option>
               <option value="South Africa">South Africa</option>
               <option value="Other">Other</option>
             </select>
-
-            {/* Preferred Area */}
 
             <select
               required
@@ -165,8 +153,6 @@ const InvestorForm = () => {
               <option value="Any">Any Area</option>
             </select>
 
-            {/* Property Type */}
-
             <select
               required
               value={form.propertyType}
@@ -182,8 +168,6 @@ const InvestorForm = () => {
               <option value="Hotel Investment">Hotel Investment</option>
             </select>
 
-            {/* Budget */}
-
             <select
               required
               value={form.budget}
@@ -196,8 +180,6 @@ const InvestorForm = () => {
               <option value="250-500k">$250,000 – $500,000</option>
               <option value="500k+">$500,000+</option>
             </select>
-
-            {/* Timeline */}
 
             <select
               required
@@ -212,8 +194,6 @@ const InvestorForm = () => {
               <option value="researching">Just researching</option>
             </select>
 
-            {/* Submit */}
-
             <button
               type="submit"
               className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 flex items-center justify-center gap-2"
@@ -223,6 +203,7 @@ const InvestorForm = () => {
             </button>
 
           </form>
+
         </motion.div>
       </div>
     </section>
