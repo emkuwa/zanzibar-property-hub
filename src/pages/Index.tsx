@@ -26,27 +26,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
 
-  <InvestorPopup />
+      <InvestorPopup />
 
-  <Navbar />
-  <Hero />
-  <WhyInvest />
-  <InvestorReasons />
-  <FeaturedProperties />
-  <ROICalculator />
-  <AIAdvisor />
-  <InvestorForm />
-  <PopularAreas />
-  <DeveloperSection />
-  <Footer />
-
-</div>
-      
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-  />
-</>
-      
       <Navbar />
       <Hero />
       <WhyInvest />
@@ -58,6 +39,7 @@ const Index = () => {
       <PopularAreas />
       <DeveloperSection />
       <Footer />
+
     </div>
   );
 };
