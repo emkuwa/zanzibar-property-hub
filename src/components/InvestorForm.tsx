@@ -19,7 +19,7 @@ const InvestorForm = () => {
 
     try {
 
-      await fetch("https://script.google.com/macros/library/d/1luGoDbyjOn45gfwCZ6scq9SKt1qAYvXVn10eEBSza4olefW1hdX3p2Q_/1", {
+      await fetch("https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec", {
         method: "POST",
         body: JSON.stringify({
           ...form
