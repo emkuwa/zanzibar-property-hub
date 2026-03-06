@@ -11,6 +11,17 @@ import DeveloperSection from "@/components/DeveloperSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZanziInvest",
+    "url": "https://zanzi-invest.vercel.app",
+    "description": "Zanzibar property investment platform helping international investors discover villas, apartments, and real estate opportunities.",
+    "areaServed": "Zanzibar",
+    "sameAs": []
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
