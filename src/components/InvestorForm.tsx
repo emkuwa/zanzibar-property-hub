@@ -76,18 +76,18 @@ const [form, setForm] = useState({
           >
 
             <div>
-              <label className="block text-sm font-semibold text-muted-foreground mb-1.5">
-                Full Name
-              </label>
+  <label className="block text-sm font-semibold text-muted-foreground mb-1.5">
+    Country
+  </label>
 
-              <input
-                required
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full rounded-lg border border-input bg-background px-4 py-3"
-                placeholder="John Doe"
-              />
-            </div>
+  <input
+    required
+    value={form.country}
+    onChange={(e) => setForm({ ...form, country: e.target.value })}
+    className="w-full rounded-lg border border-input bg-background px-4 py-3"
+    placeholder="United Kingdom"
+  />
+</div>
 
             <div>
               <label className="block text-sm font-semibold text-muted-foreground mb-1.5">
