@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import pajeImg from "@/assets/paje-villa.jpg";
 import nungwiImg from "@/assets/nungwi-apartments.jpg";
@@ -12,7 +11,6 @@ const properties = [
     price: "$120,000 – $250,000",
     description: "Modern beachfront villas with infinity pools.",
     image: pajeImg,
-    link: "/paje-villas-for-sale"
   },
   {
     name: "Nungwi Ocean Apartments",
@@ -20,7 +18,6 @@ const properties = [
     price: "$85,000 – $180,000",
     description: "Contemporary ocean-view apartments.",
     image: nungwiImg,
-    link: "/nungwi-beachfront-property"
   },
   {
     name: "Jambiani Luxury Villas",
@@ -28,50 +25,28 @@ const properties = [
     price: "$150,000 – $350,000",
     description: "Exclusive private villas with beach access.",
     image: jambianiImg,
-    link: "/jambiani-villas-for-sale"
   },
 ];
 
 const FeaturedProperties = () => {
-
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Zanzibar Property Investment Opportunities",
-    "itemListElement": [
-      {
-        "@type": "Residence",
-        "name": "Paje Beach Villas",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Paje",
-          "addressRegion": "Zanzibar"
-        }
-      },
-      {
-        "@type": "Residence",
-        "name": "Nungwi Ocean Apartments",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Nungwi",
-          "addressRegion": "Zanzibar"
-        }
-      },
-      {
-        "@type": "Residence",
-        "name": "Jambiani Luxury Villas",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Jambiani",
-          "addressRegion": "Zanzibar"
-        }
+    "itemListElement": properties.map((p, i) => ({
+      "@type": "Residence",
+      "position": i + 1,
+      "name": p.name,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": p.location.split(',')[0],
+        "addressRegion": "Zanzibar"
       }
-    ]
+    }))
   };
 
   return (
     <section id="properties" className="py-24 bg-background">
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -87,7 +62,6 @@ const FeaturedProperties = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
             Featured Investment Opportunities
           </h2>
-
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Hand-picked properties with strong rental potential and capital appreciation.
           </p>
@@ -113,30 +87,11 @@ const FeaturedProperties = () => {
               </div>
 
               <div className="p-6">
+                <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-2">
+                  <MapPin className="w-4 h-4" />
+                  {p.location}
+                </div>
 
-  <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-2">
-    <MapPin className="w-4 h-4" />
-    {p.location}
-  </div>
-
-  <h3 className="font-display text-xl font-semibold text-foreground">
-    {p.name}
-  </h3>
-
-  <p className="text-secondary font-semibold mt-1">{p.price}</p>
-
-  <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
-    {p.description}
-  </p>
-
-  <Link
-    to={p.link}
-    className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
-  >
-    View Investment Details
-  </Link>
-
-</div>
                 <h3 className="font-display text-xl font-semibold text-foreground">
                   {p.name}
                 </h3>
@@ -147,19 +102,17 @@ const FeaturedProperties = () => {
                   {p.description}
                 </p>
 
-                <button className="mt-5 w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
-                  <Link
-  to={p.link}
-  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
->
-  View Investment Details
-</Link>
-                  
+                {/* Button hii sasa inapeleka mteja kwenye form kwa smooth scroll */}
+                <a
+                  href="#investor-form"
+                  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+                >
+                  View Investment Details
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
