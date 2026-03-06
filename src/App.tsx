@@ -1,4 +1,5 @@
 // redeploy trigger
+import JambianiVillas from "./pages/JambianiVillas";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,18 +20,20 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-  <Route path="/" element={<Index />} />
 
-  <Route path="/buy-property-in-zanzibar" element={<BuyPropertyZanzibar />} />
+          <Route path="/" element={<Index />} />
 
-  <Route path="/paje-villas-for-sale" element={<PajeVillas />} />
+          <Route path="/buy-property-in-zanzibar" element={<BuyPropertyZanzibar />} />
 
-  <Route path="/nungwi-beachfront-property" element={<NungwiBeachfront />} />
+          <Route path="/paje-villas-for-sale" element={<PajeVillas />} />
 
+          <Route path="/nungwi-beachfront-property" element={<NungwiBeachfront />} />
 
-  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-  <Route path="*" element={<NotFound />} />
-</Routes>
+          <Route path="/jambiani-villas-for-sale" element={<JambianiVillas />} />
+
+          <Route path="*" element={<NotFound />} />
+
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
