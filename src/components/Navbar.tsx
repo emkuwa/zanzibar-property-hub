@@ -49,7 +49,7 @@ const Navbar = () => {
             ["Properties", "#properties"],
             ["ROI Calculator", "#calculator"],
             ["Why Zanzibar", "#why-zanzibar"],
-            ["Contact", "#contact"],
+            ["Contact", "#investor-form"],
           ].map(([label, href]) => (
             <a
               key={label}
