@@ -24,7 +24,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto font-body"
         >
-          Discover villas, apartments, and high-return property investment opportunities in Zanzibar.
+          Discover high-return villas, beachfront apartments, and property investment opportunities in Zanzibar — one of Africa’s fastest growing tourism destinations.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
