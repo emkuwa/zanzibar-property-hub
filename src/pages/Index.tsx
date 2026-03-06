@@ -9,6 +9,7 @@ import InvestorForm from "@/components/InvestorForm";
 import PopularAreas from "@/components/PopularAreas";
 import DeveloperSection from "@/components/DeveloperSection";
 import Footer from "@/components/Footer";
+import InvestorPopup from "@/components/InvestorPopup";
 
 const Index = () => {
 
