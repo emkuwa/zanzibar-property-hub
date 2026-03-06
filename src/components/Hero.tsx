@@ -19,13 +19,17 @@ const Hero = () => {
           Invest in Zanzibar Beach Property
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto font-body"
-        >
-          Discover high-return villas, beachfront apartments, and property investment opportunities in Zanzibar — one of Africa’s fastest growing tourism destinations.
-        </motion.p>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto font-body"
+>
+  Discover high-return villas, beachfront apartments, and property investment opportunities in Zanzibar — one of Africa’s fastest growing tourism destinations.
+</motion.p>
+
+<p className="mt-3 text-sm text-primary-foreground/70">
+  Join international investors exploring property opportunities in Zanzibar.
+</p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
