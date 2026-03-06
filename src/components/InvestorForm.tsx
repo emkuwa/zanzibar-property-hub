@@ -5,12 +5,12 @@ import { useToast } from "@/hooks/use-toast";
 
 const InvestorForm = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", budget: "" });
+  const [form, setForm] = useState({ name: "", email: "", whatsapp: "", budget: "", timeline: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({ title: "Thank you!", description: "We'll send you investment opportunities soon." });
-    setForm({ name: "", email: "", whatsapp: "", budget: "" });
+    setForm({ name: "", email: "", whatsapp: "", budget: "", timeline: "" });
   };
 
   return (
@@ -75,6 +75,21 @@ const InvestorForm = () => {
                 <option value="100-250k">$100,000 – $250,000</option>
                 <option value="250-500k">$250,000 – $500,000</option>
                 <option value="500k+">$500,000+</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-muted-foreground mb-1.5">Investment Timeline</label>
+              <select
+                required
+                value={form.timeline}
+                onChange={(e) => setForm({ ...form, timeline: e.target.value })}
+                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              >
+                <option value="">Select timeline</option>
+                <option value="now">Ready to invest now</option>
+                <option value="3-6">3–6 months</option>
+                <option value="6-12">6–12 months</option>
+                <option value="researching">Just researching</option>
               </select>
             </div>
             <button

@@ -16,7 +16,7 @@ const DeveloperSection = () => {
             List Your Development
           </h2>
           <p className="mt-4 text-primary-foreground/75 text-lg">
-            Get your project discovered by international investors actively looking for property in Zanzibar.
+            Promote your villas, apartments, or real estate developments to international investors searching for property in Zanzibar.
           </p>
           <button className="mt-8 inline-flex items-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-semibold text-lg hover:opacity-90 transition-opacity">
             List Your Project
