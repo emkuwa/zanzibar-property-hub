@@ -40,7 +40,7 @@ const Hero = () => {
             href="#properties"
             className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-secondary text-secondary-foreground font-semibold text-lg hover:opacity-90 transition-opacity"
           >
-            Explore Opportunities
+            Explore Investment Opportunities
           </a>
           <a
             href="#calculator"
