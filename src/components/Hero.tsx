@@ -16,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto"
         >
-          Discover Property Investment Opportunities in Zanzibar
+          Invest in Zanzibar Beach Property
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto font-body"
         >
-          Explore villas, apartments, and beach properties in one of the fastest growing tourism destinations in the world.
+          Discover villas, apartments, and high-return property investment opportunities in Zanzibar.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
