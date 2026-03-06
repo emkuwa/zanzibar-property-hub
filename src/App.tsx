@@ -27,6 +27,8 @@ const App = () => (
 
   <Route path="/nungwi-beachfront-property" element={<NungwiBeachfront />} />
 
+  <Route path="/zanzibar-property-investment-guide" element={<ZanzibarInvestmentGuide />} />
+
   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
   <Route path="*" element={<NotFound />} />
 </Routes>
