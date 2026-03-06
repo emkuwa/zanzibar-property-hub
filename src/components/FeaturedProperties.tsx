@@ -113,11 +113,30 @@ const FeaturedProperties = () => {
               </div>
 
               <div className="p-6">
-                <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-2">
-                  <MapPin className="w-4 h-4" />
-                  {p.location}
-                </div>
 
+  <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-2">
+    <MapPin className="w-4 h-4" />
+    {p.location}
+  </div>
+
+  <h3 className="font-display text-xl font-semibold text-foreground">
+    {p.name}
+  </h3>
+
+  <p className="text-secondary font-semibold mt-1">{p.price}</p>
+
+  <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
+    {p.description}
+  </p>
+
+  <Link
+    to={p.link}
+    className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+  >
+    View Investment Details
+  </Link>
+
+</div>
                 <h3 className="font-display text-xl font-semibold text-foreground">
                   {p.name}
                 </h3>
@@ -135,6 +154,7 @@ const FeaturedProperties = () => {
 >
   View Investment Details
 </Link>
+                  
               </div>
             </motion.div>
           ))}
