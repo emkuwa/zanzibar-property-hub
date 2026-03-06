@@ -23,13 +23,16 @@ const InvestorForm = () => {
 
     try {
 
-      await fetch("https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(form)
-      });
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(form)
+        }
+      );
 
       toast({
         title: "Thank you!",
@@ -83,44 +86,90 @@ const InvestorForm = () => {
             className="bg-card rounded-2xl p-8 md:p-10 shadow-lg space-y-5"
           >
 
+            {/* Name */}
+
             <input
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
               placeholder="Full Name"
             />
+
+            {/* Email */}
 
             <input
               required
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border px-4 py-3"
-              placeholder="Email"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              placeholder="Email Address"
             />
+
+            {/* WhatsApp */}
 
             <input
               required
               value={form.whatsapp}
               onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-              className="w-full rounded-lg border px-4 py-3"
-              placeholder="WhatsApp"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              placeholder="WhatsApp Number"
             />
 
-            <input
+            {/* Country */}
+
+            <select
               required
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
-              className="w-full rounded-lg border px-4 py-3"
-              placeholder="Country"
-            />
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+            >
+              <option value="">Select Country</option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Germany">Germany</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="France">France</option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Norway">Norway</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="UAE">United Arab Emirates</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Other">Other</option>
+            </select>
+
+            {/* Preferred Area */}
+
+            <select
+              required
+              value={form.preferredArea}
+              onChange={(e) =>
+                setForm({ ...form, preferredArea: e.target.value })
+              }
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+            >
+              <option value="">Preferred Area</option>
+              <option value="Paje">Paje</option>
+              <option value="Nungwi">Nungwi</option>
+              <option value="Jambiani">Jambiani</option>
+              <option value="Kendwa">Kendwa</option>
+              <option value="Any">Any Area</option>
+            </select>
+
+            {/* Property Type */}
 
             <select
               required
               value={form.propertyType}
-              onChange={(e) => setForm({ ...form, propertyType: e.target.value })}
-              className="w-full rounded-lg border px-4 py-3"
+              onChange={(e) =>
+                setForm({ ...form, propertyType: e.target.value })
+              }
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
             >
               <option value="">Property Type</option>
               <option value="Villa">Villa</option>
@@ -129,9 +178,41 @@ const InvestorForm = () => {
               <option value="Hotel Investment">Hotel Investment</option>
             </select>
 
+            {/* Budget */}
+
+            <select
+              required
+              value={form.budget}
+              onChange={(e) => setForm({ ...form, budget: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+            >
+              <option value="">Investment Budget</option>
+              <option value="50-100k">$50,000 – $100,000</option>
+              <option value="100-250k">$100,000 – $250,000</option>
+              <option value="250-500k">$250,000 – $500,000</option>
+              <option value="500k+">$500,000+</option>
+            </select>
+
+            {/* Timeline */}
+
+            <select
+              required
+              value={form.timeline}
+              onChange={(e) => setForm({ ...form, timeline: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+            >
+              <option value="">Investment Timeline</option>
+              <option value="now">Ready to invest now</option>
+              <option value="3-6">3–6 months</option>
+              <option value="6-12">6–12 months</option>
+              <option value="researching">Just researching</option>
+            </select>
+
+            {/* Submit */}
+
             <button
               type="submit"
-              className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 flex items-center justify-center gap-2"
             >
               <Send className="w-5 h-5" />
               Send Me Investment Opportunities
