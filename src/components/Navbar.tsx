@@ -46,11 +46,11 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-foreground/95 backdrop-blur-md px-6 pb-6 space-y-4">
           {[
-            ["Properties", "#properties"],
-            ["ROI Calculator", "#calculator"],
-            ["Why Zanzibar", "#why-zanzibar"],
-            ["Contact", "#investor-form"],
-          ].map(([label, href]) => (
+  ["Properties", "#properties"],
+  ["ROI Calculator", "#calculator"],
+  ["Why Zanzibar", "#why-zanzibar"],
+  ["Contact", "#investor-form"],
+].map(([label, href]) => (
             <a
               key={label}
               href={href}
