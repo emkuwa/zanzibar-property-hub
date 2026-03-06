@@ -77,21 +77,20 @@ const [form, setForm] = useState({
 
             <div>
   <label className="block text-sm font-semibold text-muted-foreground mb-1.5">
-    Preferred Area
+    Property Type
   </label>
 
   <select
     required
-    value={form.preferredArea}
-    onChange={(e) => setForm({ ...form, preferredArea: e.target.value })}
+    value={form.propertyType}
+    onChange={(e) => setForm({ ...form, propertyType: e.target.value })}
     className="w-full rounded-lg border border-input bg-background px-4 py-3"
   >
-    <option value="">Select Area</option>
-    <option value="Paje">Paje</option>
-    <option value="Nungwi">Nungwi</option>
-    <option value="Jambiani">Jambiani</option>
-    <option value="Kendwa">Kendwa</option>
-    <option value="Any">Any Area</option>
+    <option value="">Select Property Type</option>
+    <option value="Villa">Villa</option>
+    <option value="Apartment">Apartment</option>
+    <option value="Beachfront Land">Beachfront Land</option>
+    <option value="Hotel Investment">Hotel Investment</option>
   </select>
 </div>
 
