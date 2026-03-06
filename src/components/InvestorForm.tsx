@@ -63,7 +63,7 @@ const InvestorForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="investor-form" className="py-24 bg-background">
 
       <div className="container mx-auto px-6">
 
