@@ -29,8 +29,50 @@ const properties = [
 ];
 
 const FeaturedProperties = () => {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Zanzibar Property Investment Opportunities",
+    "itemListElement": [
+      {
+        "@type": "Residence",
+        "name": "Paje Beach Villas",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paje",
+          "addressRegion": "Zanzibar"
+        }
+      },
+      {
+        "@type": "Residence",
+        "name": "Nungwi Ocean Apartments",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nungwi",
+          "addressRegion": "Zanzibar"
+        }
+      },
+      {
+        "@type": "Residence",
+        "name": "Jambiani Luxury Villas",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jambiani",
+          "addressRegion": "Zanzibar"
+        }
+      }
+    ]
+  };
+
   return (
     <section id="properties" className="py-24 bg-background">
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,10 +83,12 @@ const FeaturedProperties = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
             Featured Investment Opportunities
           </h2>
+
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Hand-picked properties with strong rental potential and capital appreciation.
           </p>
         </motion.div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {properties.map((p, i) => (
             <motion.div
@@ -63,14 +107,23 @@ const FeaturedProperties = () => {
                   loading="lazy"
                 />
               </div>
+
               <div className="p-6">
                 <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-2">
                   <MapPin className="w-4 h-4" />
                   {p.location}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground">{p.name}</h3>
+
+                <h3 className="font-display text-xl font-semibold text-foreground">
+                  {p.name}
+                </h3>
+
                 <p className="text-secondary font-semibold mt-1">{p.price}</p>
-                <p className="text-muted-foreground text-sm mt-3 leading-relaxed">{p.description}</p>
+
+                <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
+                  {p.description}
+                </p>
+
                 <button className="mt-5 w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity">
                   View Investment Details
                 </button>
@@ -78,6 +131,7 @@ const FeaturedProperties = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
