@@ -92,7 +92,7 @@ const FeaturedProperties = () => {
             Hand-picked properties with strong rental potential and capital appreciation.
           </p>
         </motion.div>
-
+        
         <div className="grid md:grid-cols-3 gap-8">
           {properties.map((p, i) => (
             <motion.div
