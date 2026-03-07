@@ -26,6 +26,19 @@ const locations = [
   "bububu"
 ];
 
+const propertyTypes = [
+  "villa",
+  "hotel",
+  "resort",
+  "apartment",
+  "land",
+  "beachfront-villa",
+  "boutique-hotel",
+  "holiday-rental",
+  "tourism-property",
+  "investment-property"
+];
+
 export default function LocationPage() {
 
   const { location, type } = useParams();
@@ -64,6 +77,18 @@ export default function LocationPage() {
           <li key={loc}>
             <a href={`/buy-property-in-${loc}-zanzibar`}>
               Buy property in {loc} Zanzibar
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Popular Property Investments in {location}</h2>
+
+      <ul>
+        {propertyTypes.map((ptype) => (
+          <li key={ptype}>
+            <a href={`/buy-${ptype}-in-${location}-zanzibar`}>
+              Buy {ptype} in {location} Zanzibar
             </a>
           </li>
         ))}
