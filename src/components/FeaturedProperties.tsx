@@ -29,29 +29,8 @@ const properties = [
 ];
 
 const FeaturedProperties = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Zanzibar Property Investment Opportunities",
-    "itemListElement": properties.map((p, i) => ({
-      "@type": "Residence",
-      "position": i + 1,
-      "name": p.name,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": p.location.split(',')[0],
-        "addressRegion": "Zanzibar"
-      }
-    }))
-  };
-
   return (
     <section id="properties" className="py-24 bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,14 +81,15 @@ const FeaturedProperties = () => {
                   {p.description}
                 </p>
 
-                {/* Button hii sasa inapeleka mteja kwenye form kwa smooth scroll */}
-                // NDANI YA FeaturedProperties.tsx
-<a
-  href="#investor-form"
-  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
->
-  View Investment Details
-</a>
+                {/* Hii ndiyo button muhimu inayotumia smooth scroll ya JavaScript */}
+                <button
+                  onClick={() => {
+                    document.getElementById('investor-form')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="mt-5 block w-full text-center py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+                >
+                  View Investment Details
+                </button>
               </div>
             </motion.div>
           ))}
