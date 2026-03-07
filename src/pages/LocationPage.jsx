@@ -15,7 +15,15 @@ const locations = [
   "bwejuu",
   "kiwengwa",
   "matemwe",
-  "michamvi"
+  "michamvi",
+  "fumba",
+  "stone-town",
+  "kizimkazi",
+  "pongwe",
+  "urowa",
+  "chwaka",
+  "makunduchi",
+  "bububu"
 ];
 
 export default function LocationPage() {
