@@ -1,0 +1,22 @@
+export const locations = [
+  "paje",
+  "nungwi",
+  "kendwa",
+  "jambiani",
+  "bwejuu",
+  "kiwengwa",
+  "matemwe",
+  "michamvi",
+  "fumba",
+  "stone-town",
+  "kizimkazi",
+  "pongwe",
+  "urowa",
+  "chwaka",
+  "nungwi-beach",
+  "kendwa-beach",
+  "paje-beach",
+  "jambiani-beach",
+  "bwejuu-beach",
+  "kiwengwa-beach"
+];
