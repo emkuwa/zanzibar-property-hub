@@ -1,28 +1,43 @@
 import { useParams } from "react-router-dom";
 
+const descriptions = [
+  "Zanzibar is becoming one of the top property investment destinations in East Africa.",
+  "International investors are increasingly buying villas and tourism properties in Zanzibar.",
+  "Tourism growth in Zanzibar is creating strong demand for rental villas and boutique hotels.",
+  "Beachfront property in Zanzibar is attracting global real estate investors."
+];
+
+const locations = [
+  "paje",
+  "nungwi",
+  "kendwa",
+  "jambiani",
+  "bwejuu",
+  "kiwengwa",
+  "matemwe",
+  "michamvi"
+];
+
 export default function LocationPage() {
 
-  const { location } = useParams();
+  const { location, type } = useParams();
+
+  const randomText =
+    descriptions[Math.floor(Math.random() * descriptions.length)];
 
   return (
-    <div style={{padding:"40px", maxWidth:"900px", margin:"auto"}}>
+    <div style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
 
-      <h1>Buy Property in {location} Zanzibar</h1>
+      <h1>Buy {type || "Property"} in {location} Zanzibar</h1>
 
-      <p>
-        {location} is one of the fastest growing real estate investment
-        areas in Zanzibar. International investors are increasingly
-        looking for beachfront villas, tourism developments and
-        boutique hotels in this region.
-      </p>
+      <p>{randomText}</p>
 
-      <h2>Property Investment in {location}</h2>
+      <h2>Why Invest in {location}</h2>
 
       <p>
-        Tourism growth in Zanzibar has created strong demand for
-        holiday rental villas and boutique hotels in {location}.
-        Many investors are targeting this location due to strong
-        rental yields and beachfront opportunities.
+        {location} is one of the fastest growing tourism areas in Zanzibar.
+        Investors are developing villas, resorts and boutique hotels to serve
+        international visitors coming to the island.
       </p>
 
       <h2>Investment Opportunities</h2>
@@ -34,15 +49,27 @@ export default function LocationPage() {
         <li>Tourism Land Development</li>
       </ul>
 
+      <h2>Other Investment Areas in Zanzibar</h2>
+
+      <ul>
+        {locations.map((loc) => (
+          <li key={loc}>
+            <a href={`/buy-property-in-${loc}-zanzibar`}>
+              Buy property in {loc} Zanzibar
+            </a>
+          </li>
+        ))}
+      </ul>
+
       <h2>Request Investment Opportunities</h2>
 
       <form>
 
-        <input placeholder="Full Name" /><br/><br/>
+        <input placeholder="Full Name" /><br /><br />
 
-        <input placeholder="Email" /><br/><br/>
+        <input placeholder="Email" /><br /><br />
 
-        <input placeholder="WhatsApp" /><br/><br/>
+        <input placeholder="WhatsApp" /><br /><br />
 
         <button>Request Investment Details</button>
 
