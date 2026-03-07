@@ -18,46 +18,32 @@ const InvestorForm = () => {
     timeline: ""
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
 
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
+  const data = {
+    name,
+    email,
+    whatsapp,
+    country,
+    budget,
+    timeline,
+    funding,
+    purpose,
+    notes
+  };
 
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbyEVgwdSMVm8M6fmm68L4ry-OcOVqAG3hgbAb2S_UVohg-iwXKtjOzP6D5WgJ3eaLQg/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(form),
-          mode: "no-cors"
-        }
-      );
+  await fetch("http://104.248.41.165:8000/api/investor", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
 
-      toast({
-        title: "Thank you!",
-        description: "We will contact you with investment opportunities."
-      });
-
-      setForm({
-        name: "",
-        email: "",
-        whatsapp: "",
-        country: "",
-        preferredArea: "",
-        propertyType: "",
-        budget: "",
-        timeline: ""
-      });
-
-    } catch (error) {
-
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again."
-      });
+  alert("Your investment request has been received.");
+};
 
     }
   };
