@@ -15,42 +15,86 @@ const InvestorForm = () => {
     preferredArea: "",
     propertyType: "",
     budget: "",
-    timeline: ""
+    timeline: "",
+    funding: "",
+    purpose: "",
+    notes: ""
   });
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  e.preventDefault();
+    try {
 
-  const data = {
-    name,
-    email,
-    whatsapp,
-    country,
-    budget,
-    timeline,
-    funding,
-    purpose,
-    notes
-  };
+      const data = {
+        name: form.name,
+        email: form.email,
+        whatsapp: form.whatsapp,
+        country: form.country,
+        budget: form.budget,
+        timeline: form.timeline,
+        funding: form.funding,
+        purpose: form.propertyType,
+        notes: `Preferred area: ${form.preferredArea}`
+      };
 
-  await fetch("http://104.248.41.165:8000/api/investor", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+      const res = await fetch("https://zanziinvest.com/api/investor", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
 
-  alert("Your investment request has been received.");
-};
+      const result = await res.json();
+
+      if (result.status === "success") {
+
+        toast({
+          title: "Request submitted",
+          description: "Our team will contact you with investment opportunities."
+        });
+
+        setForm({
+          name: "",
+          email: "",
+          whatsapp: "",
+          country: "",
+          preferredArea: "",
+          propertyType: "",
+          budget: "",
+          timeline: "",
+          funding: "",
+          purpose: "",
+          notes: ""
+        });
+
+      } else {
+
+        toast({
+          title: "Submission failed",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+
+      }
+
+    } catch (err) {
+
+      console.error(err);
+
+      toast({
+        title: "Error",
+        description: "Could not send request.",
+        variant: "destructive"
+      });
 
     }
   };
 
   return (
     <section id="investor-form" className="py-24 bg-background">
-      
+
       <div className="container mx-auto px-6">
 
         <motion.div
@@ -161,10 +205,10 @@ const InvestorForm = () => {
               className="w-full rounded-lg border border-input bg-background px-4 py-3"
             >
               <option value="">Investment Budget</option>
-              <option value="50-100k">$50,000 – $100,000</option>
-              <option value="100-250k">$100,000 – $250,000</option>
-              <option value="250-500k">$250,000 – $500,000</option>
-              <option value="500k+">$500,000+</option>
+              <option value="50-100k">50k-100k</option>
+              <option value="100-250k">100k-250k</option>
+              <option value="300k-700k">300k-700k</option>
+              <option value="700k+">700k+</option>
             </select>
 
             <select
@@ -174,10 +218,22 @@ const InvestorForm = () => {
               className="w-full rounded-lg border border-input bg-background px-4 py-3"
             >
               <option value="">Investment Timeline</option>
-              <option value="now">Ready to invest now</option>
+              <option value="0-3">0–3 months</option>
               <option value="3-6">3–6 months</option>
               <option value="6-12">6–12 months</option>
               <option value="researching">Just researching</option>
+            </select>
+
+            <select
+              required
+              value={form.funding}
+              onChange={(e) => setForm({ ...form, funding: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+            >
+              <option value="">Funding Method</option>
+              <option value="cash">Cash</option>
+              <option value="mortgage">Mortgage</option>
+              <option value="partnership">Investment partnership</option>
             </select>
 
             <button
