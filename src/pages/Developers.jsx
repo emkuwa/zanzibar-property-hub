@@ -102,7 +102,7 @@ const Developers = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold text-xl">3. We Share Qualified Leads</h3>
+              <h3 className="font-semibold text-xl">3. Receive Qualified Leads</h3>
               <p className="mt-3 text-muted-foreground">
                 Qualified investor inquiries are shared with developers,
                 agents and brokers who are part of the ZanziInvest network.
@@ -162,24 +162,104 @@ const Developers = () => {
             <div>
               <h3 className="font-semibold">International Investors</h3>
               <p className="text-muted-foreground mt-2">
-                Our platform targets investors from Europe, the Middle East
-                and other international markets.
+                Our platform attracts investors from Europe, the Middle East
+                and other international markets searching for property in Zanzibar.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold">Targeted Property Leads</h3>
+              <h3 className="font-semibold">Qualified Inquiries</h3>
               <p className="text-muted-foreground mt-2">
-                Investors submit detailed requests including budget,
-                preferred location and property type.
+                Every investor inquiry includes budget, preferred location,
+                property type and timeline.
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold">Free Trial Leads</h3>
               <p className="text-muted-foreground mt-2">
-                Try our service with 3–5 free investor inquiries before
-                joining the network.
+                Receive 3–5 investor leads for free before deciding to join
+                the ZanziInvest partner network.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* SAMPLE LEAD */}
+
+      <section className="py-20 bg-muted/40">
+
+        <div className="max-w-4xl mx-auto px-6 text-center">
+
+          <h2 className="text-3xl font-bold">
+            Example Investor Inquiry
+          </h2>
+
+          <p className="mt-4 text-muted-foreground">
+            Here is an example of the type of investor inquiries partners receive.
+          </p>
+
+          <div className="mt-10 bg-white p-8 rounded-xl text-left max-w-xl mx-auto shadow">
+
+            <p><strong>Name:</strong> Michael Schmidt</p>
+            <p><strong>Country:</strong> Germany</p>
+            <p><strong>Budget:</strong> $300,000 – $600,000</p>
+            <p><strong>Interested In:</strong> Beachfront Villa</p>
+            <p><strong>Preferred Location:</strong> Paje or Jambiani</p>
+            <p><strong>Timeline:</strong> Within 6 months</p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* FAQ */}
+
+      <section className="py-20">
+
+        <div className="max-w-4xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="mt-10 space-y-6">
+
+            <div>
+              <h3 className="font-semibold">Are the investor leads real?</h3>
+              <p className="text-muted-foreground">
+                Yes. All leads come from real investors searching for property
+                investment opportunities in Zanzibar through ZanziInvest.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">What information does each lead include?</h3>
+              <p className="text-muted-foreground">
+                Leads include name, email, WhatsApp, budget range, preferred
+                location and investment timeline.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">How many free leads do I receive?</h3>
+              <p className="text-muted-foreground">
+                New partners receive 3–5 investor leads to test the platform.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">What happens after the free trial?</h3>
+              <p className="text-muted-foreground">
+                After testing the leads, partners can subscribe to receive
+                ongoing investor inquiries.
               </p>
             </div>
 
@@ -201,8 +281,7 @@ const Developers = () => {
           </h2>
 
           <p className="mt-4 text-muted-foreground">
-            Submit your details to receive your first 3–5 investor leads
-            and experience how ZanziInvest works.
+            Submit your details to receive your first 3–5 investor leads.
           </p>
 
           <form className="mt-8 space-y-4">
