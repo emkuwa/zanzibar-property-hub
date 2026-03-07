@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const InvestorForm = () => {
+// Tunatengeneza muundo wa data ya fomu (TypeScript Interface)
+interface FormData {
+  name: string;
+  email: string;
+  whatsapp: string;
+  country: string;
+  preferredArea: string;
+  propertyType: string;
+  budget: string;
+  timeline: string;
+  funding: string;
+  purpose: string;
+  notes: string;
+}
 
+const InvestorForm = () => {
   const { toast } = useToast();
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormData>({
     name: "",
     email: "",
     whatsapp: "",
@@ -21,24 +35,22 @@ const InvestorForm = () => {
     notes: ""
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     try {
-
+      // MAREKEBISHO: Oanisha na majina ya fomu ya Python Backend
       const data = {
-        name: form.name,
+        full_name: form.name,
         email: form.email,
-        whatsapp: form.whatsapp,
-        country: form.country,
+        phone: form.whatsapp,
         budget: form.budget,
-        timeline: form.timeline,
-        funding: form.funding,
-        purpose: form.propertyType,
-        notes: `Preferred area: ${form.preferredArea}`
+        location_interest: form.preferredArea,
+        notes: `Timeline: ${form.timeline}, Funding: ${form.funding}, Property: ${form.propertyType}, Country: ${form.country}`
       };
 
-      const res = await fetch("https://zanziinvest.com/api/investor", {
+      // MAREKEBISHO: URL inayopiga DigitalOcean API Subdomain
+      const res = await fetch("https://api.zanziinvest.com/api/investor", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -49,12 +61,12 @@ const InvestorForm = () => {
       const result = await res.json();
 
       if (result.status === "success") {
-
         toast({
           title: "Request submitted",
           description: "Our team will contact you with investment opportunities."
         });
 
+        // Safisha fomu
         setForm({
           name: "",
           email: "",
@@ -70,62 +82,50 @@ const InvestorForm = () => {
         });
 
       } else {
-
         toast({
           title: "Submission failed",
-          description: "Please try again later.",
+          description: result.message || "Please try again later.",
           variant: "destructive"
         });
-
       }
 
     } catch (err) {
-
-      console.error(err);
-
+      console.error("CORS or Connection Error:", err);
       toast({
         title: "Error",
-        description: "Could not send request.",
+        description: "Could not connect to the server. Please check your connection.",
         variant: "destructive"
       });
-
     }
   };
 
   return (
     <section id="investor-form" className="py-24 bg-background">
-
       <div className="container mx-auto px-6">
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-2xl mx-auto"
         >
-
           <div className="text-center mb-12">
-
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
               Get Zanzibar Investment Opportunities
             </h2>
-
             <p className="mt-4 text-muted-foreground text-lg">
               Join investors receiving curated Zanzibar property deals.
             </p>
-
           </div>
 
           <form
             onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-8 md:p-10 shadow-lg space-y-5"
           >
-
             <input
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
               placeholder="Full Name"
             />
 
@@ -134,7 +134,7 @@ const InvestorForm = () => {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
               placeholder="Email Address"
             />
 
@@ -142,7 +142,7 @@ const InvestorForm = () => {
               required
               value={form.whatsapp}
               onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
               placeholder="WhatsApp Number"
             />
 
@@ -150,7 +150,7 @@ const InvestorForm = () => {
               required
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Select Country</option>
               <option value="United States">United States</option>
@@ -173,7 +173,7 @@ const InvestorForm = () => {
               onChange={(e) =>
                 setForm({ ...form, preferredArea: e.target.value })
               }
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Preferred Area</option>
               <option value="Paje">Paje</option>
@@ -189,7 +189,7 @@ const InvestorForm = () => {
               onChange={(e) =>
                 setForm({ ...form, propertyType: e.target.value })
               }
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Property Type</option>
               <option value="Villa">Villa</option>
@@ -202,7 +202,7 @@ const InvestorForm = () => {
               required
               value={form.budget}
               onChange={(e) => setForm({ ...form, budget: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Investment Budget</option>
               <option value="50-100k">50k-100k</option>
@@ -215,7 +215,7 @@ const InvestorForm = () => {
               required
               value={form.timeline}
               onChange={(e) => setForm({ ...form, timeline: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Investment Timeline</option>
               <option value="0-3">0–3 months</option>
@@ -228,7 +228,7 @@ const InvestorForm = () => {
               required
               value={form.funding}
               onChange={(e) => setForm({ ...form, funding: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3"
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground"
             >
               <option value="">Funding Method</option>
               <option value="cash">Cash</option>
@@ -243,9 +243,7 @@ const InvestorForm = () => {
               <Send className="w-5 h-5" />
               Send Me Investment Opportunities
             </button>
-
           </form>
-
         </motion.div>
       </div>
     </section>
