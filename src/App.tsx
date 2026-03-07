@@ -1,5 +1,5 @@
 // redeploy trigger
-
+import Developers from "./pages/Developers";
 import JambianiVillas from "./pages/JambianiVillas";
 import BuyPropertyZanzibar from "./pages/BuyPropertyZanzibar";
 import PajeVillas from "./pages/PajeVillas";
@@ -45,6 +45,8 @@ const App = () => (
           {/* Programmatic SEO route */}
           <Route path="/buy-property-in-:location-zanzibar" element={<LocationPage />} />
 
+<Route path="/developers" element={<Developers />} />
+          
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
 
