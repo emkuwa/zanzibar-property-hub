@@ -20,94 +20,7 @@ const locations = [
   "stone-town",
   "kizimkazi",
   "pongwe",
-  "urowa",
-  "chwaka",
-  "makunduchi",
-  "bububu",
-  "mtoni",
-  "mbweni",
-  "fuoni",
-  "chuini",
-  "mbuzini",
-  "donge",
-  "kidoti",
-  "tumbatu",
-  "pwani-mchangani",
-  "kijini",
-  "uroa",
-  "marumbi",
-  "dikoni",
-  "nungwi-beach",
-  "kendwa-beach",
-  "paje-beach",
-  "jambiani-beach",
-  "bwejuu-beach",
-  "kiwengwa-beach",
-  "matemwe-beach",
-  "fukuchani",
-  "kandwi",
-  "kizimkazi-dimbani",
-  "kizimkazi-mkunguni",
-  "dunga",
-  "cheju",
-  "bambi",
-  "unguja-uku",
-  "chwaka-bay",
-  "pwani",
-  "pwani-mtoni",
-  "kisauni",
-  "tunguu",
-  "fujoni",
-  "kiembesamaki",
-  "mwembemakumbi",
-  "rahaleo",
-  "malindi",
-  "vikokotoni",
-  "forodhani",
-  "mwembe-tanga",
-  "sokoni",
-  "jangombe",
-  "bububu-beach",
-  "fuoni-kibondeni",
-  "chukwani",
-  "airport-area",
-  "mbweni-jkt",
-  "stone-town-harbour",
-  "nungwi-village",
-  "kendwa-village",
-  "paje-village",
-  "jambiani-village",
-  "bwejuu-village",
-  "kiwengwa-village",
-  "matemwe-village",
-  "michamvi-kai",
-  "michamvi-pingwe",
-  "fumba-town",
-  "fumba-beach",
-  "tunguu-beach",
-  "uroa-beach",
-  "marumbi-beach",
-  "dikoni-beach",
-  "pwani-mchangani-beach",
-  "kigomani",
-  "kigomani-beach",
-  "matemwe-kigomani",
-  "nungwi-north",
-  "nungwi-south",
-  "kendwa-north",
-  "kendwa-south",
-  "paje-north",
-  "paje-south",
-  "jambiani-north",
-  "jambiani-south",
-  "bwejuu-north",
-  "bwejuu-south",
-  "kiwengwa-north",
-  "kiwengwa-south",
-  "matemwe-north",
-  "matemwe-south",
-  "michamvi-north",
-  "michamvi-south"
+  "uroa"
 ];
 
 const propertyTypes = [
@@ -125,7 +38,23 @@ const propertyTypes = [
 
 export default function LocationPage() {
 
-  const { location, type } = useParams();
+  const { slug } = useParams();
+
+  let location = "";
+  let type = "property";
+
+  if (slug) {
+
+    const cleaned = slug.replace("-zanzibar", "");
+
+    const parts = cleaned.split("-in-");
+
+    if (parts.length === 2) {
+      type = parts[0].replace("buy-", "");
+      location = parts[1];
+    }
+
+  }
 
   const randomText =
     descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -133,7 +62,7 @@ export default function LocationPage() {
   return (
     <div style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
 
-      <h1>Buy {type || "Property"} in {location} Zanzibar</h1>
+      <h1>Buy {type} in {location} Zanzibar</h1>
 
       <p>{randomText}</p>
 
