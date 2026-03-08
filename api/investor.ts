@@ -3,37 +3,36 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
-  if (request.method !== 'POST') return response.status(405).json({ error: 'Method not allowed' });
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   try {
-    const { question, leadData } = request.body;
+    const { question, leadData } = req.body;
 
-    // A. KAMA NI CHAT YA KAWAIDA (Tumia OpenAI kujibu)
+    // A. CHAT LOGIC (OpenAI inajibu hapa)
     if (question && !leadData) {
       const completion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
-          { role: "system", content: "You are a Zanzibar real estate expert. Answer questions about property investment in Zanzibar concisely." },
+          { role: "system", content: "You are a Zanzibar real estate expert. Be professional and helpful." },
           { role: "user", content: question }
         ],
       });
 
-      const answer = completion.choices[0].message.content;
-      return response.status(200).json({ answer });
+      return res.status(200).json({ answer: completion.choices[0].message.content });
     }
 
-    // B. KAMA NI LEAD DATA (Hifadhi DB na tumia Telegram)
+    // B. LEAD LOGIC (Hifadhi DB na Tuma Telegram)
     if (leadData) {
-      // 1. Tuma DigitalOcean (Kama ulivyoseti)
+      // 1. Tuma DigitalOcean
       await fetch("http://104.248.41.165:5000/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(leadData)
       });
 
-      // 2. Tuma Telegram Alert
-      const message = `🚀 *New Lead on ZanziInvest!* \n\n📧 Email: ${leadData.email}\n📱 Phone: ${leadData.phone || 'N/A'}`;
+      // 2. Tuma Telegram Alert (Hii ndio SMS yako)
+      const message = `✅ *New Lead Captured!*\n\n📧 Email: ${leadData.email}\n📱 Simu: ${leadData.phone || 'N/A'}`;
       
       await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: "POST",
@@ -45,9 +44,9 @@ export default async function handler(request: VercelRequest, response: VercelRe
         })
       });
 
-      return response.status(200).json({ success: true });
+      return res.status(200).json({ success: true });
     }
-  } catch (error) {
-    return response.status(500).json({ error: "System busy" });
+  } catch (e) {
+    return res.status(500).json({ answer: "AI is currently resting. Try again!" });
   }
 }
