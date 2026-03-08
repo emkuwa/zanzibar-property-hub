@@ -35,6 +35,8 @@ const App = () => (
           {/* Homepage */}
           <Route path="/" element={<Index />} />
 
+          <Route path="/partners" element={<Partners />} />
+
           <Route path="/invest-in-zanzibar" element={<InvestInZanzibar />} />
 
           {/* Main SEO page */}
