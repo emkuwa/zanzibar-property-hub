@@ -12,6 +12,7 @@ const AIAdvisor = () => {
 
 const [question, setQuestion] = useState("");
 const [messages, setMessages] = useState([]);
+const [suggestions, setSuggestions] = useState([]);
 const [loading, setLoading] = useState(false);
 
 const askAI = async () => {
@@ -43,6 +44,7 @@ try {
   };
 
   setMessages(prev => [...prev, aiMessage]);
+  setSuggestions(data.suggestions || []);
 
 } catch (error) {
 
@@ -123,75 +125,9 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-3 rounded-lg ${
+              className={`p-3 rounded-lg whitespace-pre-line ${
                 msg.role === "user"
                   ? "bg-primary text-white"
                   : "bg-card"
               }`}
-            >
-              {msg.text}
-            </div>
-          ))}
-
-        </div>
-
-        {messages.length > 0 && (
-          <button
-            className="w-full py-2 rounded-lg bg-secondary text-secondary-foreground font-semibold"
-            onClick={() => window.location.href="/invest"}
-          >
-            Get Investment Opportunities
-          </button>
-        )}
-
-        <div className="mt-6 space-y-2">
-
-          <p className="text-sm text-muted-foreground">
-            Popular investment questions:
-          </p>
-
-          <div className="flex flex-wrap gap-2">
-
-            <button
-              onClick={() => setQuestion("Can foreigners buy property in Zanzibar?")}
-              className="text-sm bg-card px-3 py-1 rounded"
-            >
-              Foreigners buy property?
-            </button>
-
-            <button
-              onClick={() => setQuestion("Best areas to invest in Zanzibar")}
-              className="text-sm bg-card px-3 py-1 rounded"
-            >
-              Best areas to invest
-            </button>
-
-            <button
-              onClick={() => setQuestion("Average ROI for Zanzibar villas")}
-              className="text-sm bg-card px-3 py-1 rounded"
-            >
-              Zanzibar villa ROI
-            </button>
-
-            <button
-              onClick={() => setQuestion("Is Zanzibar a good place for real estate investment?")}
-              className="text-sm bg-card px-3 py-1 rounded"
-            >
-              Invest in Zanzibar
-            </button>
-
-          </div>
-
-        </div>
-
-      </motion.div>
-
-    </div>
-  </div>
-</section>
 ```
-
-);
-};
-
-export default AIAdvisor;
