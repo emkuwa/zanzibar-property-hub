@@ -68,6 +68,7 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
+
         <div className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-1.5 mb-6">
           <Sparkles className="w-4 h-4 text-accent-foreground" />
           <span className="text-sm font-semibold text-accent-foreground">
@@ -138,6 +139,7 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
 
         {suggestions.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-4">
+
             {suggestions.map((s, i) => (
               <button
                 key={i}
@@ -147,6 +149,7 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
                 {s}
               </button>
             ))}
+
           </div>
         )}
 
