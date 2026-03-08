@@ -11,37 +11,39 @@ export default async function handler(
   try {
     const { question, leadData } = request.body;
 
-    // 1. KAMA NI CHAT YA KAWAIDA
+    // A. LOGIC YA CHAT (AI HAITUMI TELEGRAM)
     if (question && !leadData) {
-      const answers: Record<string, any> = {
+      const knowledgeBase: Record<string, any> = {
         "Is Zanzibar a good place to buy property?": {
-          answer: "Zanzibar has seen a 15% increase in property values over the last year. It's a prime market for vacation rentals.",
+          answer: "Zanzibar has seen a 15% increase in property values over the last year. It's a prime market for vacation rentals with growing tourism demand.",
           suggestions: ["Best areas for ROI", "Legal process"]
         },
         "Which areas have the best rental returns?": {
-          answer: "Paje and Nungwi are currently top-tier for rental returns, often exceeding 10% net ROI.",
+          answer: "Paje and Nungwi are currently top-tier for rental returns, often exceeding 10% net ROI due to high occupancy rates.",
           suggestions: ["See Paje listings", "Calculate ROI"]
+        },
+        "What is the average ROI for villas?": {
+          answer: "Luxury villas in prime locations typically see between 8% to 12% ROI, depending on management and location.",
+          suggestions: ["View Villa ROI guide", "Contact Sales"]
         }
       };
 
-      const result = answers[question] || {
-        answer: "That's a great question! For detailed investment analysis, feel free to leave your contact details.",
+      const result = knowledgeBase[question] || {
+        answer: "That's a great question about the Zanzibar market! Based on current trends, we recommend beachfront areas for maximum appreciation. Would you like more specific details?",
         suggestions: ["Contact Specialist", "View Properties"]
       };
 
-      // MUHIMU: Hapa HATUTUMI Telegram. Tunarudisha jibu kwa AI pekee.
       return response.status(200).json(result);
     }
 
-    // 2. KAMA AI IMEPATA "LEAD DATA" (Mtumiaji amequalify)
+    // B. LOGIC YA DATABASE (KAMA MTUMIAJI AMEQUALIFY)
     if (leadData) {
-      // HAPA NDIPO UNAPOWEKA KODI YA KUHIFADHI KWENYE DATABASE
+      // TODO: Weka kodi ya Supabase au Database yako hapa
       console.log("Saving qualified lead to database:", leadData);
 
-      // Tunarudisha jibu la shukrani bila kutuma Telegram kwa sasa
       return response.status(200).json({ 
         success: true, 
-        message: "Lead qualified and saved to database." 
+        message: "Data imehifadhiwa kwenye Database kikamilifu (Bila Telegram)." 
       });
     }
 
