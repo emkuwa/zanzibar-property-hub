@@ -8,18 +8,16 @@ const { question } = req.body;
 const prompt = `
 ```
 
-You are a Zanzibar property investment advisor.
+You are a professional Zanzibar property investment advisor.
 
-Rules:
+Write the answer in ONE short paragraph (3–4 sentences maximum).
+Explain clearly and naturally like a helpful advisor.
 
-* Answer in MAXIMUM 2 short sentences.
-* Use simple language.
-* Do NOT write long paragraphs.
-* Do NOT use numbered lists.
+After the paragraph, add a short invitation asking if the investor
+would like to receive property investment opportunities in Zanzibar.
 
-After answering, ask briefly if they want investment opportunities.
-
-Question: ${question}
+Question:
+${question}
 `;
 
 ```
@@ -31,12 +29,12 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {
   },
   body: JSON.stringify({
     model: "gpt-4o-mini",
-    max_tokens: 80,
-    temperature: 0.5,
+    max_tokens: 120,
+    temperature: 0.6,
     messages: [
       {
         role: "system",
-        content: "You are a helpful Zanzibar real estate investment advisor."
+        content: "You are a Zanzibar real estate investment expert."
       },
       {
         role: "user",
@@ -57,8 +55,8 @@ res.status(200).json({
   suggestions: [
     "Can foreigners buy property in Zanzibar?",
     "Best areas to invest in Zanzibar",
-    "Average ROI for villas in Zanzibar",
-    "Is Zanzibar good for real estate investment?"
+    "Average ROI for Zanzibar villas",
+    "Buy land in Zanzibar as a foreign investor"
   ]
 });
 ```
@@ -69,7 +67,7 @@ res.status(200).json({
 console.error(error);
 
 res.status(500).json({
-  answer: "Sorry, something went wrong."
+  answer: "Something went wrong."
 });
 ```
 
