@@ -56,22 +56,36 @@ export default function LocationPage() {
 
   }
 
+  // Capitalize first letter of location
+  const formattedLocation =
+    location.charAt(0).toUpperCase() + location.slice(1);
+
   const randomText =
     descriptions[Math.floor(Math.random() * descriptions.length)];
 
   return (
     <div style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
 
-      <h1>Buy {type} in {location} Zanzibar</h1>
+      <h1>
+        Buy {type} in {formattedLocation} Zanzibar – Investment Opportunities
+      </h1>
 
       <p>{randomText}</p>
 
-      <h2>Why Invest in {location}</h2>
+      <h2>Why Invest in {formattedLocation}</h2>
 
       <p>
-        {location} is one of the fastest growing tourism areas in Zanzibar.
-        Investors are developing villas, resorts and boutique hotels to serve
-        international visitors coming to the island.
+        {formattedLocation} is one of the fastest growing tourism areas in
+        Zanzibar. Investors are developing villas, resorts and boutique hotels
+        to serve international visitors coming to the island.
+      </p>
+
+      <p>
+        {formattedLocation} is attracting international property investors
+        looking for beachfront villas, boutique hotels and tourism development
+        opportunities. With strong tourism growth and increasing demand for
+        holiday rentals, this location has become one of the most promising
+        real estate investment areas in Zanzibar.
       </p>
 
       <h2>Investment Opportunities</h2>
@@ -86,22 +100,27 @@ export default function LocationPage() {
       <h2>Other Investment Areas in Zanzibar</h2>
 
       <ul>
-        {locations.map((loc) => (
-          <li key={loc}>
-            <a href={`/buy-property-in-${loc}-zanzibar`}>
-              Buy property in {loc} Zanzibar
-            </a>
-          </li>
-        ))}
+        {locations.map((loc) => {
+          const locFormatted =
+            loc.charAt(0).toUpperCase() + loc.slice(1);
+
+          return (
+            <li key={loc}>
+              <a href={`/buy-property-in-${loc}-zanzibar`}>
+                Buy property in {locFormatted} Zanzibar
+              </a>
+            </li>
+          );
+        })}
       </ul>
 
-      <h2>Popular Property Investments in {location}</h2>
+      <h2>Popular Property Investments in {formattedLocation}</h2>
 
       <ul>
         {propertyTypes.map((ptype) => (
           <li key={ptype}>
             <a href={`/buy-${ptype}-in-${location}-zanzibar`}>
-              Buy {ptype} in {location} Zanzibar
+              Buy {ptype} in {formattedLocation} Zanzibar
             </a>
           </li>
         ))}
