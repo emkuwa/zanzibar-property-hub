@@ -3,13 +3,15 @@ export default async function handler(req, res) {
   const { question } = req.body;
 
   const prompt = `
-You are a real estate investment advisor for Zanzibar.
+You are a Zanzibar property investment advisor.
 
-Answer the question clearly and briefly.
+Answer the investor's question clearly and helpfully.
+
+After answering, ALWAYS end with this line:
+
+"Would you like to receive the best property investment opportunities in Zanzibar?"
 
 Question: ${question}
-
-End your answer by asking if the investor would like to receive investment opportunities in Zanzibar.
 `;
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
