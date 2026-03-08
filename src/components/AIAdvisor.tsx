@@ -11,8 +11,8 @@ const questions = [
 const AIAdvisor = () => {
 
 const [question, setQuestion] = useState("");
-const [messages, setMessages] = useState([]);
-const [suggestions, setSuggestions] = useState([]);
+const [messages, setMessages] = useState<any[]>([]);
+const [suggestions, setSuggestions] = useState<string[]>([]);
 const [loading, setLoading] = useState(false);
 
 const askAI = async () => {
@@ -130,4 +130,48 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
                   ? "bg-primary text-white"
                   : "bg-card"
               }`}
+            >
+              {msg.text}
+            </div>
+          ))}
+
+        </div>
+
+        {suggestions.length > 0 && (
+
+          <div className="flex flex-wrap gap-2 mt-4">
+
+            {suggestions.map((s, i) => (
+              <button
+                key={i}
+                onClick={() => setQuestion(s)}
+                className="text-sm bg-card px-3 py-1 rounded"
+              >
+                {s}
+              </button>
+            ))}
+
+          </div>
+
+        )}
+
+        {messages.length > 0 && (
+          <button
+            className="w-full py-2 rounded-lg bg-secondary text-secondary-foreground font-semibold"
+            onClick={() => window.location.href="/invest"}
+          >
+            Get Investment Opportunities
+          </button>
+        )}
+
+      </motion.div>
+
+    </div>
+  </div>
+</section>
 ```
+
+);
+};
+
+export default AIAdvisor;
