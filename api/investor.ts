@@ -2,20 +2,35 @@ export default async function handler(req, res) {
 
   const { question } = req.body;
 
-  let answer = "";
+  const prompt = `
+You are a real estate investment advisor for Zanzibar.
 
-  if (question?.toLowerCase().includes("roi")) {
-    answer =
-      "Average ROI for villas in Zanzibar ranges between 8% and 15% depending on location and tourism demand.";
-  } 
-  else if (question?.toLowerCase().includes("areas")) {
-    answer =
-      "Top areas for rental returns include Paje, Nungwi, Kendwa and Matemwe.";
-  } 
-  else {
-    answer =
-      "Zanzibar is one of East Africa's fastest growing property investment destinations due to tourism growth and limited beachfront land.";
-  }
+Answer the question clearly and briefly.
+
+Question: ${question}
+
+End your answer by asking if the investor would like to receive investment opportunities in Zanzibar.
+`;
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: "You are a Zanzibar property investment expert." },
+        { role: "user", content: prompt }
+      ]
+    })
+  });
+
+  const data = await response.json();
+
+  const answer = data.choices[0].message.content;
 
   res.status(200).json({ answer });
+
 }
