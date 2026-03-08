@@ -11,12 +11,9 @@ import Footer from "@/components/Footer";
 import InvestorPopup from "@/components/InvestorPopup";
 
 const Index = () => {
-
-return ( <div className="min-h-screen">
+return ( <div className="min-h-screen"> <InvestorPopup />
 
 ```
-  <InvestorPopup />
-
   <Navbar />
   <Hero />
   <WhyInvest />
@@ -27,12 +24,11 @@ return ( <div className="min-h-screen">
   <InvestorForm />
   <PopularAreas />
   <Footer />
-
 </div>
 ```
 
 );
-
 };
 
 export default Index;
+
