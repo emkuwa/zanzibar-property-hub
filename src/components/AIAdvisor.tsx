@@ -21,7 +21,6 @@ const askAI = async () => {
 if (!question) return;
 
 const userMessage = { role: "user", text: question };
-
 setMessages(prev => [...prev, userMessage]);
 
 setLoading(true);
@@ -138,9 +137,7 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
         </div>
 
         {suggestions.length > 0 && (
-
           <div className="flex flex-wrap gap-2 mt-4">
-
             {suggestions.map((s, i) => (
               <button
                 key={i}
@@ -150,9 +147,7 @@ return ( <section className="py-24 bg-sand"> <div className="container mx-auto p
                 {s}
               </button>
             ))}
-
           </div>
-
         )}
 
         {messages.length > 0 && (
