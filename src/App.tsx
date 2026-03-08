@@ -7,6 +7,7 @@ import PajeVillas from "./pages/PajeVillas";
 import NungwiBeachfront from "./pages/NungwiBeachfront";
 import LocationPage from "./pages/LocationPage";
 import InvestInZanzibar from "./pages/InvestInZanzibar";
+import Partners from "@/pages/Partners";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
