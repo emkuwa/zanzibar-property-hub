@@ -11,23 +11,21 @@ import Footer from "@/components/Footer";
 import InvestorPopup from "@/components/InvestorPopup";
 
 const Index = () => {
-return ( <div className="min-h-screen"> <InvestorPopup />
-
-```
-  <Navbar />
-  <Hero />
-  <WhyInvest />
-  <InvestorReasons />
-  <FeaturedProperties />
-  <ROICalculator />
-  <AIAdvisor />
-  <InvestorForm />
-  <PopularAreas />
-  <Footer />
-</div>
-```
-
-);
+  return (
+    <div className="min-h-screen">
+      <InvestorPopup />
+      <Navbar />
+      <Hero />
+      <WhyInvest />
+      <InvestorReasons />
+      <FeaturedProperties />
+      <ROICalculator />
+      <AIAdvisor />
+      <InvestorForm />
+      <PopularAreas />
+      <Footer />
+    </div>
+  );
 };
 
 export default Index;
