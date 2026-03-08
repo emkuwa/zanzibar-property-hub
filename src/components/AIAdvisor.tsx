@@ -104,8 +104,17 @@ const AIAdvisor = () => {
             </button>
 
             {answer && (
-              <div className="bg-card p-4 rounded-lg shadow">
-                {answer}
+              <div className="bg-card p-4 rounded-lg shadow space-y-4">
+
+                <p className="text-foreground">{answer}</p>
+
+                <button
+                  className="w-full py-2 rounded-lg bg-secondary text-secondary-foreground font-semibold hover:opacity-90"
+                  onClick={() => window.location.href="/invest"}
+                >
+                  Get Investment Opportunities
+                </button>
+
               </div>
             )}
 
