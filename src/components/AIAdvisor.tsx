@@ -1,30 +1,19 @@
-const askAI = async (selectedQuestion?: string) => {
-    const q = selectedQuestion || question;
-    if (!q) return;
-
-    setMessages(prev => [...prev, { role: "user", text: q }]);
-    setLoading(true);
-
-    try {
+try {
       const res = await fetch("/api/investor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: q }), // Tuma swali pekee hapa
+        body: JSON.stringify({ question: q }),
       });
 
       const data = await res.json();
 
-      // MUHIMU: Hapa lazima tuseme data.answer ili AI isitoe jibu la default
+      // Hapa lazima tuseme data.answer ili jibu litoke kwenye Backend yako
       setMessages(prev => [...prev, { 
         role: "ai", 
-        text: data.answer || "I have received your query. How else can I help?" 
+        text: data.answer || "How can I assist you further with Zanzibar properties?" 
       }]);
       
       if (data.suggestions) setSuggestions(data.suggestions);
     } catch (error) {
-      setMessages(prev => [...prev, { role: "ai", text: "I'm having trouble connecting right now." }]);
+      setMessages(prev => [...prev, { role: "ai", text: "Connection error. Please try again." }]);
     }
-
-    setQuestion("");
-    setLoading(false);
-  };
