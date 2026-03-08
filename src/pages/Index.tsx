@@ -31,4 +31,3 @@ return ( <div className="min-h-screen"> <InvestorPopup />
 };
 
 export default Index;
-
