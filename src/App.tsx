@@ -6,6 +6,7 @@ import BuyPropertyZanzibar from "./pages/BuyPropertyZanzibar";
 import PajeVillas from "./pages/PajeVillas";
 import NungwiBeachfront from "./pages/NungwiBeachfront";
 import LocationPage from "./pages/LocationPage";
+import InvestInZanzibar from "./pages/InvestInZanzibar";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -32,6 +33,8 @@ const App = () => (
 
           {/* Homepage */}
           <Route path="/" element={<Index />} />
+
+          <Route path="/invest-in-zanzibar" element={<InvestInZanzibar />} />
 
           {/* Main SEO page */}
           <Route path="/buy-property-in-zanzibar" element={<BuyPropertyZanzibar />} />
