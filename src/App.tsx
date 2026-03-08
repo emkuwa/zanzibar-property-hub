@@ -43,7 +43,7 @@ const App = () => (
           <Route path="/jambiani-villas-for-sale" element={<JambianiVillas />} />
 
           {/* Programmatic SEO route */}
-          <Route path="/buy-property-in-:location-zanzibar" element={<LocationPage />} />
+          <Route path="/:slug" element={<LocationPage />} />
 
 <Route path="/developers" element={<Developers />} />
           
