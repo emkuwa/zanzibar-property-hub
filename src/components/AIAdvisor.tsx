@@ -1,7 +1,3 @@
-
-kwa hii:
-
-:::writing{variant="standard" id="57241"}
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, Sparkles } from "lucide-react";
@@ -13,14 +9,12 @@ const questions = [
 ];
 
 const AIAdvisor = () => {
-
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState<any[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
   const askAI = async () => {
-
     if (!question) return;
 
     const userMessage = { role: "user", text: question };
@@ -29,7 +23,6 @@ const AIAdvisor = () => {
     setLoading(true);
 
     try {
-
       const res = await fetch("/api/investor", {
         method: "POST",
         headers: {
@@ -42,24 +35,21 @@ const AIAdvisor = () => {
 
       const aiMessage = {
         role: "ai",
-        text: data.answer
+        text: data.answer || "I'm processing your request."
       };
 
       setMessages(prev => [...prev, aiMessage]);
       setSuggestions(data.suggestions || []);
 
     } catch (error) {
-
       setMessages(prev => [...prev, {
         role: "ai",
         text: "Error getting response."
       }]);
-
     }
 
     setQuestion("");
     setLoading(false);
-
   };
 
   return (
@@ -72,7 +62,6 @@ const AIAdvisor = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-
             <div className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-1.5 mb-6">
               <Sparkles className="w-4 h-4 text-accent-foreground" />
               <span className="text-sm font-semibold text-accent-foreground">
@@ -87,7 +76,6 @@ const AIAdvisor = () => {
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
               Ask questions about property investment in Zanzibar.
             </p>
-
           </motion.div>
 
           <motion.div
@@ -96,7 +84,6 @@ const AIAdvisor = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-
             {questions.map((q) => (
               <div
                 key={q}
@@ -114,58 +101,54 @@ const AIAdvisor = () => {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="Ask about investing in Zanzibar..."
-              className="w-full p-3 rounded-lg border"
+              className="w-full p-3 rounded-lg border bg-white"
             />
 
             <button
               onClick={askAI}
-              className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90"
+              disabled={loading}
+              className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 disabled:opacity-50"
             >
               {loading ? "Thinking..." : "Ask the AI Advisor"}
             </button>
 
-            <div className="space-y-3">
-
+            <div className="space-y-3 mt-6">
               {messages.map((msg, index) => (
                 <div
                   key={index}
                   className={`p-3 rounded-lg whitespace-pre-line ${
                     msg.role === "user"
-                      ? "bg-primary text-white"
-                      : "bg-card"
+                      ? "bg-primary text-white ml-auto max-w-[80%]"
+                      : "bg-card mr-auto max-w-[80%]"
                   }`}
                 >
                   {msg.text}
                 </div>
               ))}
-
             </div>
 
             {suggestions.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-4">
-
                 {suggestions.map((s, i) => (
                   <button
                     key={i}
                     onClick={() => setQuestion(s)}
-                    className="text-sm bg-card px-3 py-1 rounded"
+                    className="text-sm bg-card px-3 py-1 rounded hover:bg-accent transition-colors"
                   >
                     {s}
                   </button>
                 ))}
-
               </div>
             )}
 
             {messages.length > 0 && (
               <button
-                className="w-full py-2 rounded-lg bg-secondary text-secondary-foreground font-semibold"
+                className="w-full py-2 mt-4 rounded-lg bg-secondary text-secondary-foreground font-semibold"
                 onClick={() => window.location.href="/invest"}
               >
                 Get Investment Opportunities
               </button>
             )}
-
           </motion.div>
 
         </div>
@@ -175,15 +158,3 @@ const AIAdvisor = () => {
 };
 
 export default AIAdvisor;
-:::
-
----
-
-# Baada ya kuweka code hii
-
-Commit:
-
-```bash
-git add .
-git commit -m "fix AIAdvisor build error"
-git push
