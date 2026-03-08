@@ -14,38 +14,31 @@ const AIAdvisor = () => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const askAI = async () => {
-    if (!question) return;
+  const askAI = async (selectedQuestion?: string) => {
+    const q = selectedQuestion || question;
+    if (!q) return;
 
-    const userMessage = { role: "user", text: question };
-    setMessages(prev => [...prev, userMessage]);
-
+    setMessages(prev => [...prev, { role: "user", text: q }]);
     setLoading(true);
 
     try {
       const res = await fetch("/api/investor", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ question }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: q }),
       });
 
       const data = await res.json();
 
-      const aiMessage = {
-        role: "ai",
-        text: data.answer || "I'm processing your request."
-      };
-
-      setMessages(prev => [...prev, aiMessage]);
-      setSuggestions(data.suggestions || []);
-
-    } catch (error) {
-      setMessages(prev => [...prev, {
-        role: "ai",
-        text: "Error getting response."
+      // Hapa ndipo tunasoma 'answer' badala ya ujumbe wa kizamani
+      setMessages(prev => [...prev, { 
+        role: "ai", 
+        text: data.answer || "I am analyzing the market for you..." 
       }]);
+      
+      setSuggestions(data.suggestions || []);
+    } catch (error) {
+      setMessages(prev => [...prev, { role: "ai", text: "Service temporarily unavailable." }]);
     }
 
     setQuestion("");
@@ -56,101 +49,53 @@ const AIAdvisor = () => {
     <section className="py-24 bg-sand">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-1.5 mb-6">
-              <Sparkles className="w-4 h-4 text-accent-foreground" />
-              <span className="text-sm font-semibold text-accent-foreground">
-                AI-Powered
-              </span>
+          <motion.div>
+            <div className="inline-flex items-center gap-2 bg-accent rounded-full px-4 py-1.5 mb-6 text-accent-foreground">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-semibold">AI Advisor</span>
             </div>
-
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-              AI Investment Advisor
-            </h2>
-
-            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              Ask questions about property investment in Zanzibar.
-            </p>
+            <h2 className="text-4xl font-bold">Zanzibar Investment AI</h2>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            {questions.map((q) => (
-              <div
-                key={q}
-                onClick={() => setQuestion(q)}
-                className="flex items-start gap-3 bg-card rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          <div className="space-y-4">
+            {/* Clickable suggestions */}
+            {!messages.length && questions.map((q) => (
+              <button 
+                key={q} 
+                onClick={() => askAI(q)}
+                className="w-full text-left p-4 bg-white rounded-xl shadow-sm hover:bg-blue-50 transition-colors flex items-center gap-3"
               >
-                <MessageSquare className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
-                <span className="text-foreground font-medium">
-                  {q}
-                </span>
-              </div>
+                <MessageSquare className="w-5 h-5 text-blue-500" />
+                {q}
+              </button>
             ))}
 
-            <input
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              placeholder="Ask about investing in Zanzibar..."
-              className="w-full p-3 rounded-lg border bg-white"
-            />
-
-            <button
-              onClick={askAI}
-              disabled={loading}
-              className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 disabled:opacity-50"
-            >
-              {loading ? "Thinking..." : "Ask the AI Advisor"}
-            </button>
-
-            <div className="space-y-3 mt-6">
-              {messages.map((msg, index) => (
-                <div
-                  key={index}
-                  className={`p-3 rounded-lg whitespace-pre-line ${
-                    msg.role === "user"
-                      ? "bg-primary text-white ml-auto max-w-[80%]"
-                      : "bg-card mr-auto max-w-[80%]"
-                  }`}
-                >
+            {/* Chat Messages */}
+            <div className="space-y-3 max-h-[400px] overflow-y-auto">
+              {messages.map((msg, i) => (
+                <div key={i} className={`p-3 rounded-lg ${msg.role === 'user' ? 'bg-blue-600 text-white ml-auto' : 'bg-white text-gray-800 mr-auto'} max-w-[85%]`}>
                   {msg.text}
                 </div>
               ))}
             </div>
 
-            {suggestions.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
-                {suggestions.map((s, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setQuestion(s)}
-                    className="text-sm bg-card px-3 py-1 rounded hover:bg-accent transition-colors"
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {messages.length > 0 && (
-              <button
-                className="w-full py-2 mt-4 rounded-lg bg-secondary text-secondary-foreground font-semibold"
-                onClick={() => window.location.href="/invest"}
+            {/* Input area */}
+            <div className="flex gap-2">
+              <input 
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                placeholder="Ask me anything..."
+                className="flex-1 p-3 border rounded-lg"
+              />
+              <button 
+                onClick={() => askAI()}
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold"
+                disabled={loading}
               >
-                Get Investment Opportunities
+                {loading ? "..." : "Send"}
               </button>
-            )}
-          </motion.div>
-
+            </div>
+          </div>
         </div>
       </div>
     </section>
