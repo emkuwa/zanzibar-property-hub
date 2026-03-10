@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { API_BASE } from "@/lib/api";
 
 // Tunatengeneza muundo wa data ya fomu (TypeScript Interface)
 interface FormData {
@@ -39,28 +40,32 @@ const InvestorForm = () => {
     e.preventDefault();
 
     try {
-      // MAREKEBISHO: Oanisha na majina ya fomu ya Python Backend
+      // Oanisha na majina ya fomu ya backend
       const data = {
         full_name: form.name,
         email: form.email,
         phone: form.whatsapp,
         budget: form.budget,
         location_interest: form.preferredArea,
-        notes: `Timeline: ${form.timeline}, Funding: ${form.funding}, Property: ${form.propertyType}, Country: ${form.country}`
+        notes: form.notes || "",
+        country: form.country,
+        property_type: form.propertyType,
+        timeline: form.timeline,
+        funding: form.funding
       };
 
-      // MAREKEBISHO: URL inayopiga DigitalOcean API Subdomain
-      const res = await fetch("https://api.zanziinvest.com/api/investor", {
+      // Kwa sasa tunapiga moja kwa moja DigitalOcean API
+      const res = await fetch(`${API_BASE}/api/investor`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ leadData: data })
       });
 
       const result = await res.json();
 
-      if (result.status === "success") {
+      if (result.success || result.status === "success") {
         toast({
           title: "Request submitted",
           description: "Our team will contact you with investment opportunities."

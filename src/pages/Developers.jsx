@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { API_BASE } from "@/lib/api";
 
 const Developers = () => {
 
@@ -18,7 +19,7 @@ const Developers = () => {
 
     try {
 
-      const res = await fetch("https://zanziinvest.com/api/partners/apply", {
+      const res = await fetch(`${API_BASE}/api/partners/apply`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
