@@ -43,5 +43,5 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${entries.join("\n")}
 </urlset>`;
 
-fs.writeFileSync("./public/sitemap.xml", sitemap);
+fs.writeFileSync("./public/sitemap_static.xml", sitemap);
 console.log("Sitemap generated!");

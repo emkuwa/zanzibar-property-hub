@@ -4,7 +4,7 @@ import path from "path";
 
 export default function handler(_req: VercelRequest, res: VercelResponse) {
   try {
-    const sitemapPath = path.join(process.cwd(), "public", "sitemap.xml");
+    const sitemapPath = path.join(process.cwd(), "public", "sitemap_static.xml");
     const xml = fs.readFileSync(sitemapPath, "utf-8");
 
     res.status(200);
