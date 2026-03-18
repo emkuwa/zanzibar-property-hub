@@ -18,6 +18,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,9 @@ const App = () => (
 
           {/* Developers page */}
           <Route path="/developers" element={<Developers />} />
+
+          {/* Leads dashboard (embedded) */}
+          <Route path="/dashboard" element={<Dashboard />} />
 
           {/* Programmatic SEO pages */}
           <Route path="/:slug" element={<LocationPage />} />

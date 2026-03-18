@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "auto-push": "node scripts/auto-push-watch.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

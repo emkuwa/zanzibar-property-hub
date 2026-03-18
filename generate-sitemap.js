@@ -1,56 +1,47 @@
-const fs = require("fs");
+import fs from "fs";
+
+const BASE = "https://www.zanziinvest.com";
+
+const staticPages = [
+  "/",
+  "/partners",
+  "/invest-in-zanzibar",
+  "/buy-property-in-zanzibar",
+  "/paje-villas-for-sale",
+  "/nungwi-beachfront-property",
+  "/jambiani-villas-for-sale",
+  "/developers",
+];
 
 const locations = [
-"paje",
-"nungwi",
-"kendwa",
-"jambiani",
-"bwejuu",
-"kiwengwa",
-"matemwe",
-"michamvi",
-"fumba",
-"kizimkazi"
+  "paje", "nungwi", "kendwa", "jambiani", "bwejuu", "kiwengwa",
+  "matemwe", "michamvi", "fumba", "kizimkazi",
 ];
 
 const propertyTypes = [
-"property",
-"villa",
-"hotel",
-"resort",
-"apartment",
-"land"
+  "property", "villa", "hotel", "resort", "apartment", "land",
 ];
 
-let urls = [];
+let urls = [...staticPages];
 
-locations.forEach(location => {
+locations.forEach((location) => {
+  propertyTypes.forEach((type) => {
+    urls.push(`/buy-${type}-in-${location}-zanzibar`);
+  });
+});
+urls = [...new Set(urls)];
 
-urls.push(`/buy-property-in-${location}-zanzibar`);
-
-propertyTypes.forEach(type => {
-
-urls.push(`/buy-${type}-in-${location}-zanzibar`);
-
+const entries = [];
+urls.forEach((path) => {
+  const loc = (path === "/" ? BASE + "/" : BASE + path).trim();
+  if (!loc) return;
+  entries.push(`<url><loc>${loc}</loc></url>`);
 });
 
-});
-
-let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-urls.forEach(url => {
-
-sitemap += `
-<url>
-<loc>https://zanziinvest.com${url}</loc>
-</url>`;
-
-});
-
-sitemap += `
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.join("\n")}
 </urlset>`;
 
 fs.writeFileSync("./public/sitemap.xml", sitemap);
-
 console.log("Sitemap generated!");

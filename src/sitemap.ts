@@ -24,23 +24,17 @@ export const propertyTypes = [
 ];
 
 export function generateSitemap() {
+  const baseUrl = "https://www.zanziinvest.com";
 
-const baseUrl = "https://zanziinvest.com";
+  const urls: string[] = [];
 
-let urls = [];
+  locations.forEach((location) => {
+    urls.push(`${baseUrl}/buy-property-in-${location}-zanzibar`);
 
-locations.forEach(location => {
+    propertyTypes.forEach((type) => {
+      urls.push(`${baseUrl}/buy-${type}-in-${location}-zanzibar`);
+    });
+  });
 
-urls.push(`${baseUrl}/buy-property-in-${location}-zanzibar`);
-
-propertyTypes.forEach(type => {
-
-urls.push(`${baseUrl}/buy-${type}-in-${location}-zanzibar`);
-
-});
-
-});
-
-return urls;
-
+  return urls;
 }

@@ -459,7 +459,7 @@ function DashboardPreview() {
             <div className="h-3 w-3 rounded-full bg-destructive/60" />
             <div className="h-3 w-3 rounded-full bg-accent/60" />
             <div className="h-3 w-3 rounded-full bg-primary/60" />
-            <span className="ml-3 text-xs text-muted-foreground">dashboard.zanziinvest.com</span>
+            <a href="/dashboard" className="ml-3 text-xs text-muted-foreground hover:text-primary hover:underline">dashboard.zanziinvest.com</a>
           </div>
           <div className="p-6 md:p-8">
             <div className="mb-6 flex items-center justify-between">
