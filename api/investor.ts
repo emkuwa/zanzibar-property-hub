@@ -62,7 +62,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (leadData) {
     try {
       // 1. Tuma DigitalOcean (Background)
-      fetch("http://104.248.41.165:5000/api/investor", {
+      // Server-side only (no mixed-content); Flask listens on 5051. Override with FLASK_LEAD_URL if needed.
+      fetch(process.env.FLASK_LEAD_URL || "http://104.248.41.165:5051/api/investor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(leadData)
