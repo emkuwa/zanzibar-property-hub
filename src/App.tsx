@@ -15,13 +15,24 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import { gaPageView } from "@/lib/gtag";
 
 const queryClient = new QueryClient();
+
+function GaPageViews() {
+  const location = useLocation();
+  useEffect(() => {
+    const path = location.pathname + location.search + location.hash;
+    gaPageView(path);
+  }, [location.pathname, location.search, location.hash]);
+  return null;
+}
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -31,6 +42,7 @@ const App = () => (
       <Sonner />
 
       <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <GaPageViews />
         <Routes>
 
           {/* Homepage */}
