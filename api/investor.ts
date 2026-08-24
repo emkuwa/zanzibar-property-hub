@@ -2,6 +2,15 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const CENTRAL_URL = "https://qmnpwinlvewbnjbruril.supabase.co/functions/v1/central-lead-intake";
+const CENTRAL_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbnB3aW5sdmV3Ym5qYnJ1cmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NDI4OTksImV4cCI6MjA5NDQxODg5OX0.TqDNfrPAr0bx6RcWuAAZ0RLQ-zL5eaZrhrMbz7yOIm8";
+async function captureCentralLead(leadData: Record<string, unknown>) {
+  try {
+    const response = await fetch(CENTRAL_URL, { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${CENTRAL_ANON_KEY}`, apikey: CENTRAL_ANON_KEY }, body: JSON.stringify({ ...leadData, sourcePortal: "zanziinvest.com", sourceUrl: "https://zanziinvest.com", leadType: "investment_inquiry" }) });
+    return response.ok;
+  } catch { return false; }
+}
+
 
 // Fallback ya AI upande wa server – sawa na ile ya frontend
 function getFallbackAnswer(question: string): string {
@@ -61,6 +70,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // --- STEP B: LEAD CAPTURE (Hapa ndipo Telegram inaruhusiwa) ---
   if (leadData) {
     try {
+      await captureCentralLead(leadData as Record<string, unknown>);
       // 1. Tuma DigitalOcean (Background)
       // Server-side only (no mixed-content); Flask listens on 5051. Override with FLASK_LEAD_URL if needed.
       fetch(process.env.FLASK_LEAD_URL || "http://104.248.41.165:5051/api/investor", {
