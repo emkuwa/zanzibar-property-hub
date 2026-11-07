@@ -34,5 +34,10 @@ export function aiReferralEngine(referrer: string): string | undefined {
 }
 export function currentAiReferral(): string | undefined {
   if (typeof document === "undefined") return undefined;
-  return aiReferralEngine(document.referrer);
+  const engine = aiReferralEngine(document.referrer);
+  try {
+    if (engine) window.sessionStorage.setItem("zi-ai-referral-v1", engine);
+    const stored = window.sessionStorage.getItem("zi-ai-referral-v1");
+    return engine || (stored && ["chatgpt", "perplexity", "claude", "gemini", "copilot"].includes(stored) ? stored : undefined);
+  } catch { return engine; }
 }

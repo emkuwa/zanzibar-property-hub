@@ -23,7 +23,7 @@ Query fan-out used: (1) exact property/unit, (2) provider identity, (3) location
 - Connected Organization, WebSite, Service, WebPage/CollectionPage, editorial Article/BlogPosting, FAQPage and BreadcrumbList graph. FAQ text comes from visible content, including home. Schema eligibility does not guarantee rich results or citations.
 - Brand facts state operator, service area, actual seven enquiry fields, consent, saved-versus-sent distinction, commissions and public contact. The enquiry collects no payment and makes no reservation.
 - Explicit content modified dates drive visible Last updated and schema; sitemap uses record dates. Hub/home review date is editorially fixed, never bumped automatically per request/build.
-- Known AI referrer category is attached to page_view and generate_lead without sending the referrer query, contact details or lead reference. Unknown sources remain unknown. This is referral evidence, not proof of a citation or a qualified sale. Origin-only Bing/Google are not labelled AI. No analytics identifiers or backend contracts changed.
+- Known AI referrer category is retained in sessionStorage across internal pages and attached to page_view and generate_lead without sending the referrer query, contact details or lead reference. Unknown sources remain unknown. This is referral evidence, not proof of a citation or a qualified sale. Origin-only Bing/Google are not labelled AI. No analytics identifiers or backend contracts changed.
 - Hero keeps WebP and eager loading with explicit source dimensions. Mobile table overflow is contained. No performance score or sub-2.5-second LCP is claimed without measurement.
 
 ## Missing first-party data / TODO

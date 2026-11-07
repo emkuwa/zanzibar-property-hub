@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { aiReferralEngine } from "../lib/gtag";
+import { aiReferralEngine, currentAiReferral } from "../lib/gtag";
 describe("AI referral attribution", () => {
+  it("keeps a validated AI category across internal navigation", () => {
+    sessionStorage.setItem("zi-ai-referral-v1", "perplexity");
+    expect(currentAiReferral()).toBe("perplexity");
+    sessionStorage.setItem("zi-ai-referral-v1", "invalid-value");
+    expect(currentAiReferral()).toBeUndefined();
+    sessionStorage.removeItem("zi-ai-referral-v1");
+  });
   it("accepts known origins, never similarly named domains", () => {
     expect(aiReferralEngine("https://chatgpt.com/")).toBe("chatgpt");
     expect(aiReferralEngine("https://chatgpt.com.attacker.example/")).toBeUndefined();
