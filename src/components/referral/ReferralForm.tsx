@@ -1,6 +1,6 @@
 import { fetchWithTimeout } from "@/lib/fetch-timeout";
 import { useRef, useState, type FormEvent } from "react";
-import { ArrowUpRight, Check, Loader2 } from "lucide-react";
+import { ArrowUpRight, Check, Info, Loader2 } from "lucide-react";
 import {
   AREAS,
   BUDGETS,
@@ -11,7 +11,9 @@ import {
   referralSchema,
 } from "@/lib/referral-contract";
 
-export default function ReferralForm() {
+export default function ReferralForm({
+  onSubmitted,
+}: { onSubmitted?: () => void } = {}) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [reference, setReference] = useState("");
@@ -78,6 +80,7 @@ export default function ReferralForm() {
       }
       setAwaitingPartners(data.distributionStatus === "awaiting_partners");
       setReference(data.reference);
+      onSubmitted?.();
       // No names, email addresses, phone numbers or reference IDs go to analytics.
       window.gtag?.("event", "generate_lead", {
         form_name: "developer_network",
@@ -102,16 +105,32 @@ export default function ReferralForm() {
           <Check aria-hidden="true" />
         </span>
         <p className="eyebrow">Enquiry received</p>
-        <h2>You're one step closer.</h2>
+        <div className="gold-rule" aria-hidden="true" />
+        <h2>
+          Your next chapter
+          <br />
+          starts here.
+        </h2>
         <p>
           {awaitingPartners
             ? "Your enquiry has been recorded with Zanzibaba. Developer introductions are being prepared; your enquiry has not been sent to a developer yet."
-            : "Your enquiry has been recorded with Zanzibaba. Participating developers may contact you directly with their property options. You may hear from more than one developer."}
+            : "Your enquiry has been recorded with Zanzibaba. Participating developers may contact you directly with their property options."}
         </p>
         <div className="reference-box">
           <span>Your referral reference</span>
           <strong>{reference}</strong>
         </div>
+        <div className="success-contact-note">
+          <Info aria-hidden="true" />
+          <span>
+            {awaitingPartners
+              ? "Your reference is saved with Zanzibaba."
+              : "You may hear from more than one developer."}
+          </span>
+        </div>
+        <a className="back-home-link" href="#home">
+          Back to home
+        </a>
         <p className="small-note">
           Keep this reference and mention ZanziInvest when speaking with
           developers. Your enquiry does not reserve a property or commit you to
