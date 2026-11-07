@@ -159,17 +159,17 @@ export default function Index() {
               />
               <div className="landing-container hero-content">
                 <h1 id="hero-title">
-                  <span>Own your place</span>
+                  <span>Own a Piece of Paradise</span>
                   <span>in Zanzibar.</span>
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Share your goals with ZanziInvest. Explore apartments and villas for investment, a holiday home or everyday living.
+                  Discover villas and apartments for your island home, holiday escape or next investment. Talk to us to find your place.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
                   Find my property options <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">Explore your options. No purchase commitment.</p>
+                <p className="hero-reassurance">Your island home starts with a conversation.</p>
               </div>
             </section>
             <section
