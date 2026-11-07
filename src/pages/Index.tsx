@@ -145,7 +145,7 @@ export default function Index() {
       <main id="main">
         {screen === "home" ? (
           <>
-            <section className="landing-hero" aria-labelledby="hero-title" data-answer-section="landing">
+            <section className="landing-hero" aria-labelledby="hero-title">
               <img
                 className="landing-hero-image"
                 src={hero}
@@ -162,16 +162,12 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Record one Zanzibar property enquiry for developer introductions. Several participating developers may contact you after consent.
+                  Receive property offers from
+                  <br className="mobile-break" /> our partner developers.
                 </p>
-                <dl className="hero-facts" aria-label="Enquiry specifications" data-evidence>
-                  <div><dt>7 details</dt><dd>Preferences and contacts</dd></div>
-                  <div><dt>1 reference</dt><dd>For your saved enquiry</dd></div>
-                </dl>
                 <a className="primary-button hero-button" href="#enquiry">
                   Find my property options <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-methodology">The form records four preferences, three contact details and separate sharing consent. Saving an enquiry does not confirm developer delivery, availability or a reservation.</p>
               </div>
             </section>
             <section
