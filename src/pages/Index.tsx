@@ -116,7 +116,7 @@ export default function Index() {
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
-            <a href="#enquiry">Find my property options</a>
+            <a href="#enquiry">Get Prices &amp; Payment Plans</a>
             <a href="/guides">Guides</a>
             <a href="#privacy">Privacy</a>
           </nav>
@@ -139,7 +139,7 @@ export default function Index() {
             onClick={() => setMenuOpen(false)}
           >
             <a href="#home">Home</a>
-            <a href="#enquiry">Find my property options</a>
+            <a href="#enquiry">Get Prices &amp; Payment Plans</a>
             <a href="/guides">Property guides</a>
             <a href="#privacy">Privacy & contact</a>
           </nav>
@@ -164,12 +164,12 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Discover villas and apartments for your island home, holiday escape or next investment. Talk to us to find your place.
+                  Explore off-plan villas and apartments with flexible payment plans—for your future island home or rental investment.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
-                  Find my property options <ArrowRight aria-hidden="true" />
+                  Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">Your island home starts with a conversation.</p>
+                <p className="hero-reassurance">Tell us your budget. Let’s explore your options.</p>
               </div>
             </section>
             <section
@@ -211,7 +211,7 @@ export default function Index() {
                 ))}
               </div>
               <a className="primary-button closing-button" href="#enquiry" onClick={() => trackEnquiryEntry("faq")}>
-                Find my property options <ArrowRight aria-hidden="true" />
+                Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
               </a>
             </section>
           </>
