@@ -8,7 +8,10 @@
     "answer": "For property in Paje, compare the exact walking route, neighbourhood activity, services and total ownership cost. A beach photograph or the word “Paje” does not tell you whether a unit suits personal use or the rental operation you have in mind.",
     "table": {
       "caption": "Paje property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Beach access",
@@ -26,19 +29,19 @@
     },
     "sections": [
       {
-        "heading": "Separate village access from beach proximity",
+        "heading": "How do I verify beach and village access in Paje?",
         "paragraphs": [
           "Draw the routes you would use to reach food shops, parking and the beach. Ask whether access is public, shared or dependent on an agreement. A short distance measured across a map can conceal an impractical walking route. Request a location description with the property brief rather than inferring it from a lifestyle image."
         ]
       },
       {
-        "heading": "Choose a rental use case before comparing units",
+        "heading": "Which Paje property suits my intended use?",
         "paragraphs": [
           "An apartment for occasional personal use has different requirements from a home intended for frequent guest turnover. Write down guest capacity, luggage access, cleaning storage and check-in arrangements. Compare management costs and actual operating restrictions alongside the floor plan; do not treat a tourism setting as proof of booked nights."
         ]
       },
       {
-        "heading": "Test the environment at more than one time",
+        "heading": "What site conditions should I check before reserving?",
         "paragraphs": [
           "Check the approach road after rainfall where practical and revisit during busier periods. Ask how the property manages drainage, wastewater, waste collection and maintenance access. These checks relate to the site itself; neighbouring businesses and infrastructure can change."
         ]
@@ -67,7 +70,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Paje property buying guide"
+    "seoTitle": "Paje property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/areas/jambiani",
@@ -78,7 +82,10 @@
     "answer": "For a Jambiani property enquiry, compare the individual site, access arrangements, servicing and maintenance responsibilities. Use the village name to narrow a search, then evaluate the home itself. Price, completion status and rental suitability need unit-specific confirmation.",
     "table": {
       "caption": "Jambiani property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Position within the area",
@@ -137,7 +144,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Jambiani property buying guide"
+    "seoTitle": "Jambiani property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/areas/nungwi",
@@ -148,7 +156,10 @@
     "answer": "For Nungwi property, compare the actual unit location, access, operating restrictions and management costs. A coastal tourism address can help define the setting, but it does not establish occupancy, rental income or a profitable purchase. Request evidence for the specific unit and intended use.",
     "table": {
       "caption": "Nungwi property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Access and arrivals",
@@ -212,7 +223,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Nungwi property buying guide"
+    "seoTitle": "Nungwi property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/areas/kendwa",
@@ -223,7 +235,10 @@
     "answer": "When comparing property in Kendwa, distinguish beachfront, sea-view and inland descriptions, then request evidence for access and what the price includes. Those labels describe different features. None alone confirms tenure, rental performance, current availability or the final acquisition cost.",
     "table": {
       "caption": "Kendwa property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Location description",
@@ -282,7 +297,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Kendwa property buying guide"
+    "seoTitle": "Kendwa property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/areas/fumba",
@@ -293,7 +309,10 @@
     "answer": "For property in Fumba, separate services already operating at the particular site from facilities shown in a masterplan. Compare the unit, delivery phase, service charges and access arrangements. A wider planning document is background information, not proof that your chosen home has completed infrastructure.",
     "table": {
       "caption": "Fumba property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Delivery phase",
@@ -357,7 +376,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Fumba property buying guide"
+    "seoTitle": "Fumba property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/areas/matemwe",
@@ -368,7 +388,10 @@
     "answer": "For Matemwe property, compare the unit’s access, surroundings, utility resilience and maintenance plan before assessing a rental projection. A coastal setting does not confirm management availability or guest demand. Request documents and operating assumptions for the actual unit you may buy.",
     "table": {
       "caption": "Matemwe property comparison checklist",
-      "headers": ["Decision", "What to confirm"],
+      "headers": [
+        "Decision",
+        "What to confirm"
+      ],
       "rows": [
         [
           "Coastal maintenance",
@@ -427,7 +450,8 @@
       "/guides/zanzibar-property-payment-plans"
     ],
     "published": "2026-11-07",
-    "seoTitle": "Matemwe property buying guide"
+    "seoTitle": "Matemwe property buying guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/guides/zanzibar-apartments",
@@ -438,7 +462,10 @@
     "answer": "Compare Zanzibar apartments by the specific unit, usable floor area, delivery stage, service charges and permitted use. A lower starting price does not establish a lower total cost. Request a unit-specific quotation and management terms before choosing between offers.",
     "table": {
       "caption": "Apartment offer comparison",
-      "headers": ["Item", "Question for the developer"],
+      "headers": [
+        "Item",
+        "Question for the developer"
+      ],
       "rows": [
         [
           "Floor area",
@@ -477,6 +504,18 @@
         "paragraphs": [
           "Ask whether the planned use is permitted by the relevant documents and management agreement. If rental income is part of your decision, request assumptions for rates, occupancy, booking commissions, cleaning, management and maintenance. Avoid treating a furnished show unit or the existence of a rental operator as proof of a net return."
         ]
+      },
+      {
+        "heading": "What should I request before comparing developer offers?",
+        "paragraphs": [
+          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
+        ],
+        "bullets": [
+          "Confirm the exact unit and what the quoted price includes.",
+          "Ask for dated payment milestones and cancellation terms.",
+          "Separate purchase costs from recurring ownership and management costs.",
+          "Obtain independent legal advice on the proposed transaction documents."
+        ]
       }
     ],
     "faqs": [
@@ -497,7 +536,8 @@
     ],
     "sources": [],
     "published": "2026-11-07",
-    "seoTitle": "Zanzibar apartments: buyer checklist"
+    "seoTitle": "Zanzibar apartments: buyer checklist",
+    "modified": "2026-11-07"
   },
   {
     "path": "/guides/zanzibar-villas",
@@ -508,7 +548,10 @@
     "answer": "For Zanzibar villas, compare usable indoor space, outside areas, access arrangements and who pays for maintenance. A private pool or garden adds responsibilities as well as amenities. Ask for unit-specific plans, written inclusions and independent review of the documents before reserving.",
     "table": {
       "caption": "Villa shortlist checklist",
-      "headers": ["Feature", "Evidence to request"],
+      "headers": [
+        "Feature",
+        "Evidence to request"
+      ],
       "rows": [
         [
           "Outside space",
@@ -518,7 +561,10 @@
           "Pool",
           "Size, equipment, water arrangements and maintenance responsibility"
         ],
-        ["Access", "Road and pedestrian access arrangements plus parking"],
+        [
+          "Access",
+          "Road and pedestrian access arrangements plus parking"
+        ],
         [
           "Operating costs",
           "Security, garden, pool, repairs, utilities and management costs"
@@ -544,6 +590,18 @@
         "paragraphs": [
           "If you expect to host paying guests, confirm the operating permissions and management terms for that use. If the villa is mainly a personal home, inspect privacy, neighbouring activity and convenient daily access. More outside space is not automatically more useful if it increases costs or conflicts with your intended lifestyle."
         ]
+      },
+      {
+        "heading": "What should I request before comparing developer offers?",
+        "paragraphs": [
+          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
+        ],
+        "bullets": [
+          "Confirm the exact unit and what the quoted price includes.",
+          "Ask for dated payment milestones and cancellation terms.",
+          "Separate purchase costs from recurring ownership and management costs.",
+          "Obtain independent legal advice on the proposed transaction documents."
+        ]
       }
     ],
     "faqs": [
@@ -564,7 +622,8 @@
     ],
     "sources": [],
     "published": "2026-11-07",
-    "seoTitle": "Zanzibar villas: buyer checklist"
+    "seoTitle": "Zanzibar villas: buyer checklist",
+    "modified": "2026-11-07"
   },
   {
     "path": "/guides/zanzibar-property-payment-plans",
@@ -575,13 +634,19 @@
     "answer": "Compare a Zanzibar property payment plan using the full price, dated instalment schedule, construction conditions and completion terms. A small deposit does not show the total commitment or protect against delay. Request the actual contract and assess it with independent counsel before paying.",
     "table": {
       "caption": "Payment plan review",
-      "headers": ["Decision", "Written detail to request"],
+      "headers": [
+        "Decision",
+        "Written detail to request"
+      ],
       "rows": [
         [
           "Upfront amount",
           "Reservation amount, deposit and whether each payment is refundable"
         ],
-        ["Instalments", "Amounts, due dates, currency and transfer charges"],
+        [
+          "Instalments",
+          "Amounts, due dates, currency and transfer charges"
+        ],
         [
           "Construction",
           "Whether payments depend on a documented milestone or only a date"
@@ -611,6 +676,18 @@
         "paragraphs": [
           "Have independent counsel review the seller’s authority, relevant rights, payment recipient, cancellation terms and completion obligations. Obtain written bank details through a trusted verification process and confirm the applicable payment terms. An enquiry or introduction does not approve a contract or create a reservation."
         ]
+      },
+      {
+        "heading": "What should I request before comparing developer offers?",
+        "paragraphs": [
+          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
+        ],
+        "bullets": [
+          "Confirm the exact unit and what the quoted price includes.",
+          "Ask for dated payment milestones and cancellation terms.",
+          "Separate purchase costs from recurring ownership and management costs.",
+          "Obtain independent legal advice on the proposed transaction documents."
+        ]
       }
     ],
     "faqs": [
@@ -636,7 +713,8 @@
       }
     ],
     "published": "2026-11-07",
-    "seoTitle": "Zanzibar property payment plans"
+    "seoTitle": "Zanzibar property payment plans",
+    "modified": "2026-11-07"
   },
   {
     "path": "/guides/zanzibar-property-under-150000",
@@ -647,15 +725,27 @@
     "answer": "For a Zanzibar property budget below $150,000, decide whether that ceiling covers the unit price alone or the full acquisition cost. Ask developers to separate inclusions, additional charges and recurring costs. This budget guide does not confirm that a particular property is currently available.",
     "table": {
       "caption": "Budget brief for developer offers",
-      "headers": ["Budget item", "What your enquiry should say"],
+      "headers": [
+        "Budget item",
+        "What your enquiry should say"
+      ],
       "rows": [
         [
           "Ceiling",
           "State whether $150,000 includes fees, furnishing and other costs"
         ],
-        ["Type", "Apartment, villa or open to alternatives"],
-        ["Timing", "Cash purchase or staged payments; planned purchase date"],
-        ["Flexibility", "Preferred areas and which requirements are essential"]
+        [
+          "Type",
+          "Apartment, villa or open to alternatives"
+        ],
+        [
+          "Timing",
+          "Cash purchase or staged payments; planned purchase date"
+        ],
+        [
+          "Flexibility",
+          "Preferred areas and which requirements are essential"
+        ]
       ]
     },
     "sections": [
@@ -677,6 +767,18 @@
         "paragraphs": [
           "Choose the appropriate budget band in the form and state your purchase timeline. Each participating developer decides whether its current inventory fits. Request an updated written quotation, availability and unit specification. Do not treat this page, its title or an old advertisement as a promise of stock below your budget."
         ]
+      },
+      {
+        "heading": "What should I request before comparing developer offers?",
+        "paragraphs": [
+          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
+        ],
+        "bullets": [
+          "Confirm the exact unit and what the quoted price includes.",
+          "Ask for dated payment milestones and cancellation terms.",
+          "Separate purchase costs from recurring ownership and management costs.",
+          "Obtain independent legal advice on the proposed transaction documents."
+        ]
       }
     ],
     "faqs": [
@@ -696,7 +798,8 @@
     ],
     "sources": [],
     "published": "2026-11-07",
-    "seoTitle": "Zanzibar property under $150,000: budget guide"
+    "seoTitle": "Zanzibar property under $150,000: budget guide",
+    "modified": "2026-11-07"
   },
   {
     "path": "/guides/zanzibar-property-costs",
@@ -707,7 +810,10 @@
     "answer": "A Zanzibar property budget should separate the unit price, transaction-related costs, fit-out and ongoing ownership costs. Ask the relevant professional or developer to confirm each amount and who pays it. This guide is a cost checklist, not a tax quotation or a statement of standard fees.",
     "table": {
       "caption": "Costs to request in writing",
-      "headers": ["Category", "Examples to clarify"],
+      "headers": [
+        "Category",
+        "Examples to clarify"
+      ],
       "rows": [
         [
           "Purchase",
@@ -752,6 +858,18 @@
         "paragraphs": [
           "Use independent counsel and the relevant authorities to establish current requirements for the actual structure and property. Official procedure references are a starting point, not a substitute for an assessment of the proposed transaction. Request the seller’s documents before making a reservation decision."
         ]
+      },
+      {
+        "heading": "What should I request before comparing developer offers?",
+        "paragraphs": [
+          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
+        ],
+        "bullets": [
+          "Confirm the exact unit and what the quoted price includes.",
+          "Ask for dated payment milestones and cancellation terms.",
+          "Separate purchase costs from recurring ownership and management costs.",
+          "Obtain independent legal advice on the proposed transaction documents."
+        ]
       }
     ],
     "faqs": [
@@ -777,7 +895,8 @@
       }
     ],
     "published": "2026-11-07",
-    "seoTitle": "Zanzibar property buying costs"
+    "seoTitle": "Zanzibar property buying costs",
+    "modified": "2026-11-07"
   },
   {
     "path": "/blog/paje-vs-fumba",
@@ -788,7 +907,11 @@
     "answer": "Choose between Paje and Fumba by comparing the actual properties against your daily use, delivery requirements and operating costs. Paje is a southeast-coast search area; Fumba is on the western/southwestern peninsula. Neither area name establishes a better return or a more suitable home.",
     "table": {
       "caption": "Paje and Fumba comparison framework",
-      "headers": ["Decision", "Paje shortlist", "Fumba shortlist"],
+      "headers": [
+        "Decision",
+        "Paje shortlist",
+        "Fumba shortlist"
+      ],
       "rows": [
         [
           "Site context",
@@ -862,7 +985,8 @@
       }
     ],
     "published": "2026-11-07",
-    "seoTitle": "Paje vs Fumba property comparison"
+    "seoTitle": "Paje vs Fumba property comparison",
+    "modified": "2026-11-07"
   },
   {
     "path": "/blog/apartment-vs-villa",
@@ -873,7 +997,11 @@
     "answer": "An apartment or villa is suitable only when its space, rules, costs and maintenance responsibilities fit your intended use. Compare the specific documents and operating setup. Neither property type is automatically a better investment or a lower-effort home.",
     "table": {
       "caption": "Apartment and villa decision matrix",
-      "headers": ["Question", "Apartment offer", "Villa offer"],
+      "headers": [
+        "Question",
+        "Apartment offer",
+        "Villa offer"
+      ],
       "rows": [
         [
           "Maintenance",
@@ -935,7 +1063,8 @@
     ],
     "sources": [],
     "published": "2026-11-07",
-    "seoTitle": "Apartment vs villa in Zanzibar"
+    "seoTitle": "Apartment vs villa in Zanzibar",
+    "modified": "2026-11-07"
   },
   {
     "path": "/blog/off-plan-vs-completed-property",
@@ -946,7 +1075,11 @@
     "answer": "Compare off-plan and completed property by what can be inspected, when payments fall due and which delivery obligations are documented. A staged payment plan does not remove construction risk, and a finished unit still needs document and condition checks. Assess the particular transaction before reserving.",
     "table": {
       "caption": "Delivery-stage comparison",
-      "headers": ["Decision", "Off-plan", "Completed unit"],
+      "headers": [
+        "Decision",
+        "Off-plan",
+        "Completed unit"
+      ],
       "rows": [
         [
           "Inspection",
@@ -1014,7 +1147,8 @@
       }
     ],
     "published": "2026-11-07",
-    "seoTitle": "Off-plan vs completed property in Zanzibar"
+    "seoTitle": "Off-plan vs completed property in Zanzibar",
+    "modified": "2026-11-07"
   },
   {
     "path": "/blog/gross-vs-net-rental-yield",
@@ -1025,11 +1159,23 @@
     "answer": "Gross rental yield divides annual rental revenue by the chosen property cost basis. Net yield subtracts operating expenses first. Compare projections only when revenue, expenses, acquisition costs and owner use are defined consistently. Neither calculation guarantees income, occupancy or a future selling price.",
     "table": {
       "caption": "Illustrative calculation — not a Zanzibar market forecast",
-      "headers": ["Item", "Hypothetical amount or calculation"],
+      "headers": [
+        "Item",
+        "Hypothetical amount or calculation"
+      ],
       "rows": [
-        ["All-in acquisition cost", "$120,000"],
-        ["Annual rental revenue", "$12,000"],
-        ["Annual operating expenses", "$4,000"],
+        [
+          "All-in acquisition cost",
+          "$120,000"
+        ],
+        [
+          "Annual rental revenue",
+          "$12,000"
+        ],
+        [
+          "Annual operating expenses",
+          "$4,000"
+        ],
         [
           "Gross / net yield on that cost basis",
           "10.0% gross; approximately 6.7% net before any excluded costs"
@@ -1080,6 +1226,7 @@
     ],
     "sources": [],
     "published": "2026-11-07",
-    "seoTitle": "Gross vs net rental yield explained"
+    "seoTitle": "Gross vs net rental yield explained",
+    "modified": "2026-11-07"
   }
 ]

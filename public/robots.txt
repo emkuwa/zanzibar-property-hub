@@ -1,5 +1,70 @@
+# Search/retrieval and training permissions are explicit. Existing training access remains allowed.
+# GPTBot and ClaudeBot are training crawlers; Google-Extended is a product-control token.
+# Claude-Web is retained for compatibility. Edge/WAF rules require a separate audit.
+
 User-agent: *
 Allow: /
 Disallow: /dashboard
 Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /dashboard
+Disallow: /api/
+
 Sitemap: https://www.zanziinvest.com/sitemap.xml

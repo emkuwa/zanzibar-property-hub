@@ -1,3 +1,4 @@
+import { BUSINESS, HOME_QUESTIONS, REVIEWED } from "./business";
 import records from "./seo-pages.json";
 
 export type ContentKind = "area" | "guide" | "article";
@@ -10,11 +11,12 @@ export type ContentPage = {
   description: string;
   answer: string;
   table: { caption: string; headers: string[]; rows: string[][] };
-  sections: { heading: string; paragraphs: string[] }[];
+  sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
   faqs: { question: string; answer: string }[];
   sources: { label: string; url: string; scope: string }[];
   related: string[];
   published: string;
+  modified?: string;
 };
 export const CONTENT_PAGES = records as ContentPage[];
 export const SITE_URL = "https://www.zanziinvest.com";
@@ -152,5 +154,43 @@ export function pageSchema(path: string) {
       })),
     });
   }
-  return result;
+  const orgId = org["@id"];
+  const websiteId = SITE_URL + "/#website";
+  const serviceId = SITE_URL + "/#service";
+  const pageId = SITE_URL + path + "#webpage";
+  const graph: Record<string, unknown>[] = [
+    { ...org, legalName: BUSINESS.name, email: BUSINESS.email,
+      alternateName: BUSINESS.brand, knowsAbout: ["Zanzibar property enquiries", "Property developer introductions"] },
+    { "@type": "WebSite", "@id": websiteId, url: SITE_URL + "/", name: BUSINESS.brand,
+      publisher: { "@id": orgId }, inLanguage: "en" },
+    { "@type": "Service", "@id": serviceId, name: "Zanzibar property enquiry and developer introduction service",
+      provider: { "@id": orgId }, areaServed: { "@type": "Place", name: BUSINESS.area },
+      description: "Submit property preferences and consent for introductions to participating developers. An enquiry does not reserve a property." },
+    { "@type": hub ? "CollectionPage" : "WebPage", "@id": pageId,
+      url: SITE_URL + path, name: pageMetadata(path).title, description: pageMetadata(path).description,
+      isPartOf: { "@id": websiteId }, about: { "@id": serviceId }, inLanguage: "en",
+      ...(page ? { dateModified: page.modified || page.published } : path === "/" ? { dateModified: REVIEWED } : {}) },
+  ];
+  for (const node of result.slice(1)) {
+    delete node["@context"];
+    if (node["@type"] === "Article" || node["@type"] === "BlogPosting") {
+      node["@id"] = SITE_URL + path + "#article";
+      node.author = { "@id": orgId };
+      node.mainEntityOfPage = { "@id": pageId };
+      node.dateModified = page!.modified || page!.published;
+      node.inLanguage = "en";
+    } else if (node["@type"] === "WebPage" || node["@type"] === "CollectionPage") {
+      Object.assign(graph[3], node, { "@id": pageId });
+      continue;
+    } else {
+      node["@id"] = SITE_URL + path + (node["@type"] === "FAQPage" ? "#faq" : "#breadcrumbs");
+      if (node["@type"] === "FAQPage") node.isPartOf = { "@id": pageId };
+    }
+    graph.push(node);
+  }
+  if (path === "/") graph.push({ "@type": "FAQPage", "@id": SITE_URL + "/#faq",
+    isPartOf: { "@id": pageId }, mainEntity: HOME_QUESTIONS.map(([question, answer]) => ({
+      "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer }
+    })) });
+  return { "@context": "https://schema.org", "@graph": graph };
 }

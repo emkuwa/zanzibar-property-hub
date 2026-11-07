@@ -5,6 +5,8 @@ const pages = JSON.parse(
     "utf8",
   ),
 );
+const robots = fs.readFileSync(new URL("./public/robots.txt", import.meta.url), "utf8");
+fs.writeFileSync(new URL("./server/seo-robots.ts", import.meta.url), `/** Generated from public/robots.txt. */\nexport const ROBOTS_TXT = ${JSON.stringify(robots)};\n`);
 export const paths = [
   "/",
   "/areas",
@@ -12,7 +14,7 @@ export const paths = [
   "/blog",
   ...pages.map((p) => p.path),
 ];
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map((path) => `<url><loc>https://www.zanziinvest.com${path}</loc><lastmod>2026-11-07</lastmod></url>`).join("\n")}\n</urlset>\n`;
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map((path) => `<url><loc>https://www.zanziinvest.com${path}</loc><lastmod>${pages.find((p) => p.path === path)?.modified || pages.find((p) => p.path === path)?.published || "2026-11-07"}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 fs.writeFileSync(new URL("./public/sitemap.xml", import.meta.url), xml);
 fs.writeFileSync(
   new URL("./server/seo-sitemap.ts", import.meta.url),

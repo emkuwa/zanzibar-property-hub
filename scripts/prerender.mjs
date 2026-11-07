@@ -59,6 +59,10 @@ for (const route of PUBLIC_PATHS) {
     /<meta property="og:type"[^>]*>/,
     `<meta property="og:type" content="${route.startsWith("/blog/") || route.startsWith("/guides/") ? "article" : "website"}" />`,
   );
+  if (route === "/") {
+    const hero = html.match(/<img[^>]*class="landing-hero-image"[^>]*src="([^"]+)"/);
+    if (hero) html = html.replace("</head>", `<link rel="preload" as="image" href="${hero[1]}" fetchpriority="high" />\n</head>`);
+  }
   const target = route === "/" ? "dist/index.html" : `dist${route}.html`;
   await fs.mkdir(path.dirname(target), { recursive: true });
   await fs.writeFile(target, html);

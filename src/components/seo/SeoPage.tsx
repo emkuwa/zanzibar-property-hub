@@ -63,7 +63,7 @@ function ContentCards({ pages }: { pages: ContentPage[] }) {
           <h3>{p.title}</h3>
           <p>{p.answer}</p>
           <span className="seo-card-link">
-            Read guide <ArrowRight size={17} aria-hidden="true" />
+            Read {p.label} guide <ArrowRight size={17} aria-hidden="true" />
           </span>
         </a>
       ))}
@@ -137,13 +137,13 @@ export default function SeoPage({ path }: { path: string }) {
               <h1>{page.title}</h1>
               <p className="seo-byline">
                 Published by Zanzibaba Company Limited ·{" "}
-                <time dateTime={page.published}>
+                Last updated: <time dateTime={page.modified || page.published}>
                   {new Intl.DateTimeFormat("en-GB", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
                     timeZone: "UTC",
-                  }).format(new Date(page.published + "T00:00:00Z"))}
+                  }).format(new Date((page.modified || page.published) + "T00:00:00Z"))}
                 </time>
               </p>
               <p className="seo-answer">{page.answer}</p>
@@ -191,6 +191,7 @@ export default function SeoPage({ path }: { path: string }) {
                   {s.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
+                  {s.bullets ? <ul>{s.bullets.map((item) => <li key={item}>{item}</li>)}</ul> : null}
                 </section>
               ))}
             </div>

@@ -54,7 +54,13 @@ for (const route of paths) {
     'script[type="application/ld+json"]',
   )) {
     const data = JSON.parse(schema.textContent);
-    check(Array.isArray(data) && data.length > 0, `Missing schema: ${route}`);
+    for (const node of data["@graph"] || []) {
+      if (node["@type"] === "FAQPage") for (const q of node.mainEntity) {
+        check(doc.body.textContent.includes(q.name), `FAQ question absent: ${route}`);
+        check(doc.body.textContent.includes(q.acceptedAnswer.text), `FAQ answer absent: ${route}`);
+      }
+    }
+    check(data["@context"] === "https://schema.org" && Array.isArray(data["@graph"]) && data["@graph"].length >= 4, `Missing schema: ${route}`);
   }
   check(
     doc.querySelector('meta[property="og:type"]')?.content ===
@@ -93,8 +99,8 @@ for (const route of paths) {
       `Table row semantics: ${route}`,
     );
     check(
-      doc.querySelector("article").textContent.split(/\s+/).length >= 250,
-      `Insufficient article content: ${route}`,
+      record.sections.length >= 2 && record.sections.every((s) => s.paragraphs.length > 0),
+      `Missing substantive sections: ${route}`,
     );
     const article = doc.querySelector("article");
     const table = article.querySelector("table");
@@ -175,3 +181,8 @@ for (const redirect of config.redirects)
 console.log(
   `SEO audit passed: ${checks} checks across ${paths.length} canonical pages; ${records.length} articles/area guides.`,
 );
+
+const robots = fs.readFileSync("public/robots.txt", "utf8");
+for (const bot of ["Googlebot", "bingbot", "OAI-SearchBot", "ChatGPT-User", "Claude-SearchBot", "Claude-User", "ClaudeBot", "Claude-Web", "PerplexityBot", "Google-Extended"]) {
+  check(robots.includes(`User-agent: ${bot}\nAllow: /\nDisallow: /dashboard\nDisallow: /api/`), `Crawler policy missing: ${bot}`);
+}

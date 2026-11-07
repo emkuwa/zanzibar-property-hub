@@ -1,3 +1,4 @@
+import { ROBOTS_TXT } from "../server/seo-robots";
 export default function handler(
   _req: unknown,
   res: {
@@ -8,7 +9,5 @@ export default function handler(
 ) {
   res.status(200);
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
-  res.send(
-    "User-agent: *\nAllow: /\nDisallow: /dashboard\nDisallow: /api/\nSitemap: https://www.zanziinvest.com/sitemap.xml\n",
-  );
+  res.send(ROBOTS_TXT);
 }

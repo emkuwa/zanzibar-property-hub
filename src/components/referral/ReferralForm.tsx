@@ -1,3 +1,4 @@
+import { currentAiReferral } from "@/lib/gtag";
 import { fetchWithTimeout } from "@/lib/fetch-timeout";
 import { useRef, useState, type FormEvent } from "react";
 import { ArrowUpRight, Check, Info, Loader2 } from "lucide-react";
@@ -83,6 +84,7 @@ export default function ReferralForm({
       onSubmitted?.();
       // No names, email addresses, phone numbers or reference IDs go to analytics.
       window.gtag?.("event", "generate_lead", {
+        ...(currentAiReferral() ? { ai_referral_engine: currentAiReferral() } : {}),
         form_name: "developer_network",
         method: "referral_form",
       });
