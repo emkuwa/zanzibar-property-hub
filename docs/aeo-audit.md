@@ -50,3 +50,11 @@ Primary reference checks:
 
 ## Readiness score interpretation
 Scores in the implementation report are subjective code/content readiness, not Google scores, predicted rank or tested AI citation rates. LCP, review sentiment and actual citation visibility remain unmeasured. Re-audit monthly and after changing service facts, partner activation or templates.
+
+## Follow-up performance and validation — 7 November 2026
+- Moved the unchanged Google Fonts families/weights and display=swap from CSS @import into an early HTML stylesheet link, with preconnect hints for fonts.googleapis.com and fonts.gstatic.com. This removes a stylesheet-discovery dependency; it does not prove a field LCP improvement.
+- Dashboard code now loads on demand behind a Suspense status message. Public content remains synchronously prerendered; no public page is moved into an SSR Suspense fallback.
+- Compared the previous production module (449,814 bytes; locally recompressed gzip 135,089 bytes) with the new build (445,464 bytes; locally recompressed gzip 134,202 bytes): 4,350 bytes less module code, or 887 bytes less in this gzip comparison. Gzip figures are a controlled local comparison, not measured Vercel transfer sizes.
+- Permanent SEO assertions now check unique connected entity IDs, resolvable graph references, font discovery hints and visible/schema date agreement. Audit passes 1,128 checks across the same 19 canonical pages; 14 unit/integration tests pass, TypeScript passes, lint has zero errors and seven pre-existing Fast Refresh warnings.
+- GSC Wizard list_sites returned payment_required/subscription_required. Its account has no active plan or trial, so Search Console/indexing/CrUX/GA4 reads could not run. Reconnect the Google account if required and enable an active GSC Wizard subscription/trial in app settings before retrying. No search or real-user performance figures were inferred from this failure. Direct Google Search Console verification remains possible outside this integration.
+- Relevant primary implementation references: https://web.dev/articles/font-best-practices and https://react.dev/reference/react/lazy .

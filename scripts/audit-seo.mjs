@@ -23,6 +23,8 @@ for (const route of paths) {
   check(fs.existsSync(file), `Missing prerendered file: ${route}`);
   const html = fs.readFileSync(file, "utf8");
   const doc = new JSDOM(html).window.document;
+  check(doc.querySelectorAll('link[rel="stylesheet"][href^="https://fonts.googleapis.com/"]').length === 1, `Missing/duplicate font stylesheet: ${route}`);
+  check(doc.querySelector('link[rel="preconnect"][href="https://fonts.gstatic.com"][crossorigin]'), `Missing font connection hint: ${route}`);
   const canonical = doc.querySelector("link[rel=canonical]")?.href;
   check(
     canonical === `https://www.zanziinvest.com${route}`,
@@ -54,7 +56,18 @@ for (const route of paths) {
     'script[type="application/ld+json"]',
   )) {
     const data = JSON.parse(schema.textContent);
-    for (const node of data["@graph"] || []) {
+    const graph = data["@graph"] || [];
+    const ids = graph.map((node) => node["@id"]);
+    check(new Set(ids).size === ids.length, `Duplicate schema IDs: ${route}`);
+    const visit = (value) => {
+      if (!value || typeof value !== "object") return;
+      if (value["@id"] && Object.keys(value).length === 1)
+        check(ids.includes(value["@id"]), `Unresolved schema reference: ${route} ${value["@id"]}`);
+      for (const child of Object.values(value))
+        if (Array.isArray(child)) child.forEach(visit); else visit(child);
+    };
+    graph.forEach(visit);
+    for (const node of graph) {
       if (node["@type"] === "FAQPage") for (const q of node.mainEntity) {
         check(doc.body.textContent.includes(q.name), `FAQ question absent: ${route}`);
         check(doc.body.textContent.includes(q.acceptedAnswer.text), `FAQ answer absent: ${route}`);
@@ -118,6 +131,9 @@ for (const route of paths) {
         source.url.startsWith("https://") && source.scope.length > 20,
         `Unclear source scope: ${route}`,
       );
+    check(doc.querySelector("time")?.dateTime === (record.modified || record.published), `Visible modified date mismatch: ${route}`);
+    const dated = JSON.parse(doc.querySelector("#seo-schema").textContent)["@graph"].filter((n) => n.dateModified);
+    check(dated.length > 0 && dated.every((n) => n.dateModified === (record.modified || record.published)), `Schema modified date mismatch: ${route}`);
     const faq = doc.querySelectorAll(".seo-faq details");
     check(faq.length === record.faqs.length, `FAQ mismatch: ${route}`);
     check(
