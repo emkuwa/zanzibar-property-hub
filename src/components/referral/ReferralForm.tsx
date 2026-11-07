@@ -15,6 +15,7 @@ export default function ReferralForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [reference, setReference] = useState("");
+  const [awaitingPartners, setAwaitingPartners] = useState(false);
   const requestId = useRef<string>();
   const inFlight = useRef(false);
 
@@ -75,6 +76,7 @@ export default function ReferralForm() {
             : "We could not save your enquiry. Please try again.",
         );
       }
+      setAwaitingPartners(data.distributionStatus === "awaiting_partners");
       setReference(data.reference);
       // No names, email addresses, phone numbers or reference IDs go to analytics.
       window.gtag?.("event", "generate_lead", {
@@ -102,9 +104,9 @@ export default function ReferralForm() {
         <p className="eyebrow">Enquiry received</p>
         <h2>You're one step closer.</h2>
         <p>
-          Your enquiry has been recorded with Zanzibaba. Participating
-          developers may contact you directly with their property options. You
-          may hear from more than one developer.
+          {awaitingPartners
+            ? "Your enquiry has been recorded with Zanzibaba. Developer introductions are being prepared; your enquiry has not been sent to a developer yet."
+            : "Your enquiry has been recorded with Zanzibaba. Participating developers may contact you directly with their property options. You may hear from more than one developer."}
         </p>
         <div className="reference-box">
           <span>Your referral reference</span>

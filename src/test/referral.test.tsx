@@ -153,6 +153,16 @@ describe("server-side consent and saving", () => {
   });
 });
 
+it("uses isolated edge storage when Vercel holds no database secret", async () => {
+  const fetcher = vi.fn().mockResolvedValue(new Response(JSON.stringify({ reference: "ZI-EDGE", lead_id: uuid, deliveries: 0, duplicate: false }), { status: 201 }));
+  const res = response();
+  await createReferralHandler({}, fetcher)(request(), res);
+  expect(res.code).toBe(201);
+  expect(res.body).toMatchObject({ reference: "ZI-EDGE", distributionStatus: "awaiting_partners" });
+  expect(fetcher.mock.calls[0][0]).toContain("/functions/v1/zanziinvest-referral");
+  expect(JSON.parse(fetcher.mock.calls[0][1].body).input.consent).toBe(true);
+});
+
 describe("all-partner delivery", () => {
   const delivery = (id: string, recipient: string) => ({
     id,

@@ -1,3 +1,4 @@
+import { registerThroughEdge } from "../server/referral-edge.js";
 import { referralSchema } from "../src/lib/referral-contract.js";
 import {
   registerReferral,
@@ -52,12 +53,9 @@ export function createReferralHandler(env: Env = process.env, fetcher = fetch) {
         header(req, "x-vercel-forwarded-for") ||
         header(req, "x-forwarded-for").split(",")[0].trim() ||
         "unknown";
-      const registration = await registerReferral(
-        parsed.data,
-        ip,
-        env,
-        fetcher,
-      );
+      const registration = env.SUPABASE_SERVICE_ROLE_KEY
+        ? await registerReferral(parsed.data, ip, env, fetcher)
+        : await registerThroughEdge(parsed.data, ip, fetcher);
       // Registration atomically saves the lead, consent and one delivery per eligible developer.
       // Network/provider failures leave deliveries pending; they never erase the saved lead.
       try {

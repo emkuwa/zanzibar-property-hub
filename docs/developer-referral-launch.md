@@ -25,3 +25,9 @@ The homepage is a single public referral landing page. It does not show individu
 ## Operational checks
 
 Use the Supabase table editor to review `zi_referral_leads` and `zi_referral_deliveries` until a dedicated admin dashboard is added. The previous embedded dashboard is not wired to these isolated tables. Record retention/deletion policy and partner terms before the public launch. Provider secrets and developer email addresses must remain server-side.
+
+## Production capture activation — 7 November 2026
+
+The isolated schema has now been applied to Zanzicore and the JWT-protected `zanziinvest-referral` Edge Function is active. When direct server database credentials are absent, the Vercel intake uses that function, whose service-role credentials stay inside Supabase. Existing `central-lead-intake` and other portals are unchanged. `node scripts/package-referral-edge.mjs` reproduces its uploaded file bundle from canonical shared code.
+
+A synthetic submission and repeat returned the same reference with 201 then 200 and zero developer deliveries; test data was removed after verification. No developers are active yet. Enquiries can be saved, but developer email distribution remains disabled pending confirmed partner emails/agreements, sender credentials and scheduling. The confirmation explicitly states when an enquiry has not yet been sent to a developer.
