@@ -11,6 +11,13 @@ const paths = [
   "/blog",
   ...records.map((p) => p.path),
 ];
+const priorityMap = JSON.parse(fs.readFileSync("src/content/geo-priorities.json", "utf8"));
+assert.deepEqual(priorityMap.routes.map((r) => r.path).sort(), [...paths].sort(), "Priority map must cover all canonical routes exactly once");
+for (const record of records) {
+  if (priorityMap.routes.find((r) => r.path === record.path)?.priority === "P1") {
+    assert.ok(record.sections.every((s) => s.answer && s.evidence && s.paragraphs.length), `All commercial sections need three layers: ${record.path}`);
+  }
+}
 const titles = new Set(),
   descriptions = new Set();
 let checks = 0;
@@ -82,6 +89,18 @@ for (const route of paths) {
         : "website"),
     `OpenGraph type mismatch: ${route}`,
   );
+  for (const section of doc.querySelectorAll("[data-answer-section]")) {
+    const heading = section.querySelector("h1,h2");
+    check(Boolean(heading), `Missing commercial heading: ${route}`);
+    const answer = section.querySelector(".seo-section-answer,.hero-description,.landing-answer,p");
+    check(answer && answer.textContent.trim().split(/\s+/).length <= 50, `Direct answer must fit 50 words: ${route}`);
+    const evidence = section.querySelector("table,[data-evidence]");
+    check(Boolean(evidence), `Missing section evidence: ${route}`);
+    const prefix = doc.createRange(); prefix.setStartAfter(heading); prefix.setEndBefore(evidence);
+    check(prefix.toString().trim().split(/\s+/).length <= 200, `Section evidence after 200 words: ${route}`);
+    const following = doc.createRange(); following.setStartAfter(evidence); following.setEndAfter(section.lastChild);
+    check(following.toString().trim().split(/\s+/).length >= 12, `Missing methodology after evidence: ${route}`);
+  }
   const record = records.find((p) => p.path === route);
   if (record) {
     check(title.length <= 70, `Overlong SEO title: ${route}`);
@@ -102,12 +121,12 @@ for (const route of paths) {
       `Missing semantic caption: ${route}`,
     );
     check(
-      doc.querySelectorAll("thead th[scope=col]").length ===
+      doc.querySelector("table").querySelectorAll("thead th[scope=col]").length ===
         record.table.headers.length,
       `Table column semantics: ${route}`,
     );
     check(
-      doc.querySelectorAll("tbody th[scope=row]").length ===
+      doc.querySelector("table").querySelectorAll("tbody th[scope=row]").length ===
         record.table.rows.length,
       `Table row semantics: ${route}`,
     );

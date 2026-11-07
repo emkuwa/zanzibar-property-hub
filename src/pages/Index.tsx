@@ -145,7 +145,7 @@ export default function Index() {
       <main id="main">
         {screen === "home" ? (
           <>
-            <section className="landing-hero" aria-labelledby="hero-title">
+            <section className="landing-hero" aria-labelledby="hero-title" data-answer-section="landing">
               <img
                 className="landing-hero-image"
                 src={hero}
@@ -162,20 +162,30 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Receive property offers from
-                  <br className="mobile-break" /> our partner developers.
+                  Record one Zanzibar property enquiry for developer introductions. Several participating developers may contact you after consent.
                 </p>
+                <dl className="hero-facts" aria-label="Enquiry specifications" data-evidence>
+                  <div><dt>7 details</dt><dd>Preferences and contacts</dd></div>
+                  <div><dt>1 reference</dt><dd>For your saved enquiry</dd></div>
+                </dl>
                 <a className="primary-button hero-button" href="#enquiry">
                   Find my property options <ArrowRight aria-hidden="true" />
                 </a>
+                <p className="hero-methodology">The form records four preferences, three contact details and separate sharing consent. Saving an enquiry does not confirm developer delivery, availability or a reservation.</p>
               </div>
             </section>
             <section
               id="how-it-works"
               className="how-section landing-container"
               aria-labelledby="how-heading"
+              data-answer-section="landing"
             >
-              <h2 id="how-heading">How it works</h2>
+              <h2 id="how-heading">What does one enquiry actually do?</h2>
+              <p className="landing-answer">Your enquiry records your property brief and consent for participating developers to contact you directly. It does not select one developer or reserve a unit.</p>
+              <dl className="process-facts" aria-label="Sharing conditions" data-evidence>
+                <div><dt>Required consent</dt><dd>Explicit agreement to contact from all participating developers.</dd></div>
+                <div><dt>Saved vs sent</dt><dd>A saved reference does not confirm delivery to a developer.</dd></div>
+              </dl>
               <div className="steps-grid">
                 {steps.map(({ Icon, title, detail }) => (
                   <article key={title} className="step-card">

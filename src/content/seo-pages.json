@@ -487,35 +487,77 @@
     },
     "sections": [
       {
-        "heading": "Start with the unit, not the building’s headline price",
+        "heading": "Why can the lowest apartment price be the wrong comparison?",
         "paragraphs": [
           "Ask for the floor number, orientation, usable internal area, outdoor space and the exact inclusions. Check lift or stair access, ventilation, storage, noise transfer and natural light. A two-bedroom label does not tell you whether the living space works for the number of occupants you expect.",
           "Compare offers on the same basis. If one price includes furniture while another is a bare unit, list the missing items before comparing totals. Do the same for parking, appliances, outdoor areas and access to shared facilities."
-        ]
+        ],
+        "answer": "Compare the exact apartment and included items before comparing prices. A building’s starting price does not specify your unit.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Unit identity",
+              "Floor number, orientation and dated unit plan."
+            ],
+            [
+              "Price basis",
+              "Written inclusions for furniture, parking, appliances and floor-area measurement."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Read the common-cost and management terms",
+        "heading": "Which apartment fees are separate obligations?",
         "paragraphs": [
           "Request a schedule of service charges, what it includes and how it can change. A building service charge and a rental management fee are different obligations. Clarify responsibility for lift maintenance, shared pools, insurance where applicable, exterior repairs and exceptional expenditure."
-        ]
+        ],
+        "answer": "A building service charge and a rental-management fee cover different responsibilities. Compare their scope and revision terms separately.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Shared services",
+              "Service-charge schedule and included building maintenance."
+            ],
+            [
+              "Rental management",
+              "Separate fee schedule, exclusions and repair-approval process."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Separate apartment ownership from rental performance",
+        "heading": "Does apartment ownership establish rental performance?",
         "paragraphs": [
           "Ask whether the planned use is permitted by the relevant documents and management agreement. If rental income is part of your decision, request assumptions for rates, occupancy, booking commissions, cleaning, management and maintenance. Avoid treating a furnished show unit or the existence of a rental operator as proof of a net return."
-        ]
-      },
-      {
-        "heading": "What should I request before comparing developer offers?",
-        "paragraphs": [
-          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
         ],
-        "bullets": [
-          "Confirm the exact unit and what the quoted price includes.",
-          "Ask for dated payment milestones and cancellation terms.",
-          "Separate purchase costs from recurring ownership and management costs.",
-          "Obtain independent legal advice on the proposed transaction documents."
-        ]
+        "answer": "Owning an apartment does not establish its rental income. Check permitted use and the assumptions behind any unit-specific forecast.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Permitted use",
+              "Relevant use restrictions and management agreement."
+            ],
+            [
+              "Income evidence",
+              "Dated unit-specific revenue, occupancy and expense assumptions."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -573,35 +615,77 @@
     },
     "sections": [
       {
-        "heading": "Define the property’s boundaries and outside space",
+        "heading": "Does a villa photograph establish private outside space?",
         "paragraphs": [
           "Ask which garden, terrace, parking and pool areas belong to the unit’s agreed use and which are shared. A sales image can show landscaping or neighbouring space that is not included. Request a plan that distinguishes these areas and have the relevant rights reviewed independently."
-        ]
+        ],
+        "answer": "A villa photograph does not establish which outdoor areas are private or included. Compare the agreed boundary and use rights.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Boundary",
+              "Plan distinguishing private, shared and neighbouring areas."
+            ],
+            [
+              "Rights",
+              "Written terms for garden, parking, terrace and pool use."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Price the work that a villa needs",
+        "heading": "What villa costs can the purchase price hide?",
         "paragraphs": [
           "Request an annual maintenance plan and the expected responsibilities of the owner and manager. Pool treatment, pump replacement, gardening, security, exterior repairs and water storage can be separate cost lines. Ask what happens during periods when the home is unoccupied.",
           "Consider access for maintenance crews and equipment deliveries. Check drainage, ventilation and the location of water and wastewater equipment during a viewing. Budgeting only for the visible finish misses much of the practical work of owning a standalone or semi-detached home."
-        ]
+        ],
+        "answer": "The villa price does not describe its annual maintenance workload. Compare the equipment, responsibility and cost of keeping the property usable.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Maintenance",
+              "Annual plan covering pool, garden, security and equipment."
+            ],
+            [
+              "Vacancy",
+              "Written arrangements for inspections and urgent repairs while unoccupied."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Choose privacy and flexibility deliberately",
+        "heading": "When is more outside space a poor fit?",
         "paragraphs": [
           "If you expect to host paying guests, confirm the operating permissions and management terms for that use. If the villa is mainly a personal home, inspect privacy, neighbouring activity and convenient daily access. More outside space is not automatically more useful if it increases costs or conflicts with your intended lifestyle."
-        ]
-      },
-      {
-        "heading": "What should I request before comparing developer offers?",
-        "paragraphs": [
-          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
         ],
-        "bullets": [
-          "Confirm the exact unit and what the quoted price includes.",
-          "Ask for dated payment milestones and cancellation terms.",
-          "Separate purchase costs from recurring ownership and management costs.",
-          "Obtain independent legal advice on the proposed transaction documents."
-        ]
+        "answer": "More outside space is useful only when its privacy, permitted use and upkeep fit your brief. Compare those obligations before choosing a villa.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Personal use",
+              "Viewing of boundaries, nearby activity and daily access."
+            ],
+            [
+              "Guest use",
+              "Operating permissions and written management terms."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -659,35 +743,77 @@
     },
     "sections": [
       {
-        "heading": "Make one cash-flow schedule",
+        "heading": "Why does a smaller deposit not prove affordability?",
         "paragraphs": [
           "List every payment from reservation through handover and any later instalments. Add transaction charges, professional fees, furnishing, recurring charges before occupation and any remaining balance due on completion. A payment-plan comparison is incomplete if it shows the deposit but omits the final payment.",
           "For example, an illustrative $120,000 unit paid 20% / 30% / 50% creates instalments of $24,000, $36,000 and $60,000 before any extra costs. This is arithmetic for a hypothetical unit, not a currently available offer or a standard Zanzibar payment plan."
-        ]
+        ],
+        "answer": "A smaller deposit changes payment timing, not the total commitment. Compare every instalment and additional cost through handover.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Payment schedule",
+              "Amount, currency and due date for every instalment."
+            ],
+            [
+              "Extra costs",
+              "Itemised transaction, furnishing and pre-occupation charges."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Distinguish a calendar date from a construction condition",
+        "heading": "What if a payment date arrives before construction is ready?",
         "paragraphs": [
           "Ask what evidence triggers each instalment and who confirms a milestone. Clarify what happens if construction is late but a scheduled payment date arrives. Ask how variations, specification changes, incomplete common facilities and defects are handled. These questions need answers in the actual agreement rather than a brochure summary."
-        ]
+        ],
+        "answer": "A calendar payment date and a construction milestone are different triggers. The agreement must explain which applies when work is delayed.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Trigger",
+              "Contract clause specifying date or certified construction condition."
+            ],
+            [
+              "Delay",
+              "Written treatment of late works, variations, defects and incomplete facilities."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Review the transaction before sending funds",
+        "heading": "What must be checked before transferring funds?",
         "paragraphs": [
           "Have independent counsel review the seller’s authority, relevant rights, payment recipient, cancellation terms and completion obligations. Obtain written bank details through a trusted verification process and confirm the applicable payment terms. An enquiry or introduction does not approve a contract or create a reservation."
-        ]
-      },
-      {
-        "heading": "What should I request before comparing developer offers?",
-        "paragraphs": [
-          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
         ],
-        "bullets": [
-          "Confirm the exact unit and what the quoted price includes.",
-          "Ask for dated payment milestones and cancellation terms.",
-          "Separate purchase costs from recurring ownership and management costs.",
-          "Obtain independent legal advice on the proposed transaction documents."
-        ]
+        "answer": "Verify the seller’s authority, payment recipient and contract terms independently before paying. A ZanziInvest enquiry does not approve the transaction.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Recipient",
+              "Bank details verified through a trusted independent channel."
+            ],
+            [
+              "Agreement",
+              "Independent review of authority, cancellation and completion obligations."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -750,35 +876,77 @@
     },
     "sections": [
       {
-        "heading": "Reserve room for the complete commitment",
+        "heading": "Does a $150,000 headline price fit a $150,000 total budget?",
         "paragraphs": [
           "Write down the maximum total amount you are prepared to commit, not only the maximum headline price. Ask for professional fees, transaction charges and required inclusions to be itemised. Keep a contingency for unresolved costs until the offer is clear. This guide does not assign tax rates or professional fee percentages."
-        ]
+        ],
+        "answer": "A $150,000 unit price can exceed a $150,000 total budget once other costs are added. Define the ceiling before requesting offers.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Ceiling",
+              "State whether your limit covers fees, furniture and preparation."
+            ],
+            [
+              "Unresolved costs",
+              "Itemised exclusions and a buyer-defined contingency; no assumed tax rate."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Make trade-offs explicit",
+        "heading": "Which trade-offs make a budget brief usable?",
         "paragraphs": [
           "Rank your requirements: internal area, bedrooms, outdoor space, position, stage of completion and intended use. A clearer brief helps developers decide whether to offer a smaller unit, a different area or another delivery stage. Do not assume every combination can fit the same ceiling.",
           "A lower-priced unfinished unit may still need furnishings or fit-out. A completed unit may have a different payment timetable. Compare total cost and timing together rather than assuming a lower advertised number is automatically more affordable."
-        ]
+        ],
+        "answer": "Rank essential requirements and flexible preferences before comparing offers. A lower advertised price can come with unfinished work or different payment timing.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Essentials",
+              "Required space, intended use, area and completion stage."
+            ],
+            [
+              "Trade-offs",
+              "Written comparison of fit-out costs and payment schedule."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Use the enquiry to request evidence, not a guarantee",
+        "heading": "Does this budget guide confirm stock below $150,000?",
         "paragraphs": [
           "Choose the appropriate budget band in the form and state your purchase timeline. Each participating developer decides whether its current inventory fits. Request an updated written quotation, availability and unit specification. Do not treat this page, its title or an old advertisement as a promise of stock below your budget."
-        ]
-      },
-      {
-        "heading": "What should I request before comparing developer offers?",
-        "paragraphs": [
-          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
         ],
-        "bullets": [
-          "Confirm the exact unit and what the quoted price includes.",
-          "Ask for dated payment milestones and cancellation terms.",
-          "Separate purchase costs from recurring ownership and management costs.",
-          "Obtain independent legal advice on the proposed transaction documents."
-        ]
+        "answer": "This guide does not confirm property stock below $150,000. A developer must provide a current unit-specific offer that fits your budget.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Availability",
+              "Dated written confirmation for the specific unit."
+            ],
+            [
+              "Enquiry",
+              "Choose your own budget band and timeline; the form guarantees no offer."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -835,41 +1003,101 @@
     },
     "sections": [
       {
-        "heading": "Separate the quotation from the full budget",
+        "heading": "Why is an all-inclusive quotation still worth checking?",
         "paragraphs": [
           "Start with the exact unit and obtain a written statement of what is included. List transaction expenses separately until the relevant provider confirms them. If an offer says “all-inclusive”, ask for the exclusions and the assumptions behind that description. Do not assume a developer’s sales price includes independent professional services."
-        ]
+        ],
+        "answer": "An all-inclusive label does not define every included expense. Compare the written inclusions and exclusions against your complete acquisition budget.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Purchase scope",
+              "Exact unit and dated statement of included works and items."
+            ],
+            [
+              "Other providers",
+              "Separately confirmed professional and transaction charges."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Account for the time before first use",
+        "heading": "What costs arise before a property is ready to use?",
         "paragraphs": [
           "If the home is unfinished, ask which costs can arise before handover and which are due before occupation. Consider furnishings, appliance installation and service arrangements. If you intend to rent, account for preparation and vacancy before the first booking rather than starting a projection at full occupancy on day one."
-        ]
+        ],
+        "answer": "The time before occupation can involve furnishing, installation and service costs. Rental preparation also precedes any first booking.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Readiness",
+              "Remaining works, furnishings, appliances and connections."
+            ],
+            [
+              "Timing",
+              "Dates and costs before occupation or first guest use."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Keep a recurring-cost sheet",
+        "heading": "How should recurring property costs be compared?",
         "paragraphs": [
           "Compare monthly or annual charges on a consistent basis. Service charges, property management, booking commissions and maintenance reserves are distinct cost lines unless a contract explicitly combines them. Ask how variable costs change with owner use or guest occupancy.",
           "For an illustrative comparison, a $100,000 unit needing $12,000 of furnishing and $3,000 of other confirmed acquisition expenses uses $115,000 before any additional unresolved costs. These numbers are a hypothetical budgeting example, not a quoted Zanzibar price, tax assessment or professional fee schedule."
-        ]
+        ],
+        "answer": "Compare recurring costs over the same period and on the same usage assumptions. Identify separate charges instead of assuming one fee covers everything.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Period",
+              "Consistent monthly or annual cost sheet."
+            ],
+            [
+              "Scope",
+              "Service, management, booking and maintenance charges with exclusions."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Verify the transaction-specific charges",
+        "heading": "Can a generic fee list establish transaction charges?",
         "paragraphs": [
           "Use independent counsel and the relevant authorities to establish current requirements for the actual structure and property. Official procedure references are a starting point, not a substitute for an assessment of the proposed transaction. Request the seller’s documents before making a reservation decision."
-        ]
-      },
-      {
-        "heading": "What should I request before comparing developer offers?",
-        "paragraphs": [
-          "Request a written, property-specific offer before comparing prices or payment terms. Your enquiry records preferences; it does not confirm a unit, reserve availability or verify a developer’s projections."
         ],
-        "bullets": [
-          "Confirm the exact unit and what the quoted price includes.",
-          "Ask for dated payment milestones and cancellation terms.",
-          "Separate purchase costs from recurring ownership and management costs.",
-          "Obtain independent legal advice on the proposed transaction documents."
-        ]
+        "answer": "A generic fee list cannot establish the charges for your proposed transaction. Confirm requirements against the actual property and transaction structure.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Documents",
+              "Seller’s documents supplied for independent review."
+            ],
+            [
+              "Confirmation",
+              "Current requirements checked with counsel and relevant authorities."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -937,29 +1165,101 @@
     },
     "sections": [
       {
-        "heading": "Compare two addresses, not two slogans",
+        "heading": "Why compare two addresses instead of Paje versus Fumba slogans?",
         "paragraphs": [
           "Start with the intended use: full-time residence, occasional personal stays or an operating rental property. Write down what you must be able to do during an ordinary week. Then test each site against that brief. A beach image, a wider planning vision or a projected percentage cannot replace that exercise.",
           "If you shortlist one property in each area, inspect actual access, services, surroundings and construction activity. Compare completed facilities separately from proposed ones. The practical difference between two addresses can matter more than a broad description of the coast."
-        ]
+        ],
+        "answer": "Compare specific properties against the same use brief. An area label, beach image or masterplan cannot establish access or completed facilities.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Daily use",
+              "Same personal-use or rental brief for both properties."
+            ],
+            [
+              "Site evidence",
+              "Viewing of actual access, services, surroundings and construction activity."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Use a consistent cost sheet",
+        "heading": "How do I make Paje and Fumba prices comparable?",
         "paragraphs": [
           "Compare unit price, transaction-related costs, furnishing, recurring charges and management on the same basis. Do not compare a furnished offer against a bare unit without adding the difference. Ask for the mechanism by which shared charges can change and who is responsible for major repairs."
-        ]
+        ],
+        "answer": "Compare both offers with the same inclusions and cost period. Add missing furniture and distinguish shared charges from rental-management fees.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Acquisition",
+              "Unit price plus transaction and fit-out costs on the same basis."
+            ],
+            [
+              "Ownership",
+              "Recurring charges, revision mechanism and major-repair responsibility."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Require the same standard of rental evidence",
+        "heading": "Does destination appeal prove rental returns?",
         "paragraphs": [
           "If rental returns influence the decision, ask both providers for their occupancy, rate and cost assumptions. Separate historical operating records from forecasts. A forecast based on different assumptions does not provide a fair area comparison, and a destination’s appeal does not confirm the outcome for a unit."
-        ]
+        ],
+        "answer": "Destination appeal does not establish a unit’s rental result. Compare the same operating period, cost basis and evidence standard for both offers.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Historical",
+              "Dated realised revenue and expense records for the relevant unit."
+            ],
+            [
+              "Forecast",
+              "Separately labelled rate, occupancy and expense assumptions."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Send a brief that leaves room for a real comparison",
+        "heading": "How can one enquiry keep both areas open?",
         "paragraphs": [
           "Select Any area if you are open to both coasts, and explain your property type, budget and purchase timeline. Developers may respond with their own suitable options. The enquiry does not select a winner or guarantee an offer in either location."
-        ]
+        ],
+        "answer": "Select Any area to keep the enquiry open to Paje and Fumba. Developers decide whether they have suitable options; neither area is guaranteed.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Area selection",
+              "Any area leaves the preferred-area field unrestricted."
+            ],
+            [
+              "Other preferences",
+              "Property type, budget and purchase timeline remain buyer choices."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -1027,23 +1327,77 @@
     },
     "sections": [
       {
-        "heading": "Decide how much operational work you want",
+        "heading": "Is an apartment automatically less work than a villa?",
         "paragraphs": [
           "For personal use, compare privacy, storage, access and everyday comfort. For rental use, add cleaning logistics, maintenance support, guest arrivals and management rules. An apartment can still require significant involvement, while a villa may offer managed services at a separate cost. Ask what is actually included."
-        ]
+        ],
+        "answer": "Neither property type guarantees less operational work. Compare the actual services included and the responsibilities that remain with you.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Personal use",
+              "Privacy, storage, access and everyday comfort."
+            ],
+            [
+              "Rental use",
+              "Cleaning, guest arrivals, support and management rules."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Compare responsibilities in writing",
+        "heading": "Does fully managed mean every repair is covered?",
         "paragraphs": [
           "Prepare a list of exterior repairs, roofs, water systems, pools, security and common spaces. Ask who pays, who authorises work and how costs are shared. The marketing label “fully managed” is not a complete allocation of responsibility.",
           "Consider periods when the property is unoccupied. Ask who checks for leaks, equipment faults and security issues, how urgent repairs are approved and whether replacement reserves are funded. Include the cost of that arrangement in your comparison."
-        ]
+        ],
+        "answer": "A fully managed label does not allocate every repair or expense. Ask who pays, who approves work and what happens during vacancy.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Responsibilities",
+              "Written owner, manager and shared-asset responsibility schedule."
+            ],
+            [
+              "Urgent work",
+              "Approval process, inspections and replacement reserves during vacancy."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Keep the investment calculation property-specific",
+        "heading": "Does a larger villa automatically produce a better yield?",
         "paragraphs": [
           "If an offer includes a projection, compare total acquisition cost and net cash flow after the complete fee stack. Larger floor area or a private pool may change costs without guaranteeing higher occupancy. The appropriate comparison uses evidence for the unit and its proposed operation, not a generic assumption about property types."
-        ]
+        ],
+        "answer": "More space or a private pool does not guarantee higher net income. Compare acquisition cost and operating cash flow for the actual properties.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Cost basis",
+              "Total acquisition cost with the same included items."
+            ],
+            [
+              "Cash flow",
+              "Unit-specific revenue assumptions and complete fee stack."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -1105,23 +1459,77 @@
     },
     "sections": [
       {
-        "heading": "Distinguish drawings from a delivered specification",
+        "heading": "Does completed mean the specification needs no checks?",
         "paragraphs": [
           "For off-plan property, ask which plan revision forms part of the agreement, what can change and which items are included. Request the expected process for documenting progress and approving variations. For a completed unit, compare the actual condition with the written specification rather than assuming completion resolves every issue."
-        ]
+        ],
+        "answer": "A completed unit still needs inspection against its specification. Off-plan buyers need the agreed plan revision and documented change process.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Off-plan",
+              "Contract plan revision, specifications and variation process."
+            ],
+            [
+              "Completed",
+              "Inspection of delivered condition against written inclusions."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Model when money leaves your account",
+        "heading": "Does a staged payment plan reduce the total property cost?",
         "paragraphs": [
           "Build a dated cash-flow sheet that includes the unit price, transaction costs and preparation for use. Ask whether payments are tied to construction evidence or calendar dates. If completion is delayed, understand how that changes expected use and holding costs. A different payment timetable is not the same as a lower total cost."
-        ]
+        ],
+        "answer": "Staged payments change when cash is required. Compare total costs and delay exposure separately from the deposit size.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Cash flow",
+              "Dated purchase, transaction and preparation payments."
+            ],
+            [
+              "Delay exposure",
+              "Contract triggers and the cost of postponing intended use."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Use independent review at both stages",
+        "heading": "Which checks remain necessary at either delivery stage?",
         "paragraphs": [
           "Request the seller’s authority, relevant property and project documents and the proposed purchase agreement. Ask independent counsel to review the transaction. For completed property, arrange a condition inspection; for unfinished property, ask what technical oversight and progress evidence will be available.",
           "Review common areas and surroundings separately from the unit. A ready apartment can be inside a development with later construction phases. Ask what facilities are operating now, which are proposed and who is responsible for temporary arrangements."
-        ]
+        ],
+        "answer": "Both delivery stages require independent document review. Review the unit, common facilities and later construction phases separately.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Transaction",
+              "Seller authority, project documents and purchase agreement."
+            ],
+            [
+              "Technical review",
+              "Condition inspection or agreed construction oversight and progress evidence."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [
@@ -1184,29 +1592,101 @@
     },
     "sections": [
       {
-        "heading": "Use the right denominator",
+        "heading": "Can a higher percentage hide the same rental cash flow?",
         "paragraphs": [
           "The denominator might be a headline unit price or the complete acquisition cost. Those are not interchangeable. Ask whether it includes furnishing, professional costs, transaction charges and preparation for use. A projection using a lower denominator can show a higher percentage without producing more cash.",
           "In the hypothetical example above, $12,000 divided by $120,000 is 10%. After $4,000 of operating expenses, $8,000 divided by the same $120,000 is approximately 6.7%. These numbers are deliberately illustrative; they are not sourced operating results for any Zanzibar property."
-        ]
+        ],
+        "answer": "Yes. Using a smaller acquisition-cost denominator raises the percentage without increasing rental cash flow. Compare yields on the same cost basis.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Denominator",
+              "Confirm whether the cost basis includes fit-out and transaction expenses."
+            ],
+            [
+              "Arithmetic",
+              "Gross = revenue ÷ cost; net = revenue less defined expenses, divided by cost."
+            ]
+          ]
+        }
       },
       {
-        "heading": "List every cost the projection excludes",
+        "heading": "What does net yield exclude?",
         "paragraphs": [
           "Ask about management, booking commissions, cleaning, utilities, maintenance, insurance where relevant, service charges and replacement reserves. Clarify the treatment of taxes, financing costs and owner-use periods. The word “net” is not useful until the included and excluded expenses are defined."
-        ]
+        ],
+        "answer": "Net yield is interpretable only when its included and excluded costs are defined. Clarify financing, taxes, owner use and replacement reserves.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Operating costs",
+              "Management, booking, cleaning, utilities, maintenance and service charges."
+            ],
+            [
+              "Excluded items",
+              "Written treatment of financing, taxes, owner use and reserves."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Separate a forecast from an operating record",
+        "heading": "Is a rental forecast the same as an operating record?",
         "paragraphs": [
           "A forecast is an assumption-based scenario. A historical record needs dates, occupancy, realised rates, expenses and the basis for attributing results to the unit. Ask whether the result is gross or net, before or after financing, and whether it refers to the same unit type and operating period."
-        ]
+        ],
+        "answer": "A forecast uses assumptions; an operating record documents realised results over stated dates. Keep the two evidence types separate.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Record",
+              "Dated occupancy, realised rates, revenue and expense records."
+            ],
+            [
+              "Forecast",
+              "Explicit assumptions for the same unit type, period and cost basis."
+            ]
+          ]
+        }
       },
       {
-        "heading": "Request sensitivity cases",
+        "heading": "How should a rental projection be stress-tested?",
         "paragraphs": [
           "Ask what happens if booked nights or realised nightly rates fall, or operating expenses rise. Compare at least a lower-revenue case with the base scenario before making a decision. The purpose is to understand exposure to assumptions, not to convert a forecast into a promised return."
-        ]
+        ],
+        "answer": "Compare lower-revenue and higher-expense cases against the base scenario. Sensitivity analysis tests assumptions; it does not guarantee a return.",
+        "evidence": {
+          "caption": "Evidence to request before deciding",
+          "headers": [
+            "Check",
+            "Required evidence or calculation basis"
+          ],
+          "rows": [
+            [
+              "Revenue case",
+              "Change booked nights or realised nightly rate while identifying other assumptions."
+            ],
+            [
+              "Expense case",
+              "Change operating costs and recalculate cash flow on the same acquisition basis."
+            ]
+          ]
+        }
       }
     ],
     "faqs": [

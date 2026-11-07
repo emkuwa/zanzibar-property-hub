@@ -187,8 +187,14 @@ export default function SeoPage({ path }: { path: string }) {
             </aside>
             <div className="seo-prose">
               {page.sections.map((s) => (
-                <section key={s.heading}>
+                <section key={s.heading} data-answer-section={s.answer ? "commercial" : undefined}>
                   <h2>{s.heading}</h2>
+                  {s.answer ? <p className="seo-section-answer">{s.answer}</p> : null}
+                  {s.evidence ? <div className="seo-table-wrap"><table>
+                    <caption>{s.evidence.caption}</caption>
+                    <thead><tr>{s.evidence.headers.map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
+                    <tbody>{s.evidence.rows.map(([label, ...cells]) => <tr key={label}><th scope="row">{label}</th>{cells.map((cell, i) => <td key={i}>{cell}</td>)}</tr>)}</tbody>
+                  </table></div> : null}
                   {s.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}

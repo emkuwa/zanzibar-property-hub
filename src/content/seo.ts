@@ -11,7 +11,7 @@ export type ContentPage = {
   description: string;
   answer: string;
   table: { caption: string; headers: string[]; rows: string[][] };
-  sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+  sections: { heading: string; answer?: string; evidence?: ContentPage["table"]; paragraphs: string[]; bullets?: string[] }[];
   faqs: { question: string; answer: string }[];
   sources: { label: string; url: string; scope: string }[];
   related: string[];

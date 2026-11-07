@@ -1,0 +1,139 @@
+{
+  "reviewed": "2026-11-07",
+  "basis": "Inferred commercial intent; no route-level revenue or AI citation evidence is available. Reprioritise using enquiry_guide conversions and a fixed tracked-prompt panel.",
+  "routes": [
+    {
+      "path": "/",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/areas",
+      "priority": "P2",
+      "intent": "resource navigation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/guides",
+      "priority": "P2",
+      "intent": "resource navigation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/blog",
+      "priority": "P2",
+      "intent": "resource navigation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/paje",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/jambiani",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/nungwi",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/kendwa",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/fumba",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/areas/matemwe",
+      "priority": "P2",
+      "intent": "local evaluation",
+      "aiVisibility": "unmeasured",
+      "reason": "Supports a distinct local shortlist or parent-child navigation"
+    },
+    {
+      "path": "/guides/zanzibar-apartments",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/guides/zanzibar-villas",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/guides/zanzibar-property-payment-plans",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/guides/zanzibar-property-under-150000",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/guides/zanzibar-property-costs",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/blog/paje-vs-fumba",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/blog/apartment-vs-villa",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/blog/off-plan-vs-completed-property",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/blog/gross-vs-net-rental-yield",
+      "priority": "P1",
+      "intent": "commercial decision / enquiry",
+      "aiVisibility": "unmeasured",
+      "reason": "Direct buying, comparison, budget or enquiry decision"
+    }
+  ]
+}
