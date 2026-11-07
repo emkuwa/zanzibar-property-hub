@@ -1,18 +1,18 @@
 export const HOME_QUESTIONS = [
   [
     "What happens after I submit?",
-    "Your enquiry is saved with a Zanzibaba reference. Once shared, participating developers contact you directly with their property options. You may hear from more than one developer.",
+    "Your preferences are saved with a Zanzibaba reference. Once shared, participating developers may contact you directly with their property options. You may hear from more than one developer.",
   ],
   [
     "Will I be connected to just one developer?",
-    "No. Your consent covers all participating partner developers. Your preferences help each developer decide which options to offer; they do not restrict your enquiry to one developer.",
+    "No. Your consent covers all participating partner developers. Your preferences help each developer decide which options to offer; they do not restrict your property search to one developer.",
   ],
   [
     "Why are project names not shown here?",
-    "This is a property enquiry service. Developers provide current project names, brochures, prices and availability directly after the referral.",
+    "ZanziInvest connects your property preferences with participating developers. Developers provide current project names, brochures, prices and availability directly after the referral.",
   ],
   [
-    "Does an enquiry reserve a property?",
+    "Does sharing my preferences reserve a property?",
     "No. Submitting creates no reservation or purchase commitment. Confirm the unit, full costs, payment terms and legal documents before proceeding.",
   ],
   [

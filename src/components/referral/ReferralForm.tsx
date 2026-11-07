@@ -79,8 +79,8 @@ export default function ReferralForm({
         if (response.status === 409) requestId.current = undefined;
         throw new Error(
           response.status === 409
-            ? "Your enquiry changed. Please submit again."
-            : "We could not save your enquiry. Please try again.",
+            ? "Your preferences changed. Please submit again."
+            : "We could not save your preferences. Please try again.",
         );
       }
       setAwaitingPartners(data.distributionStatus === "awaiting_partners");
@@ -95,7 +95,7 @@ export default function ReferralForm({
       });
     } catch (err) {
       setError(
-        err instanceof Error && err.message.startsWith("Your enquiry changed")
+        err instanceof Error && err.message.startsWith("Your preferences changed")
           ? err.message
           : "We could not confirm your submission. Please retry; your reference prevents duplicate referrals.",
       );
@@ -111,7 +111,7 @@ export default function ReferralForm({
         <span className="success-mark">
           <Check aria-hidden="true" />
         </span>
-        <p className="eyebrow">Enquiry received</p>
+        <p className="eyebrow">Your preferences are saved</p>
         <div className="gold-rule" aria-hidden="true" />
         <h2>
           Your next chapter
@@ -120,8 +120,8 @@ export default function ReferralForm({
         </h2>
         <p>
           {awaitingPartners
-            ? "Your enquiry has been recorded with Zanzibaba. Developer introductions are being prepared; your enquiry has not been sent to a developer yet."
-            : "Your enquiry has been recorded with Zanzibaba. Participating developers may contact you directly with their property options."}
+            ? "Your preferences are saved with Zanzibaba. Developer introductions are being prepared; your details have not been shared with a developer yet."
+            : "Your preferences are saved with Zanzibaba. Participating developers may contact you directly with their property options."}
         </p>
         <div className="reference-box">
           <span>Your referral reference</span>
@@ -140,7 +140,7 @@ export default function ReferralForm({
         </a>
         <p className="small-note">
           Keep this reference and mention ZanziInvest when speaking with
-          developers. Your enquiry does not reserve a property or commit you to
+          developers. Sharing your preferences does not reserve a property or commit you to
           a purchase.
         </p>
       </div>
@@ -162,13 +162,13 @@ export default function ReferralForm({
         if (!inFlight.current) requestId.current = undefined;
       }}
       className="referral-form"
-      aria-label="Property enquiry"
+      aria-label="Property preferences"
       aria-busy={busy}
     >
       <div className="form-heading">
         <span className="eyebrow">Your next chapter starts here</span>
         <h2>What are you looking for?</h2>
-        <p>One enquiry. Property options from our developer network.</p>
+        <p>Your preferences. Your property options.</p>
       </div>
       {context ? <p className="field-help">
         Started from the <a href={context.path}>{context.label}</a>. We selected its property type or area below; review and change any preference before submitting.
@@ -274,8 +274,7 @@ export default function ReferralForm({
           <span>{CONSENT_TEXT}</span>
         </label>
         <p id="privacy-note" className="field-help">
-          Read <a href="#privacy">how your information is used</a>. This is an
-          enquiry, not a reservation.
+          Read <a href="#privacy">how your information is used</a>. Sharing your preferences does not reserve a property.
         </p>
         {error ? (
           <p className="form-error" role="alert">
@@ -285,8 +284,8 @@ export default function ReferralForm({
         <button className="primary-button submit-button" type="submit">
           {busy ? (
             <>
-              <Loader2 className="spin" aria-hidden="true" /> Sending your
-              enquiry…
+              <Loader2 className="spin" aria-hidden="true" /> Saving your
+              preferences…
             </>
           ) : (
             <>

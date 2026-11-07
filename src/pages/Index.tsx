@@ -26,7 +26,7 @@ const steps = [
   },
   {
     Icon: Share2,
-    title: "Submit your enquiry",
+    title: "Find your options",
     detail:
       "Agree to direct contact from participating developers and send your brief.",
   },
@@ -34,7 +34,7 @@ const steps = [
     Icon: Mail,
     title: "Hear from participating developers",
     detail:
-      "Once your enquiry is shared, developers with suitable options may contact you directly.",
+      "Once your preferences are shared, developers with suitable options may contact you directly.",
   },
 ];
 
@@ -50,7 +50,7 @@ function PrivacyNotice() {
       <p>
         ZanziInvest is operated by Zanzibaba Company Limited, Zanzibar. We
         collect your name, email, WhatsApp number and property preferences to
-        record and share your enquiry with participating partner developers. We
+        record your preferences and share your details with participating partner developers. We
         record your consent text and version, submission time and referral
         reference. Campaign identifiers may be recorded when you arrive through
         a campaign link.
@@ -167,7 +167,7 @@ export default function Index() {
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
                   Find my property options <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">One enquiry. Explore your options. No purchase commitment.</p>
+                <p className="hero-reassurance">Explore your options. No purchase commitment.</p>
               </div>
             </section>
             <section
@@ -195,7 +195,7 @@ export default function Index() {
               className="faq-section landing-container"
               aria-labelledby="faq-heading"
             >
-              <p className="eyebrow">Before you enquire</p>
+              <p className="eyebrow">Before you get started</p>
               <h2 id="faq-heading">A few things to know.</h2>
               <div className="faq-list">
                 {questions.map(([q, a]) => (
@@ -217,7 +217,7 @@ export default function Index() {
           <section
             className="enquiry-screen"
             aria-label={
-              submitted ? "Enquiry confirmation" : "Property enquiry form"
+              submitted ? "Preferences confirmation" : "Property preferences form"
             }
           >
             {!submitted ? (
@@ -246,7 +246,7 @@ export default function Index() {
             className="seo-discovery landing-container"
             aria-labelledby="guides-heading"
           >
-            <p className="eyebrow">Make an informed enquiry</p>
+            <p className="eyebrow">Explore before you choose</p>
             <h2 id="guides-heading">Explore Zanzibar property guides</h2>
             <div className="seo-discovery-grid">
               <a href="/areas/paje">Paje property guide →</a>

@@ -277,10 +277,10 @@ describe("customer enquiry form", () => {
     fillForm();
     const consent = screen.getByRole("checkbox");
     expect(consent).not.toBeChecked();
-    fireEvent.submit(screen.getByRole("form", { name: "Property enquiry" }));
+    fireEvent.submit(screen.getByRole("form", { name: "Property preferences" }));
     expect(fetcher).not.toHaveBeenCalled();
     fireEvent.click(consent);
-    fireEvent.submit(screen.getByRole("form", { name: "Property enquiry" }));
+    fireEvent.submit(screen.getByRole("form", { name: "Property preferences" }));
     await waitFor(() =>
       expect(screen.getByText("ZI-TEST")).toBeInTheDocument(),
     );
@@ -294,12 +294,12 @@ describe("customer enquiry form", () => {
     render(<ReferralForm />);
     fillForm();
     fireEvent.click(screen.getByRole("checkbox"));
-    fireEvent.submit(screen.getByRole("form", { name: "Property enquiry" }));
+    fireEvent.submit(screen.getByRole("form", { name: "Property preferences" }));
     await waitFor(() =>
       expect(screen.getByRole("alert")).toHaveTextContent(/retry/),
     );
-    expect(screen.queryByText("Enquiry received")).not.toBeInTheDocument();
-    fireEvent.submit(screen.getByRole("form", { name: "Property enquiry" }));
+    expect(screen.queryByText("Your preferences are saved")).not.toBeInTheDocument();
+    fireEvent.submit(screen.getByRole("form", { name: "Property preferences" }));
     await waitFor(() => expect(fetcher).toHaveBeenCalledTimes(2));
     expect(JSON.parse(fetcher.mock.calls[0][1].body).requestId).toBe(
       JSON.parse(fetcher.mock.calls[1][1].body).requestId,
