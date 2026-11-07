@@ -7,6 +7,9 @@ type EnquiryContext = {
 };
 /** Reviewed defaults only: comparison and budget guides deliberately make no choice. */
 export const ENQUIRY_CONTEXTS: Record<string, EnquiryContext> = {
+  "/guides/zanzibar-off-plan-property": { label: "Off-plan property guide" },
+  "/guides/buying-zanzibar-property-from-abroad": { label: "Buying from abroad guide" },
+  "/guides/zanzibar-managed-holiday-homes": { label: "Managed holiday homes guide" },
   "/guides/zanzibar-apartments": { label: "Zanzibar apartments guide", propertyType: "Apartment" },
   "/guides/zanzibar-villas": { label: "Zanzibar villas guide", propertyType: "Villa" },
   "/areas/paje": { label: "Paje property guide", area: "Paje / Jambiani" },

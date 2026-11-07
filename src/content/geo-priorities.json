@@ -134,6 +134,27 @@
       "intent": "commercial decision / enquiry",
       "aiVisibility": "unmeasured",
       "reason": "Direct buying, comparison, budget or enquiry decision"
+    },
+    {
+      "path": "/guides/zanzibar-off-plan-property",
+      "priority": "P1",
+      "intent": "international off-plan buyer decision",
+      "aiVisibility": "unmeasured",
+      "reason": "Distinct overseas buying question leading to prices and payment plans"
+    },
+    {
+      "path": "/guides/buying-zanzibar-property-from-abroad",
+      "priority": "P1",
+      "intent": "international off-plan buyer decision",
+      "aiVisibility": "unmeasured",
+      "reason": "Distinct overseas buying question leading to prices and payment plans"
+    },
+    {
+      "path": "/guides/zanzibar-managed-holiday-homes",
+      "priority": "P1",
+      "intent": "international off-plan buyer decision",
+      "aiVisibility": "unmeasured",
+      "reason": "Distinct overseas buying question leading to prices and payment plans"
     }
   ]
 }

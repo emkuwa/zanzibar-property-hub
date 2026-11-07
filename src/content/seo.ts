@@ -26,14 +26,14 @@ export const HUBS = [
     kind: "area" as ContentKind,
     title: "Zanzibar property area guides",
     description:
-      "Compare six Zanzibar property areas using site access, surroundings, services, delivery and costs before requesting developer offers.",
+      "Compare Zanzibar property areas for your off-plan apartment, villa or holiday home, including access, services, delivery and ownership costs.",
   },
   {
     path: "/guides",
     kind: "guide" as ContentKind,
     title: "Zanzibar property buying guides",
     description:
-      "Prepare your Zanzibar property enquiry with apartment, villa, budget, payment-plan and acquisition-cost checklists.",
+      "Explore off-plan property, buying from abroad, payment plans and managed holiday homes in Zanzibar. Plan your budget and next steps.",
   },
   {
     path: "/blog",
@@ -64,9 +64,9 @@ export function pageMetadata(path: string) {
       }
     : {
         title:
-          "Zanzibar Apartments & Villas | ZanziInvest by Zanzibaba",
+          "Zanzibar Off-Plan Apartments & Villas | ZanziInvest",
         description:
-          "Explore Zanzibar apartments and villas for investment, holiday homes or everyday living. Share your property preferences with ZanziInvest.",
+          "Explore off-plan apartments and villas in Zanzibar for a holiday home or rental investment. Get prices and payment plans matched to your budget.",
         canonical: SITE_URL + "/",
       };
 }
@@ -160,12 +160,12 @@ export function pageSchema(path: string) {
   const pageId = SITE_URL + path + "#webpage";
   const graph: Record<string, unknown>[] = [
     { ...org, legalName: BUSINESS.name, email: BUSINESS.email,
-      alternateName: BUSINESS.brand, knowsAbout: ["Zanzibar property enquiries", "Property developer introductions"] },
+      alternateName: BUSINESS.brand, knowsAbout: ["Zanzibar off-plan apartments", "Zanzibar villas", "International property buyers", "Property payment plans"] },
     { "@type": "WebSite", "@id": websiteId, url: SITE_URL + "/", name: BUSINESS.brand,
       publisher: { "@id": orgId }, inLanguage: "en" },
-    { "@type": "Service", "@id": serviceId, name: "Zanzibar property enquiry and developer introduction service",
+    { "@type": "Service", "@id": serviceId, name: "Zanzibar off-plan property guidance",
       provider: { "@id": orgId }, areaServed: { "@type": "Place", name: BUSINESS.area },
-      description: "Submit property preferences and consent for introductions to participating developers. An enquiry does not reserve a property." },
+      description: "Explore off-plan apartments and villas in Zanzibar. Share your budget and preferences with ZanziInvest to request prices and payment plans." },
     { "@type": hub ? "CollectionPage" : "WebPage", "@id": pageId,
       url: SITE_URL + path, name: pageMetadata(path).title, description: pageMetadata(path).description,
       isPartOf: { "@id": websiteId }, about: { "@id": serviceId }, inLanguage: "en",

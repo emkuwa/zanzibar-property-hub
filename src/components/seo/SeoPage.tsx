@@ -93,7 +93,7 @@ export default function SeoPage({ path }: { path: string }) {
             ZanziInvest<small>BY ZANZIBABA</small>
           </a>
           <a className="seo-header-cta" href={enquiryLinkFor(path)}>
-            Find my options <ArrowRight size={16} aria-hidden="true" />
+            Prices &amp; Plans <ArrowRight size={16} aria-hidden="true" />
           </a>
         </div>
         <nav
@@ -175,14 +175,14 @@ export default function SeoPage({ path }: { path: string }) {
             </div>
             <aside className="seo-inline-cta">
               <div>
-                <strong>Compare offers against your own brief.</strong>
+                <strong>Find your Zanzibar off-plan options.</strong>
                 <p>
-                  One enquiry, shared with participating developers after your
-                  consent. Several developers may contact you directly.
+                  Tell us your budget, preferred area and plans for the property.
+                  Talk to ZanziInvest about prices, payment plans and next steps.
                 </p>
               </div>
               <a href={enquiryLinkFor(path)} className="primary-button">
-                Request property offers <ArrowRight aria-hidden="true" />
+                Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
               </a>
             </aside>
             <div className="seo-prose">
@@ -203,7 +203,7 @@ export default function SeoPage({ path }: { path: string }) {
               ))}
             </div>
             <section className="seo-faq" aria-labelledby="content-faq-heading">
-              <h2 id="content-faq-heading">Questions before you enquire</h2>
+              <h2 id="content-faq-heading">Questions before you get started</h2>
               {page.faqs.map((f) => (
                 <details key={f.question}>
                   <summary>
@@ -253,12 +253,13 @@ export default function SeoPage({ path }: { path: string }) {
               <p className="eyebrow">ZanziInvest resources</p>
               <h1>{hub!.title}</h1>
               <p className="seo-answer">
-                {hub!.description} Every guide leads to the same private
-                enquiry; no developer or project directory is published here.
+                {hub!.description} Explore practical answers, then talk to us about prices and payment plans that match your goals.
               </p>
             </header>
             <ContentCards
-              pages={CONTENT_PAGES.filter((p) => p.kind === hub!.kind)}
+              pages={CONTENT_PAGES.filter((p) => p.kind === hub!.kind).sort((a, b) =>
+                (b.modified || b.published).localeCompare(a.modified || a.published)
+              )}
             />
           </>
         )}
@@ -274,7 +275,7 @@ export default function SeoPage({ path }: { path: string }) {
             <a href="/blog">Insights</a>
             <a href="/#privacy">Privacy</a>
           </nav>
-          <a href={enquiryLinkFor(path)}>Send your property enquiry →</a>
+          <a href={enquiryLinkFor(path)}>Get prices and payment plans →</a>
           <p>© 2026 Zanzibaba Company Limited · Zanzibar, Tanzania</p>
         </div>
       </footer>

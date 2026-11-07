@@ -390,3 +390,12 @@
   .seo-table-wrap th, .seo-table-wrap td, .seo-table-wrap caption { font-size:16px; line-height:1.6; }
   .seo-faq summary, .seo-faq p, .seo-inline-cta p { font-size:17px; line-height:1.65; }
 }
+
+/* Readable international buyer resources on narrow screens. */
+@media(max-width:700px) {
+  .seo-header { flex-wrap:wrap; padding-block:16px; }
+  .seo-header-cta { font-size:16px; min-height:44px; }
+  .seo-breadcrumb ol, .seo-byline, .seo-sources a, .seo-sources p, .seo-editorial-note, .seo-card-link { font-size:16px; line-height:1.65; }
+  .seo-card .eyebrow { font-size:13px; }
+  .seo-inline-cta .primary-button { font-size:17px; white-space:normal; }
+}

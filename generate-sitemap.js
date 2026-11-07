@@ -14,7 +14,14 @@ export const paths = [
   "/blog",
   ...pages.map((p) => p.path),
 ];
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map((path) => `<url><loc>https://www.zanziinvest.com${path}</loc><lastmod>${pages.find((p) => p.path === path)?.modified || pages.find((p) => p.path === path)?.published || (path === "/" ? "2026-11-08" : "2026-11-07")}</lastmod></url>`).join("\n")}\n</urlset>\n`;
+const lastModified = (route) => {
+  const record = pages.find((p) => p.path === route);
+  if (record) return record.modified || record.published;
+  if (route === "/") return "2026-11-08";
+  const kind = { "/areas": "area", "/guides": "guide", "/blog": "article" }[route];
+  return pages.filter((p) => p.kind === kind).map((p) => p.modified || p.published).sort().at(-1) || "2026-11-07";
+};
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map((path) => `<url><loc>https://www.zanziinvest.com${path}</loc><lastmod>${lastModified(path)}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 fs.writeFileSync(new URL("./public/sitemap.xml", import.meta.url), xml);
 fs.writeFileSync(
   new URL("./server/seo-sitemap.ts", import.meta.url),

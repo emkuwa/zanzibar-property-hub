@@ -251,9 +251,9 @@ export default function Index() {
             <p className="eyebrow">Explore before you choose</p>
             <h2 id="guides-heading">Explore Zanzibar property guides</h2>
             <div className="seo-discovery-grid">
-              <a href="/areas/paje">Paje property guide →</a>
-              <a href="/areas/fumba">Fumba property guide →</a>
-              <a href="/guides/zanzibar-apartments">Compare apartments →</a>
+              <a href="/guides/zanzibar-off-plan-property">Explore off-plan property →</a>
+              <a href="/guides/buying-zanzibar-property-from-abroad">Buying from abroad →</a>
+              <a href="/guides/zanzibar-managed-holiday-homes">Holiday homes &amp; rental management →</a>
               <a href="/guides/zanzibar-property-costs">
                 Plan your full buying budget →
               </a>

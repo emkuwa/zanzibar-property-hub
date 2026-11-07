@@ -25,6 +25,16 @@ describe("guide-to-enquiry context", () => {
     expect(enquiryLinkFor("/blog/apartment-vs-villa")).toBe("/#enquiry");
     expect(enquiryLinkFor("/guides/zanzibar-property-under-150000")).toBe("/#enquiry");
   });
+  it("preserves overseas buyer guide attribution without choosing buyer preferences", () => {
+    for (const path of ["/guides/zanzibar-off-plan-property", "/guides/buying-zanzibar-property-from-abroad", "/guides/zanzibar-managed-holiday-homes"]) {
+      const url = new URL(enquiryLinkFor(path), "https://www.zanziinvest.com");
+      const context = enquiryContext(url.search);
+      expect(context?.path).toBe(path);
+      expect(context?.propertyType).toBeUndefined();
+      expect(context?.area).toBeUndefined();
+      expect(url.hash).toBe("#enquiry");
+    }
+  });
   it("ignores arbitrary or inherited keys and external destinations", () => {
     for (const from of ["https://attacker.example", "__proto__", "constructor", "/unknown"]) {
       expect(enquiryContext(`?from=${encodeURIComponent(from)}`)).toBeUndefined();
