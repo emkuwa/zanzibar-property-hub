@@ -23,6 +23,7 @@ export default function ReferralForm({
   const [awaitingPartners, setAwaitingPartners] = useState(false);
   const requestId = useRef<string>();
   const inFlight = useRef(false);
+  const formStarted = useRef(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -149,6 +150,15 @@ export default function ReferralForm({
     <form
       onSubmit={submit}
       onChange={() => {
+        if (!formStarted.current) {
+          formStarted.current = true;
+          const engine = currentAiReferral();
+          window.gtag?.("event", "enquiry_form_started", {
+            form_name: "developer_network",
+            ...(context ? { enquiry_guide: context.path } : {}),
+            ...(engine ? { ai_referral_engine: engine } : {}),
+          });
+        }
         if (!inFlight.current) requestId.current = undefined;
       }}
       className="referral-form"

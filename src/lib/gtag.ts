@@ -41,3 +41,13 @@ export function currentAiReferral(): string | undefined {
     return engine || (stored && ["chatgpt", "perplexity", "claude", "gemini", "copilot"].includes(stored) ? stored : undefined);
   } catch { return engine; }
 }
+
+/** Counts enquiry entry clicks, not submissions; contains no contact data. */
+export function trackEnquiryEntry(placement: "hero" | "faq") {
+  if (typeof window === "undefined") return;
+  const engine = currentAiReferral();
+  window.gtag?.("event", "enquiry_cta_click", {
+    placement,
+    ...(engine ? { ai_referral_engine: engine } : {}),
+  });
+}

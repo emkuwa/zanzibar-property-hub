@@ -1,3 +1,4 @@
+import { trackEnquiryEntry } from "@/lib/gtag";
 import { HOME_QUESTIONS as questions } from "@/content/business";
 import BrandFacts from "@/components/seo/BrandFacts";
 import { useEffect, useState } from "react";
@@ -19,21 +20,21 @@ import "@/components/seo/seo.css";
 const steps = [
   {
     Icon: FileText,
-    title: "Share your brief",
+    title: "Tell us your preferences",
     detail:
       "Tell us your property type, budget, preferred area and purchase timeline.",
   },
   {
     Icon: Share2,
-    title: "Reach our developer network",
+    title: "Submit your enquiry",
     detail:
-      "With your consent, your enquiry is recorded for all participating partner developers.",
+      "Agree to direct contact from participating developers and send your brief.",
   },
   {
     Icon: Mail,
-    title: "Receive offers directly",
+    title: "Hear from participating developers",
     detail:
-      "Developers handle property details, viewings and purchase discussions directly with you.",
+      "Once your enquiry is shared, developers with suitable options may contact you directly.",
   },
 ];
 
@@ -113,7 +114,7 @@ export default function Index() {
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
-            <a href="#enquiry">Find my property options</a>
+            <a href="#enquiry">Request property offers</a>
             <a href="/guides">Guides</a>
             <a href="#privacy">Privacy</a>
           </nav>
@@ -136,7 +137,7 @@ export default function Index() {
             onClick={() => setMenuOpen(false)}
           >
             <a href="#home">Home</a>
-            <a href="#enquiry">Find my property options</a>
+            <a href="#enquiry">Request property offers</a>
             <a href="/guides">Property guides</a>
             <a href="#privacy">Privacy & contact</a>
           </nav>
@@ -156,32 +157,26 @@ export default function Index() {
               />
               <div className="landing-container hero-content">
                 <h1 id="hero-title">
-                  <span>Your Zanzibar</span>
-                  <span>property.</span>
+                  <span>Zanzibar property.</span>
                   <span>One enquiry.</span>
+                  <span>More options.</span>
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Receive property offers from
-                  <br className="mobile-break" /> our partner developers.
+                  Share your budget and preferred area. Request property offers directly from participating developers.
                 </p>
-                <a className="primary-button hero-button" href="#enquiry">
-                  Find my property options <ArrowRight aria-hidden="true" />
+                <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
+                  Request property offers <ArrowRight aria-hidden="true" />
                 </a>
+                <p className="hero-reassurance">No reservation or purchase commitment. Several developers may contact you.</p>
               </div>
             </section>
             <section
               id="how-it-works"
               className="how-section landing-container"
               aria-labelledby="how-heading"
-              data-answer-section="landing"
             >
-              <h2 id="how-heading">What does one enquiry actually do?</h2>
-              <p className="landing-answer">Your enquiry records your property brief and consent for participating developers to contact you directly. It does not select one developer or reserve a unit.</p>
-              <dl className="process-facts" aria-label="Sharing conditions" data-evidence>
-                <div><dt>Required consent</dt><dd>Explicit agreement to contact from all participating developers.</dd></div>
-                <div><dt>Saved vs sent</dt><dd>A saved reference does not confirm delivery to a developer.</dd></div>
-              </dl>
+              <h2 id="how-heading">How it works</h2>
               <div className="steps-grid">
                 {steps.map(({ Icon, title, detail }) => (
                   <article key={title} className="step-card">
@@ -214,8 +209,8 @@ export default function Index() {
                   </details>
                 ))}
               </div>
-              <a className="primary-button closing-button" href="#enquiry">
-                Find my property options <ArrowRight aria-hidden="true" />
+              <a className="primary-button closing-button" href="#enquiry" onClick={() => trackEnquiryEntry("faq")}>
+                Request property offers <ArrowRight aria-hidden="true" />
               </a>
             </section>
           </>
