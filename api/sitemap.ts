@@ -1,4 +1,4 @@
-/** The public site now has one canonical landing page. */
+import { SITEMAP_XML } from "../server/seo-sitemap.js";
 export default function handler(
   _req: unknown,
   res: {
@@ -9,7 +9,5 @@ export default function handler(
 ) {
   res.status(200);
   res.setHeader("Content-Type", "application/xml; charset=utf-8");
-  res.send(
-    '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.zanziinvest.com/</loc></url></urlset>',
-  );
+  res.send(SITEMAP_XML);
 }

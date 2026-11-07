@@ -1,2 +1,4 @@
-/** Legacy programmatic property pages have been retired in favour of one enquiry page. */
-export function generateSitemap() { return ["https://www.zanziinvest.com/"]; }
+import { PUBLIC_PATHS, SITE_URL } from "./content/seo";
+export function generateSitemap() {
+  return PUBLIC_PATHS.map((path) => SITE_URL + path);
+}

@@ -12,6 +12,7 @@ import {
 import ReferralForm from "@/components/referral/ReferralForm";
 import hero from "@/assets/zanziinvest-hero.webp";
 import "@/components/referral/referral.css";
+import "@/components/seo/seo.css";
 
 const steps = [
   {
@@ -94,7 +95,9 @@ function PrivacyNotice() {
 }
 export default function Index() {
   const [screen, setScreen] = useState<"home" | "enquiry">(() =>
-    window.location.hash === "#enquiry" ? "enquiry" : "home",
+    typeof window !== "undefined" && window.location.hash === "#enquiry"
+      ? "enquiry"
+      : "home",
   );
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -134,6 +137,7 @@ export default function Index() {
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#enquiry">Find my property options</a>
+            <a href="/guides">Guides</a>
             <a href="#privacy">Privacy</a>
           </nav>
           <button
@@ -156,6 +160,7 @@ export default function Index() {
           >
             <a href="#home">Home</a>
             <a href="#enquiry">Find my property options</a>
+            <a href="/guides">Property guides</a>
             <a href="#privacy">Privacy & contact</a>
           </nav>
         ) : null}
@@ -168,7 +173,7 @@ export default function Index() {
                 className="landing-hero-image"
                 src={hero}
                 alt="Palm-lined white sand beach beside turquoise ocean"
-                fetchPriority="high"
+                loading="eager"
               />
               <div className="landing-container hero-content">
                 <h1 id="hero-title">
@@ -257,6 +262,32 @@ export default function Index() {
             />
           </section>
         )}
+        {screen === "home" ? (
+          <section
+            className="seo-discovery landing-container"
+            aria-labelledby="guides-heading"
+          >
+            <p className="eyebrow">Make an informed enquiry</p>
+            <h2 id="guides-heading">Explore Zanzibar property guides</h2>
+            <div className="seo-discovery-grid">
+              <a href="/areas/paje">Paje property guide →</a>
+              <a href="/areas/fumba">Fumba property guide →</a>
+              <a href="/guides/zanzibar-apartments">Compare apartments →</a>
+              <a href="/guides/zanzibar-property-costs">
+                Plan your full buying budget →
+              </a>
+              <a href="/guides/zanzibar-property-payment-plans">
+                Compare payment plans →
+              </a>
+              <a href="/blog/paje-vs-fumba">Paje vs Fumba →</a>
+            </div>
+            <p>
+              <a href="/areas">All area guides</a>
+              <a href="/guides">All buying guides</a>
+              <a href="/blog">Property insights</a>
+            </p>
+          </section>
+        ) : null}
         <PrivacyNotice />
       </main>
       <footer className="landing-footer">

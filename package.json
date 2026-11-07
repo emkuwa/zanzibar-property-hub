@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node generate-sitemap.js && vite build && vite build --ssr src/seo/render.tsx --outDir .seo-build && node scripts/prerender.mjs && node scripts/audit-seo.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "auto-push": "node scripts/auto-push-watch.mjs",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.server.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.server.json",
+    "audit:seo": "node scripts/audit-seo.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
