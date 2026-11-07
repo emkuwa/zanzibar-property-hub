@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "auto-push": "node scripts/auto-push-watch.mjs"
+    "auto-push": "node scripts/auto-push-watch.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.server.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
