@@ -1,3 +1,4 @@
+import { enquiryLinkFor } from "@/lib/enquiry-context";
 import { useEffect } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import {
@@ -91,7 +92,7 @@ export default function SeoPage({ path }: { path: string }) {
           <a href="/" className="wordmark">
             ZanziInvest<small>BY ZANZIBABA</small>
           </a>
-          <a className="seo-header-cta" href="/#enquiry">
+          <a className="seo-header-cta" href={enquiryLinkFor(path)}>
             Find my options <ArrowRight size={16} aria-hidden="true" />
           </a>
         </div>
@@ -180,7 +181,7 @@ export default function SeoPage({ path }: { path: string }) {
                   consent. Several developers may contact you directly.
                 </p>
               </div>
-              <a href="/#enquiry" className="primary-button">
+              <a href={enquiryLinkFor(path)} className="primary-button">
                 Request property offers <ArrowRight aria-hidden="true" />
               </a>
             </aside>
@@ -267,7 +268,7 @@ export default function SeoPage({ path }: { path: string }) {
             <a href="/blog">Insights</a>
             <a href="/#privacy">Privacy</a>
           </nav>
-          <a href="/#enquiry">Send your property enquiry →</a>
+          <a href={enquiryLinkFor(path)}>Send your property enquiry →</a>
           <p>© 2026 Zanzibaba Company Limited · Zanzibar, Tanzania</p>
         </div>
       </footer>

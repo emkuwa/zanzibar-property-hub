@@ -1,3 +1,4 @@
+import { enquiryContext } from "@/lib/enquiry-context";
 import { currentAiReferral } from "@/lib/gtag";
 import { fetchWithTimeout } from "@/lib/fetch-timeout";
 import { useRef, useState, type FormEvent } from "react";
@@ -15,6 +16,7 @@ import {
 export default function ReferralForm({
   onSubmitted,
 }: { onSubmitted?: () => void } = {}) {
+  const [context] = useState(() => enquiryContext(typeof window === "undefined" ? "" : window.location.search));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [reference, setReference] = useState("");
@@ -55,6 +57,7 @@ export default function ReferralForm({
     inFlight.current = true;
     window.gtag?.("event", "referral_submit_started", {
       form_name: "developer_network",
+      ...(context ? { enquiry_guide: context.path } : {}),
     });
     try {
       const response = await fetchWithTimeout(
@@ -87,6 +90,7 @@ export default function ReferralForm({
         ...(currentAiReferral() ? { ai_referral_engine: currentAiReferral() } : {}),
         form_name: "developer_network",
         method: "referral_form",
+        ...(context ? { enquiry_guide: context.path } : {}),
       });
     } catch (err) {
       setError(
@@ -156,6 +160,9 @@ export default function ReferralForm({
         <h2>What are you looking for?</h2>
         <p>One enquiry. Property options from our developer network.</p>
       </div>
+      {context ? <p className="field-help">
+        Started from the <a href={context.path}>{context.label}</a>. We selected its property type or area below; review and change any preference before submitting.
+      </p> : null}
       <fieldset disabled={busy}>
         <legend className="sr-only">
           Your property preferences and contact details
@@ -163,7 +170,7 @@ export default function ReferralForm({
         <div className="form-grid">
           <label>
             Property type
-            <select name="propertyType" required defaultValue="">
+            <select name="propertyType" required defaultValue={context?.propertyType || ""}>
               <option value="" disabled>
                 Select property type
               </option>
@@ -185,7 +192,7 @@ export default function ReferralForm({
           </label>
           <label>
             Preferred area
-            <select name="area" required defaultValue="Any area">
+            <select name="area" required defaultValue={context?.area || "Any area"}>
               {AREAS.map((v) => (
                 <option key={v}>{v}</option>
               ))}

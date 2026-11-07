@@ -137,7 +137,7 @@ for (const route of paths) {
     const faq = doc.querySelectorAll(".seo-faq details");
     check(faq.length === record.faqs.length, `FAQ mismatch: ${route}`);
     check(
-      Boolean(doc.querySelector('a[href="/#enquiry"]')),
+      [...doc.querySelectorAll("a[href]")].some((a) => { const u = new URL(a.href, "https://www.zanziinvest.com"); return u.pathname === "/" && u.hash === "#enquiry"; }),
       `No enquiry CTA: ${route}`,
     );
   }
@@ -145,7 +145,7 @@ for (const route of paths) {
     const href = link.getAttribute("href");
     if (href.startsWith("/") && !href.startsWith("//"))
       check(
-        paths.includes(href.split("#")[0] || "/"),
+        paths.includes(new URL(href, "https://www.zanziinvest.com").pathname),
         `Broken published internal link: ${route} -> ${href}`,
       );
     if (href.startsWith("mailto:"))
