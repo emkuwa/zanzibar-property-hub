@@ -772,3 +772,30 @@
   .hero-description { font-size:16px; line-height:1.5; max-width:320px; }
   .hero-content { padding-bottom:82px; }
 }
+
+/* Keep secondary service information available without crowding the buyer journey. */
+.service-details > summary { cursor:pointer; font-size:17px; font-weight:600; line-height:1.5; padding:12px 0; color:#123e31; }
+.service-details > div { padding-top:12px; }
+.service-details p { margin-block:14px; line-height:1.7; color:#294b3c; }
+@media(max-width:700px) {
+  .landing-container { width:calc(100% - 40px); }
+  .hero-description { font-size:19px; line-height:1.5; max-width:360px; }
+  .hero-content { padding-block:32px 48px; }
+  .hero-reassurance { font-size:16px; line-height:1.5; max-width:360px; }
+  .primary-button, .hero-button, .submit-button, .closing-button { font-size:17px; min-height:56px; padding:15px 16px; }
+  .step-copy h3 { font-size:19px; font-weight:500; line-height:1.45; }
+  .faq-list summary { font-size:18px; line-height:1.5; min-height:52px; padding-block:15px; }
+  .faq-list p, .service-details p { font-size:17px; line-height:1.65; color:#294b3c; }
+  .eyebrow { font-size:13px; line-height:1.5; }
+  .referral-form { padding:20px; }
+  .form-grid { gap:17px; }
+  .form-grid label { font-size:17px; gap:8px; }
+  .form-grid input, .form-grid select { font-size:18px; height:54px; padding:12px; }
+  .field-help, .consent-label, .small-note, .form-error { font-size:16px; line-height:1.65; color:#294b3c; }
+  .consent-label input { width:24px; height:24px; flex-basis:24px; }
+  .service-details > summary { font-size:18px; min-height:52px; }
+  .privacy-section > p:not(.eyebrow), .landing-footer p, .landing-footer a:not(.wordmark), .footer-bottom { font-size:16px; line-height:1.65; color:#294b3c; }
+  .back-link, .success-contact-note, .back-home-link, .reference-box span { font-size:17px; }
+  .referral-success > p:not(.eyebrow):not(.small-note) { font-size:18px; line-height:1.65; }
+  .wordmark small { font-size:10px; letter-spacing:3px; }
+}

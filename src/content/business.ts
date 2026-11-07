@@ -1,19 +1,19 @@
 export const HOME_QUESTIONS = [
   [
-    "What happens after I submit?",
-    "Your preferences are saved with a Zanzibaba reference. Once shared, participating developers may contact you directly with their property options. You may hear from more than one developer.",
+    "What property options can I explore?",
+    "Share your preferences for an apartment or villa in Zanzibar, whether for investment, a holiday home or everyday living. Prices and availability need confirmation for the specific property.",
   ],
   [
-    "Will I be connected to just one developer?",
-    "No. Your consent covers all participating partner developers. Your preferences help each developer decide which options to offer; they do not restrict your property search to one developer.",
-  ],
-  [
-    "Why are project names not shown here?",
-    "ZanziInvest connects your property preferences with participating developers. Developers provide current project names, brochures, prices and availability directly after the referral.",
+    "How do I get started?",
+    "Tell ZanziInvest your property type, budget, preferred area and purchase timeline, then add your contact details and sharing consent. Your preferences are saved with a reference.",
   ],
   [
     "Does sharing my preferences reserve a property?",
     "No. Submitting creates no reservation or purchase commitment. Confirm the unit, full costs, payment terms and legal documents before proceeding.",
+  ],
+  [
+    "Who may contact me about property options?",
+    "With your consent, ZanziInvest may share your preferences and contact details with all participating partner developers. Several developers may contact you directly by WhatsApp, phone or email. A saved reference does not confirm that your details have been shared.",
   ],
   [
     "How does Zanzibaba earn from this service?",

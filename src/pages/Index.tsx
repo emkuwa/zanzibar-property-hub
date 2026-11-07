@@ -20,21 +20,21 @@ import "@/components/seo/seo.css";
 const steps = [
   {
     Icon: FileText,
-    title: "Tell us your preferences",
+    title: "Tell us what you need",
     detail:
       "Tell us your property type, budget, preferred area and purchase timeline.",
   },
   {
     Icon: Share2,
-    title: "Find your options",
+    title: "Send your preferences",
     detail:
-      "Agree to direct contact from participating developers and send your brief.",
+      "Send your property preferences to ZanziInvest.",
   },
   {
     Icon: Mail,
-    title: "Hear from participating developers",
+    title: "Explore your property options",
     detail:
-      "Once your preferences are shared, developers with suitable options may contact you directly.",
+      "Review property options and discuss viewings and next steps.",
   },
 ];
 
@@ -46,7 +46,8 @@ function PrivacyNotice() {
       aria-labelledby="privacy-heading"
     >
       <p className="eyebrow">Your information</p>
-      <h2 id="privacy-heading">Clear consent. Direct contact.</h2>
+      <h2 id="privacy-heading">Privacy & contact</h2>
+      <details className="service-details"><summary>How your details are used</summary>
       <p>
         ZanziInvest is operated by Zanzibaba Company Limited, Zanzibar. We
         collect your name, email, WhatsApp number and property preferences to
@@ -68,6 +69,7 @@ function PrivacyNotice() {
         who already received your details may keep their own records; you can
         also request that they stop contacting you directly.
       </p>
+      </details>
     </section>
   );
 }
@@ -162,7 +164,7 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Explore apartments and villas for investment, a holiday home or everyday living. Share your preferences and connect with participating developers.
+                  Share your goals with ZanziInvest. Explore apartments and villas for investment, a holiday home or everyday living.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
                   Find my property options <ArrowRight aria-hidden="true" />
@@ -198,7 +200,7 @@ export default function Index() {
               <p className="eyebrow">Before you get started</p>
               <h2 id="faq-heading">A few things to know.</h2>
               <div className="faq-list">
-                {questions.map(([q, a]) => (
+                {questions.slice(0, 3).map(([q, a]) => (
                   <details key={q}>
                     <summary>
                       {q}
@@ -278,7 +280,7 @@ export default function Index() {
           <p>
             Your Zanzibar property connection.
             <br />
-            A property introduction service by Zanzibaba Company Limited.
+            Operated by Zanzibaba Company Limited.
             <br />
             Zanzibar, Tanzania
           </p>

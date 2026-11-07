@@ -66,7 +66,7 @@ export function pageMetadata(path: string) {
         title:
           "Zanzibar Apartments & Villas | ZanziInvest by Zanzibaba",
         description:
-          "Explore Zanzibar apartments and villas for investment, holiday homes or everyday living. Share your preferences to connect with participating developers.",
+          "Explore Zanzibar apartments and villas for investment, holiday homes or everyday living. Share your property preferences with ZanziInvest.",
         canonical: SITE_URL + "/",
       };
 }

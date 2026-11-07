@@ -383,3 +383,10 @@
     gap: 10px;
   }
 }
+
+@media(max-width:700px) {
+  .seo-answer, .seo-prose p, .seo-prose li, .seo-discovery-grid a, .seo-discovery > p { font-size:18px; line-height:1.65; }
+  .seo-header-cta, .seo-nav, .seo-breadcrumb, .seo-byline, .seo-editorial-note, .seo-sources, .seo-card p { font-size:16px; line-height:1.6; }
+  .seo-table-wrap th, .seo-table-wrap td, .seo-table-wrap caption { font-size:16px; line-height:1.6; }
+  .seo-faq summary, .seo-faq p, .seo-inline-cta p { font-size:17px; line-height:1.65; }
+}

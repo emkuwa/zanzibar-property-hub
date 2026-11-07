@@ -168,7 +168,7 @@ export default function ReferralForm({
       <div className="form-heading">
         <span className="eyebrow">Your next chapter starts here</span>
         <h2>What are you looking for?</h2>
-        <p>Your preferences. Your property options.</p>
+        <p>Share your property preferences with ZanziInvest.</p>
       </div>
       {context ? <p className="field-help">
         Started from the <a href={context.path}>{context.label}</a>. We selected its property type or area below; review and change any preference before submitting.
@@ -256,7 +256,7 @@ export default function ReferralForm({
           </label>
         </div>
         <p id="phone-help" className="field-help">
-          Include your country code so developers can reach you.
+          Include your country code for property follow-up.
         </p>
         <div className="honeypot" aria-hidden="true">
           <label>
