@@ -14,6 +14,6 @@ export default function BrandFacts() {
       <tr><th scope="row">Contact</th><td><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></td></tr>
     </tbody></table></div>
     <p>If no participating developer is available, the confirmation records that introductions are being prepared and the enquiry has not been sent. Confirm the unit, charges and contract with the developer before making a reservation decision; this form does not perform those checks.</p>
-    <p>Last updated: <time dateTime={REVIEWED}>7 November 2026</time></p>
+    <p>Last updated: <time dateTime={REVIEWED}>{new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(REVIEWED + "T00:00:00Z"))}</time></p>
   </section>;
 }

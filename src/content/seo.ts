@@ -64,9 +64,9 @@ export function pageMetadata(path: string) {
       }
     : {
         title:
-          "ZanziInvest by Zanzibaba | One Enquiry, Developer Property Offers",
+          "Zanzibar Apartments & Villas | ZanziInvest by Zanzibaba",
         description:
-          "Submit one Zanzibar property enquiry. Share your budget and preferences with Zanzibaba partner developers and receive property options directly.",
+          "Explore Zanzibar apartments and villas for investment, holiday homes or everyday living. Share your preferences to connect with participating developers.",
         canonical: SITE_URL + "/",
       };
 }

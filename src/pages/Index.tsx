@@ -114,7 +114,7 @@ export default function Index() {
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
-            <a href="#enquiry">Request property offers</a>
+            <a href="#enquiry">Find my property options</a>
             <a href="/guides">Guides</a>
             <a href="#privacy">Privacy</a>
           </nav>
@@ -137,7 +137,7 @@ export default function Index() {
             onClick={() => setMenuOpen(false)}
           >
             <a href="#home">Home</a>
-            <a href="#enquiry">Request property offers</a>
+            <a href="#enquiry">Find my property options</a>
             <a href="/guides">Property guides</a>
             <a href="#privacy">Privacy & contact</a>
           </nav>
@@ -157,18 +157,17 @@ export default function Index() {
               />
               <div className="landing-container hero-content">
                 <h1 id="hero-title">
-                  <span>Zanzibar property.</span>
-                  <span>One enquiry.</span>
-                  <span>More options.</span>
+                  <span>Own your place</span>
+                  <span>in Zanzibar.</span>
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Share your budget and preferred area. Request property offers directly from participating developers.
+                  Explore apartments and villas for investment, a holiday home or everyday living. Share your preferences and connect with participating developers.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
-                  Request property offers <ArrowRight aria-hidden="true" />
+                  Find my property options <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">No reservation or purchase commitment. Several developers may contact you.</p>
+                <p className="hero-reassurance">One enquiry. Explore your options. No purchase commitment.</p>
               </div>
             </section>
             <section
@@ -210,7 +209,7 @@ export default function Index() {
                 ))}
               </div>
               <a className="primary-button closing-button" href="#enquiry" onClick={() => trackEnquiryEntry("faq")}>
-                Request property offers <ArrowRight aria-hidden="true" />
+                Find my property options <ArrowRight aria-hidden="true" />
               </a>
             </section>
           </>
@@ -277,6 +276,8 @@ export default function Index() {
             ZanziInvest<small>BY ZANZIBABA</small>
           </a>
           <p>
+            Your Zanzibar property connection.
+            <br />
             A property introduction service by Zanzibaba Company Limited.
             <br />
             Zanzibar, Tanzania

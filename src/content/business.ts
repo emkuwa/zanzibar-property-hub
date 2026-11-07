@@ -24,5 +24,5 @@ export const HOME_QUESTIONS = [
     "Ask each developer to stop contacting you, and email info@zanzibaba.com to request an end to further sharing by Zanzibaba. Include your referral reference if you have it.",
   ],
 ];
-export const REVIEWED = "2026-11-07";
+export const REVIEWED = "2026-11-08";
 export const BUSINESS = { name: "Zanzibaba Company Limited", brand: "ZanziInvest by Zanzibaba", email: "info@zanzibaba.com", area: "Zanzibar, Tanzania" };
