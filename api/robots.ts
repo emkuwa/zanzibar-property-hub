@@ -1,17 +1,13 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
-import fs from "fs";
-import path from "path";
-
-export default function handler(_req: VercelRequest, res: VercelResponse) {
-  try {
-    const robotsPath = path.join(process.cwd(), "public", "robots.txt");
-    const txt = fs.readFileSync(robotsPath, "utf-8");
-
-    res.status(200);
-    res.setHeader("Content-Type", "text/plain; charset=utf-8");
-    res.send(txt);
-  } catch (e) {
-    res.status(500).send("Robots unavailable");
-  }
+import { ROBOTS_TXT } from "../server/seo-robots";
+export default function handler(
+  _req: unknown,
+  res: {
+    status(code: number): void;
+    setHeader(key: string, value: string): void;
+    send(value: string): void;
+  },
+) {
+  res.status(200);
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.send(ROBOTS_TXT);
 }
-

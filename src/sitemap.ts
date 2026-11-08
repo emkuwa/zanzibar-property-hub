@@ -1,40 +1,4 @@
-export const locations = [
-"paje",
-"nungwi",
-"kendwa",
-"jambiani",
-"bwejuu",
-"kiwengwa",
-"matemwe",
-"michamvi",
-"fumba",
-"stone-town"
-];
-
-export const propertyTypes = [
-"villa",
-"hotel",
-"resort",
-"apartment",
-"land",
-"beachfront-property",
-"holiday-rental",
-"boutique-hotel",
-"tourism-land"
-];
-
+import { PUBLIC_PATHS, SITE_URL } from "./content/seo";
 export function generateSitemap() {
-  const baseUrl = "https://www.zanziinvest.com";
-
-  const urls: string[] = [];
-
-  locations.forEach((location) => {
-    urls.push(`${baseUrl}/buy-property-in-${location}-zanzibar`);
-
-    propertyTypes.forEach((type) => {
-      urls.push(`${baseUrl}/buy-${type}-in-${location}-zanzibar`);
-    });
-  });
-
-  return urls;
+  return PUBLIC_PATHS.map((path) => SITE_URL + path);
 }

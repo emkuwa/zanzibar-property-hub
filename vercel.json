@@ -1,5 +1,449 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/invest-in-zanzibar",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-zanzibar",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/paje-villas-for-sale",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/nungwi-beachfront-property",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/jambiani-villas-for-sale",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/developers",
+      "destination": "/#enquiry",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/#enquiry",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-paje-zanzibar",
+      "destination": "/areas/paje",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-jambiani-zanzibar",
+      "destination": "/areas/jambiani",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-nungwi-zanzibar",
+      "destination": "/areas/nungwi",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-kendwa-zanzibar",
+      "destination": "/areas/kendwa",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-fumba-zanzibar",
+      "destination": "/areas/fumba",
+      "permanent": true
+    },
+    {
+      "source": "/buy-property-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-villa-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-hotel-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-resort-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-apartment-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-land-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-villa-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-boutique-hotel-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-holiday-rental-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-property-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-investment-property-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-beachfront-property-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    },
+    {
+      "source": "/buy-tourism-land-in-matemwe-zanzibar",
+      "destination": "/areas/matemwe",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/dashboard",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
     {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap"
@@ -9,7 +453,7 @@
       "destination": "/api/robots"
     },
     {
-      "source": "/(.*)",
+      "source": "/dashboard",
       "destination": "/index.html"
     }
   ]

@@ -1,17 +1,13 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
-import fs from "fs";
-import path from "path";
-
-export default function handler(_req: VercelRequest, res: VercelResponse) {
-  try {
-    const sitemapPath = path.join(process.cwd(), "public", "sitemap_static.xml");
-    const xml = fs.readFileSync(sitemapPath, "utf-8");
-
-    res.status(200);
-    res.setHeader("Content-Type", "application/xml; charset=utf-8");
-    res.send(xml);
-  } catch (e) {
-    res.status(500).send("Sitemap unavailable");
-  }
+import { SITEMAP_XML } from "../server/seo-sitemap.js";
+export default function handler(
+  _req: unknown,
+  res: {
+    status(code: number): void;
+    setHeader(key: string, value: string): void;
+    send(value: string): void;
+  },
+) {
+  res.status(200);
+  res.setHeader("Content-Type", "application/xml; charset=utf-8");
+  res.send(SITEMAP_XML);
 }
-

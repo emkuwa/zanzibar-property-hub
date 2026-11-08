@@ -32,8 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Fix SPA routing for GitHub Pages
-        run: cp dist/index.html dist/404.html
+      - name: Validate TypeScript and tests
+        run: |
+          npm run typecheck
+          npm test -- --pool=threads --maxWorkers=1
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

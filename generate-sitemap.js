@@ -1,47 +1,85 @@
-import fs from "fs";
-
-const BASE = "https://www.zanziinvest.com";
-
-const staticPages = [
+import fs from "node:fs";
+const pages = JSON.parse(
+  fs.readFileSync(
+    new URL("./src/content/seo-pages.json", import.meta.url),
+    "utf8",
+  ),
+);
+const robots = fs.readFileSync(new URL("./public/robots.txt", import.meta.url), "utf8");
+fs.writeFileSync(new URL("./server/seo-robots.ts", import.meta.url), `/** Generated from public/robots.txt. */\nexport const ROBOTS_TXT = ${JSON.stringify(robots)};\n`);
+export const paths = [
   "/",
-  "/partners",
-  "/invest-in-zanzibar",
-  "/buy-property-in-zanzibar",
-  "/paje-villas-for-sale",
-  "/nungwi-beachfront-property",
-  "/jambiani-villas-for-sale",
-  "/developers",
+  "/areas",
+  "/guides",
+  "/blog",
+  ...pages.map((p) => p.path),
 ];
-
-const locations = [
-  "paje", "nungwi", "kendwa", "jambiani", "bwejuu", "kiwengwa",
-  "matemwe", "michamvi", "fumba", "kizimkazi",
+const lastModified = (route) => {
+  const record = pages.find((p) => p.path === route);
+  if (record) return record.modified || record.published;
+  if (route === "/") return "2026-11-08";
+  const kind = { "/areas": "area", "/guides": "guide", "/blog": "article" }[route];
+  return pages.filter((p) => p.kind === kind).map((p) => p.modified || p.published).sort().at(-1) || "2026-11-07";
+};
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map((path) => `<url><loc>https://www.zanziinvest.com${path}</loc><lastmod>${lastModified(path)}</lastmod></url>`).join("\n")}\n</urlset>\n`;
+fs.writeFileSync(new URL("./public/sitemap.xml", import.meta.url), xml);
+fs.writeFileSync(
+  new URL("./server/seo-sitemap.ts", import.meta.url),
+  `/** Generated from reviewed content by generate-sitemap.js. */\nexport const SITEMAP_XML = ${JSON.stringify(xml)};\n`,
+);
+const old = [
+  ["/invest-in-zanzibar", "/guides"],
+  ["/buy-property-in-zanzibar", "/guides"],
+  ["/paje-villas-for-sale", "/areas/paje"],
+  ["/nungwi-beachfront-property", "/areas/nungwi"],
+  ["/jambiani-villas-for-sale", "/areas/jambiani"],
+  ["/developers", "/#enquiry"],
+  ["/partners", "/#enquiry"],
 ];
-
-const propertyTypes = [
-  "property", "villa", "hotel", "resort", "apartment", "land",
-];
-
-let urls = [...staticPages];
-
-locations.forEach((location) => {
-  propertyTypes.forEach((type) => {
-    urls.push(`/buy-${type}-in-${location}-zanzibar`);
-  });
-});
-urls = [...new Set(urls)];
-
-const entries = [];
-urls.forEach((path) => {
-  const loc = (path === "/" ? BASE + "/" : BASE + path).trim();
-  if (!loc) return;
-  entries.push(`<url><loc>${loc}</loc></url>`);
-});
-
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries.join("\n")}
-</urlset>`;
-
-fs.writeFileSync("./public/sitemap_static.xml", sitemap);
-console.log("Sitemap generated!");
+for (const page of pages.filter((p) => p.kind === "area")) {
+  const area = page.path.split("/").pop();
+  for (const type of [
+    "property",
+    "villa",
+    "hotel",
+    "resort",
+    "apartment",
+    "land",
+    "beachfront-villa",
+    "boutique-hotel",
+    "holiday-rental",
+    "tourism-property",
+    "investment-property",
+    "beachfront-property",
+    "tourism-land",
+  ])
+    old.push([`/buy-${type}-in-${area}-zanzibar`, page.path]);
+}
+const config = {
+  cleanUrls: true,
+  trailingSlash: false,
+  redirects: old.map(([source, destination]) => ({
+    source,
+    destination,
+    permanent: true,
+  })),
+  headers: [
+    {
+      source: "/dashboard",
+      headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+    },
+  ],
+  rewrites: [
+    { source: "/api/:path*", destination: "/api/:path*" },
+    { source: "/sitemap.xml", destination: "/api/sitemap" },
+    { source: "/robots.txt", destination: "/api/robots" },
+    { source: "/dashboard", destination: "/index.html" },
+  ],
+};
+fs.writeFileSync(
+  new URL("./vercel.json", import.meta.url),
+  JSON.stringify(config, null, 2) + "\n",
+);
+console.log(
+  `Generated ${paths.length} sitemap URLs and ${old.length} legacy redirects.`,
+);

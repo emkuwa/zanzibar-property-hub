@@ -8,6 +8,7 @@ export default defineConfig(() => ({
   base: "/",
   server: {
     host: "127.0.0.1",
+    allowedHosts: ["terminal.local"],
     port: 8080,
     hmr: {
       overlay: false,
