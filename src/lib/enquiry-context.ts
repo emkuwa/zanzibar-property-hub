@@ -7,6 +7,7 @@ type EnquiryContext = {
 };
 /** Reviewed defaults only: comparison and budget guides deliberately make no choice. */
 export const ENQUIRY_CONTEXTS: Record<string, EnquiryContext> = {
+  "/guides/zanzibar-off-plan-handover-checklist": { label: "Off-plan handover checklist" },
   "/guides/zanzibar-off-plan-property": { label: "Off-plan property guide" },
   "/guides/buying-zanzibar-property-from-abroad": { label: "Buying from abroad guide" },
   "/guides/zanzibar-managed-holiday-homes": { label: "Managed holiday homes guide" },

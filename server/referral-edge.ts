@@ -2,6 +2,9 @@ import { fetchWithTimeout } from "../src/lib/fetch-timeout.js";
 import type { ReferralInput } from "../src/lib/referral-contract.js";
 import { StoreError, type Registration } from "./referral-store.js";
 
+// Optional cross-runtime global. Declaration only; emits no runtime code.
+declare const Deno: { env: { get(name: string): string | undefined } } | undefined;
+
 // These credentials are loaded from environment variables at runtime.
 // Set VITE_SUPABASE_EDGE_URL and VITE_SUPABASE_EDGE_ANON_KEY in your .env
 // (or in Vercel / hosting environment settings) — never hardcode them here.
