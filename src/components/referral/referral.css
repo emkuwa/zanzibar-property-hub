@@ -799,3 +799,19 @@
   .referral-success > p:not(.eyebrow):not(.small-note) { font-size:18px; line-height:1.65; }
   .wordmark small { font-size:10px; letter-spacing:3px; }
 }
+
+/* Keep the buyer's decision points readable across screen sizes. */
+.step-copy p { font-size:16px; line-height:1.65; color:#294b3c; }
+.faq-list details p { font-size:17px; line-height:1.65; color:#294b3c; }
+.form-intro { font-size:17px; line-height:1.6; margin:0 0 22px; color:#294b3c; }
+.landing-hero::after { background:linear-gradient(90deg,#003c37eb,#003c3770 70%,#003c3726); }
+@media(max-width:700px) {
+  .landing-hero::after { background:linear-gradient(90deg,#003c37db,#003c3780); }
+  .step-copy { display:block; padding-block:16px; }
+  .step-copy p { display:block; font-size:17px; margin:8px 0 0; }
+  .step-card { align-items:flex-start; }
+  .step-icon { margin-top:17px; }
+  .hero-description { font-size:19px; }
+  .hero-button { gap:12px; }
+  .hero-button svg { flex-shrink:0; }
+}

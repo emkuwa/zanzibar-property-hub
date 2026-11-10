@@ -20,21 +20,18 @@ import "@/components/seo/seo.css";
 const steps = [
   {
     Icon: FileText,
-    title: "Tell us what you need",
-    detail:
-      "Tell us your property type, budget, preferred area and purchase timeline.",
+    title: "A home that fits your plans",
+    detail: "An apartment for island escapes or a villa for longer stays? Start with how you want to use your Zanzibar home.",
   },
   {
     Icon: Share2,
-    title: "Send your preferences",
-    detail:
-      "Send your property preferences to ZanziInvest.",
+    title: "A payment plan you can assess",
+    detail: "Compare the full purchase cost, instalment dates and what is due at handover before choosing an off-plan option.",
   },
   {
     Icon: Mail,
-    title: "Explore your property options",
-    detail:
-      "Review property options and discuss viewings and next steps.",
+    title: "A plan for when you’re away",
+    detail: "Considering rentals? Ask about management fees, maintenance and owner-use dates alongside the purchase price.",
   },
 ];
 
@@ -164,12 +161,12 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Explore off-plan villas and apartments with flexible payment plans—for your future island home or rental investment.
+                  Your island home starts with a clear plan. Explore off-plan apartments and villas for holidays, longer stays or a rental investment—and ask for prices and payment terms that fit your budget.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
                   Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">Based in Zanzibar. Explore your options from wherever you are.</p>
+                <p className="hero-reassurance">Based in Zanzibar. Start from abroad. No payment or reservation through this form.</p>
               </div>
             </section>
             <section
@@ -177,7 +174,8 @@ export default function Index() {
               className="how-section landing-container"
               aria-labelledby="how-heading"
             >
-              <h2 id="how-heading">How it works</h2>
+              <p className="eyebrow">Make your next move clearer</p>
+              <h2 id="how-heading">Your Zanzibar home. Your priorities.</h2>
               <div className="steps-grid">
                 {steps.map(({ Icon, title, detail }) => (
                   <article key={title} className="step-card">
@@ -198,7 +196,7 @@ export default function Index() {
               aria-labelledby="faq-heading"
             >
               <p className="eyebrow">Before you get started</p>
-              <h2 id="faq-heading">A few things to know.</h2>
+              <h2 id="faq-heading">Buying from abroad? Start here.</h2>
               <div className="faq-list">
                 {questions.slice(0, 3).map(([q, a]) => (
                   <details key={q}>
@@ -228,11 +226,12 @@ export default function Index() {
                   <ArrowLeft size={20} aria-hidden="true" /> Back
                 </a>
                 <h1>
-                  Tell us what you’re
+                  Let’s find your
                   <br />
-                  looking for.
+                  Zanzibar starting point.
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
+                <p className="form-intro">Share your budget and plans so the conversation starts with what matters to you. Still exploring? Choose “Not decided”.</p>
               </>
             ) : null}
             <ReferralForm
