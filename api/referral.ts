@@ -1,3 +1,4 @@
+import { dispatchOwnerNotifications } from "../server/owner-notifications.js";
 import { registerThroughEdge } from "../server/referral-edge.js";
 import { referralSchema } from "../src/lib/referral-contract.js";
 import {
@@ -56,6 +57,9 @@ export function createReferralHandler(env: Env = process.env, fetcher = fetch) {
       const registration = env.SUPABASE_SERVICE_ROLE_KEY
         ? await registerReferral(parsed.data, ip, env, fetcher)
         : await registerThroughEdge(parsed.data, ip, fetcher);
+      if (env.SUPABASE_SERVICE_ROLE_KEY) {
+        try { await dispatchOwnerNotifications(env, fetcher); } catch { /* Saved lead stays valid. */ }
+      }
       // Registration atomically saves the lead, consent and one delivery per eligible developer.
       // Network/provider failures leave deliveries pending; they never erase the saved lead.
       try {

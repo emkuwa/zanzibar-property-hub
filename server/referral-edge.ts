@@ -6,7 +6,7 @@ import { StoreError, type Registration } from "./referral-store.js";
 declare const Deno: { env: { get(name: string): string | undefined } } | undefined;
 
 // These credentials are loaded from environment variables at runtime.
-// Set VITE_SUPABASE_EDGE_URL and VITE_SUPABASE_EDGE_ANON_KEY in your .env
+// Set server-only SUPABASE_EDGE_URL and SUPABASE_EDGE_ANON_KEY in your .env
 // (or in Vercel / hosting environment settings) — never hardcode them here.
 const EDGE_URL =
   (typeof process !== "undefined" && process.env?.SUPABASE_EDGE_URL) ||

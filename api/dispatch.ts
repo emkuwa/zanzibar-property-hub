@@ -1,3 +1,4 @@
+import { dispatchOwnerNotifications } from "../server/owner-notifications.js";
 import { timingSafeEqual } from "node:crypto";
 import { dispatchReferrals } from "../server/referral-dispatch.js";
 import type { ApiRequest, ApiResponse } from "./referral.js";
@@ -18,7 +19,9 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   )
     return res.status(401).json({ success: false });
   try {
-    return res.status(200).json(await dispatchReferrals(process.env));
+    const owner = await dispatchOwnerNotifications(process.env);
+    const partners = await dispatchReferrals(process.env);
+    return res.status(200).json({ owner, partners });
   } catch {
     return res.status(503).json({ success: false });
   }

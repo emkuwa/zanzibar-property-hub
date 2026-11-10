@@ -171,7 +171,7 @@ export default function ReferralForm({
         <p>Share your property preferences with ZanziInvest.</p>
       </div>
       {context ? <p className="field-help">
-        Started from the <a href={context.path}>{context.label}</a>. We selected its property type or area below; review and change any preference before submitting.
+        Started from the <a href={context.path}>{context.label}</a>. Review and change any preference before submitting.
       </p> : null}
       <fieldset disabled={busy}>
         <legend className="sr-only">
@@ -210,7 +210,7 @@ export default function ReferralForm({
           </label>
           <label>
             Purchase timeline
-            <select name="timeline" required defaultValue="">
+            <select name="timeline" required defaultValue="Exploring options">
               <option value="" disabled>
                 Select your timeline
               </option>
@@ -289,7 +289,7 @@ export default function ReferralForm({
             </>
           ) : (
             <>
-              Receive property offers <ArrowUpRight aria-hidden="true" />
+              Get Prices &amp; Payment Plans <ArrowUpRight aria-hidden="true" />
             </>
           )}
         </button>

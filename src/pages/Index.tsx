@@ -169,7 +169,7 @@ export default function Index() {
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
                   Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">Tell us your budget. Let’s explore your options.</p>
+                <p className="hero-reassurance">Based in Zanzibar. Explore your options from wherever you are.</p>
               </div>
             </section>
             <section
