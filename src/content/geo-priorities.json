@@ -162,6 +162,13 @@
       "intent": "overseas off-plan handover planning",
       "aiVisibility": "unmeasured",
       "reason": "Distinct post-purchase planning checklist for buyers based abroad; editorial topic choice, not a measured search-volume claim"
+    },
+    {
+      "path": "/guides/zanzibar-off-plan-floor-plan",
+      "priority": "P1",
+      "intent": "off-plan layout comparison",
+      "aiVisibility": "unmeasured",
+      "reason": "Editorial judgement: helps overseas buyers compare space before requesting prices; no search-volume evidence."
     }
   ]
 }

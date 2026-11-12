@@ -1833,7 +1833,8 @@
       "/guides/buying-zanzibar-property-from-abroad",
       "/guides/zanzibar-property-payment-plans",
       "/blog/off-plan-vs-completed-property",
-      "/guides/zanzibar-off-plan-handover-checklist"
+      "/guides/zanzibar-off-plan-handover-checklist",
+      "/guides/zanzibar-off-plan-floor-plan"
     ],
     "published": "2026-11-08",
     "modified": "2026-11-08",
@@ -1962,7 +1963,8 @@
     "related": [
       "/guides/zanzibar-off-plan-property",
       "/guides/zanzibar-property-costs",
-      "/guides/zanzibar-managed-holiday-homes"
+      "/guides/zanzibar-managed-holiday-homes",
+      "/guides/zanzibar-off-plan-floor-plan"
     ],
     "published": "2026-11-08",
     "modified": "2026-11-08",
@@ -2297,5 +2299,167 @@
     ],
     "published": "2026-11-09",
     "modified": "2026-11-09"
+  },
+  {
+    "path": "/guides/zanzibar-off-plan-floor-plan",
+    "kind": "guide",
+    "label": "Reading an off-plan floor plan",
+    "title": "Reading a Zanzibar off-plan floor plan from abroad: compare space before you choose",
+    "seoTitle": "Zanzibar Off-Plan Floor Plan Guide for Overseas Buyers",
+    "description": "Compare Zanzibar off-plan apartment and villa layouts from abroad: unit identity, enclosed space, balconies, storage and questions to resolve before choosing.",
+    "answer": "Request the exact unit plan, a dated revision and a breakdown of enclosed, outdoor and any shared areas. Compare room dimensions against your intended stays, then record unresolved questions. This editorial checklist helps organise your review; it does not verify an actual property or its measurements.",
+    "table": {
+      "caption": "Start your floor-plan comparison — editorial checklist",
+      "headers": [
+        "Compare",
+        "Ask for"
+      ],
+      "rows": [
+        [
+          "Drawing",
+          "Exact unit and latest revision"
+        ],
+        [
+          "Area",
+          "Written breakdown and measurement method"
+        ],
+        [
+          "Fit",
+          "Dimensions for your intended furniture and use"
+        ],
+        [
+          "Follow-up",
+          "Written responses to unresolved questions"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Identify the exact plan before comparing space",
+        "answer": "Request a dated, dimensioned drawing for the unit you are considering, with its number, floor and revision clearly identified.",
+        "evidence": {
+          "caption": "Questions for your plan review — editorial checklist",
+          "headers": [
+            "Compare",
+            "Ask for"
+          ],
+          "rows": [
+            [
+              "Identity",
+              "Unit number, level and revision date"
+            ],
+            [
+              "Status",
+              "Which drawing is used for the proposed purchase?"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Keep the original drawing and each later revision in one folder. If a presentation image and a specification show different layouts, ask for a written explanation before using either in your comparison. Mark your questions on a copy so the person answering can identify the room or boundary you mean.",
+          "For an off-plan apartment or villa, ask whether the drawing illustrates the proposed unit, a typical layout or a furnished example. Request clarification of any dimensions described as approximate. This guide is an editorial planning aid: it does not establish what has been approved, built or included in any particular purchase."
+        ]
+      },
+      {
+        "heading": "Separate enclosed space from outdoor and shared areas",
+        "answer": "Ask for a breakdown of the quoted area and the measurement method rather than assuming that every square metre describes the same kind of space.",
+        "evidence": {
+          "caption": "Questions for your plan review — editorial checklist",
+          "headers": [
+            "Compare",
+            "Ask for"
+          ],
+          "rows": [
+            [
+              "Enclosed rooms",
+              "Dimensions and measurement basis"
+            ],
+            [
+              "Outdoor areas",
+              "Balcony, terrace and garden shown separately"
+            ],
+            [
+              "Shared space",
+              "Whether any allocation is included in the total"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Write the enclosed accommodation, balcony or terrace, garden and any shared-area allocation on separate lines. Ask whether wall thicknesses or other spaces are included and who prepared the calculation. Keep the explanation beside the plan. A headline total alone is not enough to answer your own questions about usable rooms.",
+          "Do not label an area as verified simply because it appears in a brochure. If space is central to your decision, ask a suitably qualified independent professional to review the drawing and explain how the figures were calculated. Ask what can be confirmed from drawings and what would require an on-site measurement after construction."
+        ]
+      },
+      {
+        "heading": "Test the layout against your actual stays",
+        "answer": "Use your own furniture, storage and everyday routines as a practical comparison brief, then ask for dimensions wherever the drawing leaves a question unanswered.",
+        "evidence": {
+          "caption": "Questions for your plan review — editorial checklist",
+          "headers": [
+            "Compare",
+            "Ask for"
+          ],
+          "rows": [
+            [
+              "Longer stays",
+              "Storage, workspace and laundry arrangements"
+            ],
+            [
+              "Daily movement",
+              "Door openings, circulation and furniture dimensions"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "List what you need for your intended stay: luggage storage, a work surface, dining seats and a place for household supplies. Ask for the dimensions of the furniture shown and the clear space around it. A furnished illustration is a starting point for questions, not proof that your preferred furniture will fit.",
+          "Follow a normal day through the plan, from entering with bags to cooking, washing and using the outdoor space. Note which rooms open onto shared circulation and where you would want privacy. For a rental plan, add questions about cleaning storage and guest arrivals. These are suggested planning exercises, not an assessment of occupancy or rental performance."
+        ]
+      },
+      {
+        "heading": "Build one comparison sheet before asking for prices",
+        "answer": "Compare the same information for each option and keep unanswered questions visible before moving to a reservation discussion.",
+        "evidence": {
+          "caption": "Questions for your plan review — editorial checklist",
+          "headers": [
+            "Compare",
+            "Ask for"
+          ],
+          "rows": [
+            [
+              "Evidence",
+              "Plan, area breakdown and written clarifications"
+            ],
+            [
+              "Decision",
+              "Fits your needs, unresolved or unsuitable"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Use one row for each option and columns for room dimensions, outdoor space, storage and unresolved questions. Avoid ranking two options by their headline area when their measurement bases have not been explained. Record who answered each question and the date, keeping their response with the relevant drawing.",
+          "Link the layout review to your wider budget and payment-plan comparison. Ask what the specification includes and which changes, if any, can be discussed; do not assume that a drawing can be altered or that a change is free. To begin comparing options, use Get Prices & Payment Plans and share your budget and intended use. Confirm unit-specific details before committing."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the quoted area tell me the size of the rooms?",
+        "answer": "Ask for room dimensions and a breakdown of the total. Do not assume the total consists only of enclosed rooms."
+      },
+      {
+        "question": "Can a furnished image confirm that my furniture fits?",
+        "answer": "Request dimensions for the rooms, furniture and circulation spaces. Ask a qualified professional to help review important uncertainties."
+      },
+      {
+        "question": "Does this guide verify a project?",
+        "answer": "No. It is editorial guidance for organising questions. It confirms no unit size, construction status, contractual entitlement or availability."
+      }
+    ],
+    "sources": [],
+    "related": [
+      "/guides/zanzibar-off-plan-property",
+      "/guides/buying-zanzibar-property-from-abroad",
+      "/guides/zanzibar-off-plan-handover-checklist"
+    ],
+    "published": "2026-11-12",
+    "modified": "2026-11-12"
   }
 ]
