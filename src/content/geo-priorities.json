@@ -169,6 +169,13 @@
       "intent": "off-plan layout comparison",
       "aiVisibility": "unmeasured",
       "reason": "Editorial judgement: helps overseas buyers compare space before requesting prices; no search-volume evidence."
+    },
+    {
+      "path": "/guides/zanzibar-property-video-viewing",
+      "priority": "P1",
+      "intent": "remote viewing preparation",
+      "aiVisibility": "unmeasured",
+      "reason": "Editorial judgement: helps overseas buyers prepare a focused viewing before travel; no search-volume evidence."
     }
   ]
 }
