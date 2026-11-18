@@ -274,7 +274,7 @@ export default function ReferralForm({
           <span>{CONSENT_TEXT}</span>
         </label>
         <p id="privacy-note" className="field-help">
-          Read <a href="#privacy">how your information is used</a>. Sharing your preferences does not reserve a property.
+          Read <a href="#privacy">how your information is used</a>. We save your request first; developer introductions depend on partner availability. Submitting does not guarantee prices, a response, or a property reservation.
         </p>
         {error ? (
           <p className="form-error" role="alert">
