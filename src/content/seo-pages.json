@@ -714,30 +714,30 @@
     "kind": "guide",
     "label": "Payment plans",
     "title": "Zanzibar property payment plans: compare obligations, not just the deposit",
-    "description": "Understand how to compare property payment plans in Zanzibar: full schedule, milestones, completion terms and questions before reserving.",
-    "answer": "Compare a Zanzibar property payment plan using the full price, dated instalment schedule, construction conditions and completion terms. A small deposit does not show the total commitment or protect against delay. Request the actual contract and assess it with independent counsel before paying.",
+    "description": "Compare Zanzibar off-plan payment plans: calendar dates, construction milestones, mixed triggers and questions to resolve before committing from abroad.",
+    "answer": "Compare the complete payment schedule and identify what triggers each instalment: a date, a construction milestone or a combination. Ask what happens if progress and dates diverge. This editorial comparison guide does not confirm any project’s terms; have the actual agreement independently reviewed before paying.",
     "table": {
-      "caption": "Payment plan review",
+      "caption": "Payment-trigger comparison — editorial guidance, not current offers",
       "headers": [
-        "Decision",
-        "Written detail to request"
+        "Proposed trigger",
+        "Question to resolve",
+        "Record to request"
       ],
       "rows": [
         [
-          "Upfront amount",
-          "Reservation amount, deposit and whether each payment is refundable"
+          "Calendar date",
+          "Is payment due on the date regardless of progress?",
+          "Dated schedule and written explanation of delay treatment"
         ],
         [
-          "Instalments",
-          "Amounts, due dates, currency and transfer charges"
+          "Construction milestone",
+          "What precisely counts as completion of the stage?",
+          "Defined stage, confirmation process and notification procedure"
         ],
         [
-          "Construction",
-          "Whether payments depend on a documented milestone or only a date"
-        ],
-        [
-          "Completion",
-          "Handover conditions, missing works, delay terms and documentation"
+          "Mixed trigger",
+          "Does either condition suffice, or must both be met?",
+          "Exact wording covering the date and construction condition"
         ]
       ]
     },
@@ -792,6 +792,69 @@
         }
       },
       {
+        "heading": "Build an instalment record you can follow from abroad",
+        "answer": "Create one row per payment with its amount, trigger, evidence, notice and unresolved questions. Keep proposed dates separate from confirmed obligations until your adviser has reviewed the agreement.",
+        "evidence": {
+          "caption": "Suggested instalment record — editorial checklist",
+          "headers": [
+            "Field",
+            "What to write down"
+          ],
+          "rows": [
+            [
+              "Trigger",
+              "The date, defined work stage or combination quoted"
+            ],
+            [
+              "Evidence",
+              "What document or confirmation you expect to receive"
+            ],
+            [
+              "Notice",
+              "How you are told payment is requested and who answers questions"
+            ],
+            [
+              "Review",
+              "What is unclear and which adviser will review it"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "For a hypothetical milestone described only as “structure complete”, ask which part of the building and which unit or block the phrase refers to. Ask who confirms the stage, what the confirmation covers and how you will receive it. Do not infer that a progress photograph answers every part of that question. This example proposes questions; it describes no actual offer or certification arrangement.",
+          "For a hypothetical calendar instalment, write the stated date in the same record and ask whether construction progress affects it. For wording combining a date and milestone, ask what happens if only one condition has occurred. Avoid rewriting the clause in your own shorthand before an independent adviser has explained it. Keep the original wording next to the clarification."
+        ]
+      },
+      {
+        "heading": "Test delay and handover questions before choosing a schedule",
+        "answer": "Use the same unresolved scenarios for each proposal: delayed work, an unclear milestone and incomplete shared facilities. Request written explanations tied to the proposed agreement, rather than assuming one plan is safer.",
+        "evidence": {
+          "caption": "Questions for an independent review — editorial guidance",
+          "headers": [
+            "Scenario",
+            "Question to ask"
+          ],
+          "rows": [
+            [
+              "Date arrives before expected progress",
+              "Which obligation applies and where is it stated?"
+            ],
+            [
+              "Stage is reported complete but unclear",
+              "Who resolves the question and what evidence is available?"
+            ],
+            [
+              "Unit and shared facilities differ in readiness",
+              "What is required at handover and for the final payment?"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Keep the payment discussion connected to the exact specification and handover requirements. Ask whether the proposed stage concerns your unit, the building or the wider development. If shared access or facilities remain unfinished, ask how the agreement addresses that situation. Record an unanswered question as open; do not treat the absence of an answer as permission to change a payment.",
+          "A construction-linked label alone should not decide your shortlist. Compare the precision of the stage descriptions, the reporting process and the responses to the same scenarios. Ask independent counsel how the proposed obligations apply to you. This guide establishes no right to withhold funds, obtain a refund or change a due date. Those questions belong to the documents and advice for the specific transaction.",
+          "Before requesting prices, list the budget and payment timing you want to discuss. Use Get Prices & Payment Plans to start that conversation, then compare the written proposal with your instalment record. Submitting preferences is not a reservation or an assessment of affordability. Keep additional purchase and ownership costs on your separate complete-budget checklist."
+        ]
+      },
+      {
         "heading": "What must be checked before transferring funds?",
         "paragraphs": [
           "Have independent counsel review the seller’s authority, relevant rights, payment recipient, cancellation terms and completion obligations. Obtain written bank details through a trusted verification process and confirm the applicable payment terms. An enquiry or introduction does not approve a contract or create a reservation."
@@ -824,23 +887,33 @@
       {
         "question": "Does a low deposit make a property cheaper?",
         "answer": "No. Compare the total commitment, payment timing, extra charges and risks rather than the first payment alone."
+      },
+      {
+        "question": "Does a construction-linked instalment guarantee progress or protect my money?",
+        "answer": "Do not infer a guarantee from the label. Ask for the stage definition, confirmation process and exact agreement, then obtain independent advice on the proposal."
+      },
+      {
+        "question": "What should I do when a payment date and milestone do not match?",
+        "answer": "Ask for written clarification tied to the agreement and consult your independent adviser before acting. This guide does not authorise changing a payment obligation."
       }
     ],
     "related": [
       "/guides/zanzibar-property-costs",
       "/blog/off-plan-vs-completed-property",
-      "/guides/zanzibar-property-under-150000"
+      "/guides/zanzibar-property-under-150000",
+      "/guides/zanzibar-off-plan-handover-checklist",
+      "/guides/buying-zanzibar-property-from-abroad"
     ],
     "sources": [
       {
         "label": "Zanzibar eRegulations: investment procedures",
         "url": "https://zanzibar.eregulations.org/",
-        "scope": "Official procedure reference; confirm requirements for the specific transaction with independent counsel."
+        "scope": "Checked 19 November 2026. ZIPA service providing investment-related administrative procedure information only. It does not establish developer instalment schedules, contract protections, refund rights or project status. All payment-trigger tables and hypothetical scenarios here are ZanziInvest editorial comparison guidance."
       }
     ],
     "published": "2026-11-07",
     "seoTitle": "Zanzibar property payment plans",
-    "modified": "2026-11-07"
+    "modified": "2026-11-19"
   },
   {
     "path": "/guides/zanzibar-property-under-150000",
