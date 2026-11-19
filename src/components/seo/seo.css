@@ -315,6 +315,17 @@
   margin-right: 20px;
   text-decoration: underline;
 }
+.area-grid a strong {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #174b3a;
+  margin-bottom: 6px;
+}
+.area-grid a span {
+  color: #617164;
+}
 @media (max-width: 700px) {
   .seo-header {
     min-height: 78px;
