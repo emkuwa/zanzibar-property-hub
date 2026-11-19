@@ -1,6 +1,7 @@
 import { trackEnquiryEntry } from "@/lib/gtag";
 import { HOME_QUESTIONS as questions } from "@/content/business";
 import BrandFacts from "@/components/seo/BrandFacts";
+import { CONTENT_PAGES } from "@/content/seo";
 import { useEffect, useState } from "react";
 import {
   ArrowLeft,
@@ -34,6 +35,8 @@ const steps = [
     detail: "Considering rentals? Ask about management fees, maintenance and owner-use dates alongside the purchase price.",
   },
 ];
+
+const areas = CONTENT_PAGES.filter((page) => page.kind === "area");
 
 function PrivacyNotice() {
   return (
@@ -242,6 +245,24 @@ export default function Index() {
             />
           </section>
         )}
+        {screen === "home" ? (
+          <section
+            id="areas"
+            className="seo-discovery landing-container"
+            aria-labelledby="areas-heading"
+          >
+            <p className="eyebrow">Compare locations</p>
+            <h2 id="areas-heading">Where to buy property in Zanzibar</h2>
+            <div className="seo-discovery-grid area-grid">
+              {areas.map((area) => (
+                <a key={area.path} href={area.path}>
+                  <strong>{area.label}</strong>
+                  <span>{area.title}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : null}
         {screen === "home" ? (
           <section
             className="seo-discovery landing-container"
