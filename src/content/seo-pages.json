@@ -2050,10 +2050,10 @@
     "label": "Managed holiday homes",
     "title": "Zanzibar holiday homes and rental management: what overseas buyers should compare",
     "seoTitle": "Zanzibar Holiday Homes & Rental Management Guide",
-    "description": "Compare personal use, rental management, operating costs and owner reporting when planning a Zanzibar holiday home from abroad.",
-    "answer": "A Zanzibar holiday home can be considered for personal stays, rental use or both, depending on the property terms. If you live abroad, compare who handles bookings, maintenance, costs and owner reporting. Confirm that any management arrangement fits your planned visits and financial expectations.",
+    "description": "Compare Zanzibar holiday-home management: owner-use dates, family stays, booking changes, costs and reporting when you live abroad.",
+    "answer": "Compare a Zanzibar holiday-home management proposal against your own travel calendar, family-use plans and reporting needs. Ask how owner bookings, changes, charges and maintenance are handled. This editorial checklist helps organise questions; it confirms no property’s rental permissions, management terms or income.",
     "table": {
-      "caption": "Compare the complete ownership experience",
+      "caption": "Compare the complete ownership experience — editorial comparison guidance",
       "headers": [
         "Compare",
         "What to request",
@@ -2087,7 +2087,7 @@
         "heading": "Balance personal holidays with rental plans",
         "answer": "Decide how often you want to stay and whether those dates overlap with your intended rental periods. Ask how personal bookings affect income allocation, housekeeping charges and access to resort services.",
         "evidence": {
-          "caption": "Owner-use questions to resolve",
+          "caption": "Owner-use questions to resolve — editorial checklist",
           "headers": [
             "Compare",
             "What to request",
@@ -2117,10 +2117,97 @@
         ]
       },
       {
+        "heading": "Test the owner-use rules against your travel calendar",
+        "answer": "Write down your preferred dates and flexibility before comparing agreements. Ask how owner bookings are requested, confirmed and changed, and whether any dates or lengths of stay are restricted.",
+        "evidence": {
+          "caption": "Your calendar review — editorial checklist",
+          "headers": [
+            "Your preference",
+            "Question to resolve"
+          ],
+          "rows": [
+            [
+              "Fixed annual holiday",
+              "Can these dates be requested and when is confirmation given?"
+            ],
+            [
+              "Longer stay",
+              "Are there limits on consecutive nights or total owner use?"
+            ],
+            [
+              "Short-notice visit",
+              "What happens if the dates already have a guest booking?"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Use your actual intended pattern rather than a general wish for unlimited flexibility. For a hypothetical buyer planning one extended annual visit and occasional short trips, prepare both scenarios and ask how each would be handled. Record the response beside the relevant agreement wording. This is a suggested comparison exercise, not a description of any current management programme.",
+          "Ask whether an owner booking blocks the calendar immediately or remains a request until confirmed. Clarify which channel to use, who acknowledges it and how you can check the booking from abroad. Do not make travel arrangements on the assumption that a verbal discussion has reserved the home; ask for the confirmation process applicable to the proposal."
+        ]
+      },
+      {
+        "heading": "Clarify family stays, booking changes and access",
+        "answer": "Ask separately about your own visits, stays by family or friends, and changes to an existing reservation. Use written examples so everyone is discussing the same type of visit.",
+        "evidence": {
+          "caption": "Examples to discuss — editorial guidance",
+          "headers": [
+            "Scenario",
+            "Written clarification to request"
+          ],
+          "rows": [
+            [
+              "Family staying without you",
+              "Registration process and any different charges or conditions"
+            ],
+            [
+              "Changing your dates",
+              "Notice, cancellation process and effect on existing bookings"
+            ],
+            [
+              "Arrival and departure",
+              "Key handling, housekeeping and contact arrangements"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "A useful hypothetical question is: “If my family stays while I remain overseas, which process should we follow?” Ask who must be notified and how access is arranged. Request a complete description of the charges for that example instead of assuming that all personal visits are treated alike. Keep private guest and access details out of general comparison sheets.",
+          "For changes, ask what happens when you shorten, extend or cancel an owner stay and whether a guest booking already accepted can be affected. Request the process rather than assuming a right to displace a guest. Have an independent adviser review obligations you do not understand before agreeing to them. This checklist establishes no contractual rights or cancellation entitlements."
+        ]
+      },
+      {
+        "heading": "Request a sample owner-stay statement and care plan",
+        "answer": "Ask for a clearly labelled sample showing how an owner visit would appear in reporting, then clarify who checks the home before arrival and after departure.",
+        "evidence": {
+          "caption": "Owner-stay follow-up — editorial checklist",
+          "headers": [
+            "Record",
+            "What to ask"
+          ],
+          "rows": [
+            [
+              "Statement",
+              "Which charges and adjustments would appear for the example stay?"
+            ],
+            [
+              "Readiness",
+              "Who checks cleaning, supplies and equipment before arrival?"
+            ],
+            [
+              "Maintenance",
+              "How are problems reported, approved and followed up?"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Use the same imagined visit when comparing two proposals. Ask for separate lines for any housekeeping, utilities, management or other charges that would apply, with an explanation of what is included. Label the response as a sample until the relevant provider confirms the actual terms. Do not turn an illustrative statement into an estimate of rental earnings.",
+          "Ask who you contact if something is not ready on arrival and how unresolved maintenance is recorded when you leave. Keep the answers alongside the calendar and agreement. If you are still comparing purchases, use Get Prices & Payment Plans to share your budget and plans; request the owner-use and management documents for the option you consider."
+        ]
+      },
+      {
         "heading": "Read the operating budget before comparing returns",
         "answer": "Compare the income calculation with management fees and all owner-paid costs. Ask what is assumed, what is supported by operating records and what is governed by the agreement. A projected percentage alone does not describe the expected cash available to you.",
         "evidence": {
-          "caption": "A management information request",
+          "caption": "A management information request — editorial checklist",
           "headers": [
             "Compare",
             "What to request",
@@ -2162,15 +2249,25 @@
       {
         "question": "How do I request suitable options?",
         "answer": "Tell ZanziInvest your property budget, preferred area, intended personal use and whether rental management is important to you. Request prices, payment plans and the relevant management terms for comparison."
+      },
+      {
+        "question": "Can my family stay when I am not there?",
+        "answer": "Ask the proposed manager how family or friend visits are classified, registered and charged. Do not assume the same rules as an owner’s own visit."
+      },
+      {
+        "question": "Does requesting an owner stay confirm my dates?",
+        "answer": "Ask which step creates a confirmed booking and request written confirmation through the agreed process before relying on the dates."
       }
     ],
     "related": [
       "/guides/buying-zanzibar-property-from-abroad",
       "/blog/gross-vs-net-rental-yield",
-      "/guides/zanzibar-off-plan-property"
+      "/guides/zanzibar-off-plan-property",
+      "/guides/zanzibar-property-costs",
+      "/guides/zanzibar-off-plan-handover-checklist"
     ],
     "published": "2026-11-08",
-    "modified": "2026-11-08",
+    "modified": "2026-11-23",
     "sources": []
   },
   {

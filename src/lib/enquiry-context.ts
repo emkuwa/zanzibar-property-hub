@@ -13,7 +13,7 @@ export const ENQUIRY_CONTEXTS: Record<string, EnquiryContext> = {
   "/guides/zanzibar-off-plan-handover-checklist": { label: "Off-plan handover checklist" },
   "/guides/zanzibar-off-plan-property": { label: "Off-plan property guide" },
   "/guides/buying-zanzibar-property-from-abroad": { label: "Buying from abroad guide" },
-  "/guides/zanzibar-managed-holiday-homes": { label: "Managed holiday homes guide" },
+  "/guides/zanzibar-managed-holiday-homes": { label: "Holiday-home owner use and management guide" },
   "/guides/zanzibar-apartments": { label: "Zanzibar apartments guide", propertyType: "Apartment" },
   "/guides/zanzibar-villas": { label: "Zanzibar villas guide", propertyType: "Villa" },
   "/areas/paje": { label: "Paje property guide", area: "Paje / Jambiani" },
