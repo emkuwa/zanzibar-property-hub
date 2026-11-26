@@ -1,7 +1,7 @@
 import { enquiryContext } from "@/lib/enquiry-context";
 import { currentAiReferral } from "@/lib/gtag";
 import { fetchWithTimeout } from "@/lib/fetch-timeout";
-import { useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowUpRight, Check, Info, Loader2 } from "lucide-react";
 import {
   AREAS,
@@ -24,6 +24,10 @@ export default function ReferralForm({
   const requestId = useRef<string>();
   const inFlight = useRef(false);
   const formStarted = useRef(false);
+
+  useEffect(() => {
+    window.gtag?.("event", "enquiry_form_view", { form_name: "developer_network" });
+  }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -50,6 +54,10 @@ export default function ReferralForm({
       },
     });
     if (!parsed.success) {
+      window.gtag?.("event", "enquiry_validation_error", {
+        form_name: "developer_network",
+        field: String(parsed.error.issues[0].path[0] || "form"),
+      });
       setError(parsed.error.issues[0].message);
       return;
     }
@@ -94,6 +102,7 @@ export default function ReferralForm({
         ...(context ? { enquiry_guide: context.path } : {}),
       });
     } catch (err) {
+      window.gtag?.("event", "enquiry_submit_error", { form_name: "developer_network" });
       setError(
         err instanceof Error && err.message.startsWith("Your preferences changed")
           ? err.message
@@ -168,7 +177,7 @@ export default function ReferralForm({
       <div className="form-heading">
         <span className="eyebrow">Your next chapter starts here</span>
         <h2>What are you looking for?</h2>
-        <p>Share your property preferences with ZanziInvest.</p>
+        <p>Start with your budget and contact details. Add property preferences if you already have them.</p>
       </div>
       {context ? <p className="field-help">
         Started from the <a href={context.path}>{context.label}</a>. Review and change any preference before submitting.
@@ -179,42 +188,12 @@ export default function ReferralForm({
         </legend>
         <div className="form-grid">
           <label>
-            Property type
-            <select name="propertyType" required defaultValue={context?.propertyType || ""}>
-              <option value="" disabled>
-                Select property type
-              </option>
-              {PROPERTY_TYPES.map((v) => (
-                <option key={v}>{v}</option>
-              ))}
-            </select>
-          </label>
-          <label>
             Budget in USD
             <select name="budget" required defaultValue="">
               <option value="" disabled>
                 Select your budget
               </option>
               {BUDGETS.map((v) => (
-                <option key={v}>{v}</option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Preferred area
-            <select name="area" required defaultValue={context?.area || "Any area"}>
-              {AREAS.map((v) => (
-                <option key={v}>{v}</option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Purchase timeline
-            <select name="timeline" required defaultValue="Exploring options">
-              <option value="" disabled>
-                Select your timeline
-              </option>
-              {TIMELINES.map((v) => (
                 <option key={v}>{v}</option>
               ))}
             </select>
@@ -258,6 +237,42 @@ export default function ReferralForm({
         <p id="phone-help" className="field-help">
           Include your country code for property follow-up.
         </p>
+        <details className="optional-preferences" open={context?.propertyType || context?.area ? true : undefined}>
+          <summary>Add property preferences (optional)</summary>
+          <p className="field-help">Not sure yet? Keep “Open to options”, “Any area” and “Exploring options”.</p>
+          <div className="form-grid">
+          <label>
+            Property type
+            <select name="propertyType" defaultValue={context?.propertyType || "Open to options"}>
+              <option value="" disabled>
+                Select property type
+              </option>
+              {PROPERTY_TYPES.map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Preferred area
+            <select name="area" required defaultValue={context?.area || "Any area"}>
+              {AREAS.map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Purchase timeline
+            <select name="timeline" required defaultValue="Exploring options">
+              <option value="" disabled>
+                Select your timeline
+              </option>
+              {TIMELINES.map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+            </select>
+          </label>
+          </div>
+        </details>
         <div className="honeypot" aria-hidden="true">
           <label>
             Website
@@ -277,9 +292,10 @@ export default function ReferralForm({
           Read <a href="#privacy">how your information is used</a>. We save your request first; developer introductions depend on partner availability. Submitting does not guarantee prices, a response, or a property reservation.
         </p>
         {error ? (
-          <p className="form-error" role="alert">
-            {error}
-          </p>
+          <div className="form-error" role="alert">
+            <p>{error}</p>
+            <a href="mailto:info@zanzibaba.com" onClick={() => window.gtag?.("event", "enquiry_email_click", { placement: "form_error" })}>Email your enquiry instead</a>
+          </div>
         ) : null}
         <button className="primary-button submit-button" type="submit">
           {busy ? (
@@ -289,7 +305,7 @@ export default function ReferralForm({
             </>
           ) : (
             <>
-              Get Prices &amp; Payment Plans <ArrowUpRight aria-hidden="true" />
+              Request Prices &amp; Payment Plans <ArrowUpRight aria-hidden="true" />
             </>
           )}
         </button>

@@ -55,6 +55,6 @@ describe("guide-to-enquiry context", () => {
     window.history.replaceState({}, "", enquiryLinkFor("/areas/fumba"));
     render(<ReferralForm />);
     expect(screen.getByLabelText("Preferred area")).toHaveValue("Fumba / west coast");
-    expect(screen.getByLabelText("Property type")).toHaveValue("");
+    expect(screen.getByLabelText("Property type")).toHaveValue("Open to options");
   });
 });

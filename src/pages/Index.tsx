@@ -20,18 +20,18 @@ import "@/components/seo/seo.css";
 const steps = [
   {
     Icon: FileText,
-    title: "A home that fits your plans",
-    detail: "An apartment for island escapes or a villa for longer stays? Start with how you want to use your Zanzibar home.",
+    title: "Property options for your budget",
+    detail: "Tell us your budget and whether you want an apartment, villa or are open to options. You can start while living abroad.",
   },
   {
     Icon: Share2,
-    title: "A payment plan you can assess",
-    detail: "Compare the full purchase cost, instalment dates and what is due at handover before choosing an off-plan option.",
+    title: "Ask for the numbers that matter",
+    detail: "Request current prices, deposit requirements, instalment dates, expected handover and included features from participating developers.",
   },
   {
     Icon: Mail,
-    title: "A plan for when you’re away",
-    detail: "Considering rentals? Ask about management fees, maintenance and owner-use dates alongside the purchase price.",
+    title: "Choose your next step",
+    detail: "Compare the information, ask for a video viewing and arrange independent checks before deciding. Your enquiry does not commit you to buy.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function Index() {
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
-            <a href="#enquiry">Get Prices &amp; Payment Plans</a>
+            <a href="#enquiry">Request Prices &amp; Payment Plans</a>
             <a href="/guides">Guides</a>
             <a href="#privacy">Privacy</a>
           </nav>
@@ -136,7 +136,7 @@ export default function Index() {
             onClick={() => setMenuOpen(false)}
           >
             <a href="#home">Home</a>
-            <a href="#enquiry">Get Prices &amp; Payment Plans</a>
+            <a href="#enquiry">Request Prices &amp; Payment Plans</a>
             <a href="/guides">Property guides</a>
             <a href="#privacy">Privacy & contact</a>
           </nav>
@@ -161,12 +161,13 @@ export default function Index() {
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
                 <p className="hero-description">
-                  Your island home starts with a clear plan. Explore off-plan apartments and villas for holidays, longer stays or a rental investment—and ask for prices and payment terms that fit your budget.
+                  Looking for an off-plan apartment or villa? Start with your budget and request current prices, payment plans and handover details from participating Zanzibar developers.
                 </p>
                 <a className="primary-button hero-button" href="#enquiry" onClick={() => trackEnquiryEntry("hero")}>
-                  Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
+                  Request Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
                 </a>
-                <p className="hero-reassurance">Based in Zanzibar. Start from abroad. No payment or reservation through this form.</p>
+                <p className="hero-reassurance">Based in Zanzibar · Enquire from abroad · No purchase commitment</p>
+                <a className="hero-email" href="mailto:info@zanzibaba.com" onClick={() => window.gtag?.("event", "enquiry_email_click", { placement: "hero" })}>Prefer email? Write to our Zanzibar team <Mail size={18} aria-hidden="true" /></a>
               </div>
             </section>
             <section
@@ -174,8 +175,8 @@ export default function Index() {
               className="how-section landing-container"
               aria-labelledby="how-heading"
             >
-              <p className="eyebrow">Make your next move clearer</p>
-              <h2 id="how-heading">Your Zanzibar home. Your priorities.</h2>
+              <p className="eyebrow">From interest to an informed decision</p>
+              <h2 id="how-heading">What to request for your Zanzibar home.</h2>
               <div className="steps-grid">
                 {steps.map(({ Icon, title, detail }) => (
                   <article key={title} className="step-card">
@@ -209,7 +210,7 @@ export default function Index() {
                 ))}
               </div>
               <a className="primary-button closing-button" href="#enquiry" onClick={() => trackEnquiryEntry("faq")}>
-                Get Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
+                Request Prices &amp; Payment Plans <ArrowRight aria-hidden="true" />
               </a>
             </section>
           </>
@@ -231,7 +232,7 @@ export default function Index() {
                   Zanzibar starting point.
                 </h1>
                 <div className="gold-rule" aria-hidden="true" />
-                <p className="form-intro">Share your budget and plans so the conversation starts with what matters to you. Still exploring? Choose “Not decided”.</p>
+                <p className="form-intro">Tell us your budget and how to reach you. Ask for prices, payment terms and handover details. Still exploring? Choose “Not decided”.</p>
               </>
             ) : null}
             <ReferralForm

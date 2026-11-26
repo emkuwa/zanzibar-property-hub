@@ -265,6 +265,33 @@ function fillForm() {
   });
 }
 describe("customer enquiry form", () => {
+  it("saves a short enquiry without opening optional preferences and measures only confirmed leads", async () => {
+    vi.stubGlobal("crypto", { randomUUID: () => uuid });
+    const gtag = vi.fn();
+    const previous = window.gtag;
+    window.gtag = gtag;
+    try {
+      const fetcher = vi.fn().mockResolvedValue(new Response(JSON.stringify({
+        success: true, reference: "ZI-SHORT", distributionStatus: "awaiting_partners",
+      }), { status: 201 }));
+      vi.stubGlobal("fetch", fetcher);
+      render(<ReferralForm />);
+      expect(screen.getByText("Add property preferences (optional)").closest("details")).not.toHaveAttribute("open");
+      for (const [label, value] of [["Full name", valid.fullName], ["Email address", valid.email], ["WhatsApp number", valid.whatsapp], ["Budget in USD", valid.budget]]) {
+        fireEvent.change(screen.getByLabelText(label), { target: { value } });
+      }
+      fireEvent.click(screen.getByRole("checkbox"));
+      fireEvent.submit(screen.getByRole("form", { name: "Property preferences" }));
+      await waitFor(() => expect(screen.getByText("ZI-SHORT")).toBeInTheDocument());
+      expect(JSON.parse(fetcher.mock.calls[0][1].body)).toMatchObject({
+        propertyType: "Open to options", area: "Any area", timeline: "Exploring options", consent: true,
+      });
+      expect(gtag.mock.calls.filter(args => args[1] === "generate_lead")).toHaveLength(1);
+      expect(JSON.stringify(gtag.mock.calls)).not.toContain(valid.email);
+      expect(screen.getByText(/your details have not been shared with a developer yet/)).toBeInTheDocument();
+    } finally { window.gtag = previous; }
+  });
+
   it("requires an explicit unchecked consent and only shows confirmation after saving", async () => {
     vi.stubGlobal("crypto", { randomUUID: () => uuid });
     const fetcher = vi.fn().mockResolvedValue(
