@@ -7,6 +7,7 @@ type EnquiryContext = {
 };
 /** Reviewed defaults only: comparison and budget guides deliberately make no choice. */
 export const ENQUIRY_CONTEXTS: Record<string, EnquiryContext> = {
+  "/guides/zanzibar-furnished-vs-unfurnished": { label: "Furnishing comparison guide" },
   "/guides/zanzibar-property-payment-plans": { label: "Payment plan comparison guide" },
   "/guides/zanzibar-property-video-viewing": { label: "Video viewing guide" },
   "/guides/zanzibar-off-plan-floor-plan": { label: "Off-plan floor plan guide" },

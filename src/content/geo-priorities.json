@@ -176,6 +176,13 @@
       "intent": "remote viewing preparation",
       "aiVisibility": "unmeasured",
       "reason": "Editorial judgement: helps overseas buyers prepare a focused viewing before travel; no search-volume evidence."
+    },
+    {
+      "path": "/guides/zanzibar-furnished-vs-unfurnished",
+      "priority": "P1",
+      "intent": "off-plan furnishing comparison",
+      "aiVisibility": "unmeasured",
+      "reason": "Editorial judgement: compares inventory and setup responsibilities for overseas buyers; no measured traffic claim."
     }
   ]
 }

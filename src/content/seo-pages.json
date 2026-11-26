@@ -574,7 +574,8 @@
       "/areas/fumba",
       "/areas/paje",
       "/blog/apartment-vs-villa",
-      "/guides/zanzibar-property-costs"
+      "/guides/zanzibar-property-costs",
+      "/guides/zanzibar-furnished-vs-unfurnished"
     ],
     "sources": [],
     "published": "2026-11-07",
@@ -1186,7 +1187,8 @@
     "related": [
       "/guides/zanzibar-property-payment-plans",
       "/blog/gross-vs-net-rental-yield",
-      "/guides/zanzibar-apartments"
+      "/guides/zanzibar-apartments",
+      "/guides/zanzibar-furnished-vs-unfurnished"
     ],
     "sources": [
       {
@@ -2791,5 +2793,175 @@
     ],
     "published": "2026-11-16",
     "modified": "2026-11-16"
+  },
+  {
+    "path": "/guides/zanzibar-furnished-vs-unfurnished",
+    "kind": "guide",
+    "label": "Furnished vs unfurnished",
+    "title": "Furnished vs unfurnished Zanzibar off-plan apartments: compare the complete setup",
+    "seoTitle": "Furnished vs Unfurnished Zanzibar Apartments",
+    "description": "Compare furnished and unfurnished Zanzibar off-plan apartments using inventories, installation scope, unresolved costs and a plan for setup from abroad.",
+    "answer": "Compare the written inventory and remaining setup work for each apartment. Ask what the price includes, who installs and checks the items, and what still needs quoting. This editorial checklist helps organise a comparison; it verifies no furnishing package, completion date or property’s readiness.",
+    "table": {
+      "caption": "Furnishing comparison — editorial checklist",
+      "headers": [
+        "Compare",
+        "Written detail to request"
+      ],
+      "rows": [
+        [
+          "Inventory",
+          "Included items, quantities and exclusions"
+        ],
+        [
+          "Work",
+          "Delivery, installation and checking responsibilities"
+        ],
+        [
+          "Cost",
+          "Confirmed quotations and unresolved amounts"
+        ],
+        [
+          "Use",
+          "Your stays or proposed management requirements"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Start with an itemised inventory, not a furnishing label",
+        "answer": "Request a dated room-by-room list for each proposal, including quantities, specifications and exclusions. Keep a show-unit photograph separate from the written inventory.",
+        "evidence": {
+          "caption": "Furnishing comparison — editorial checklist",
+          "headers": [
+            "Compare",
+            "Written detail to request"
+          ],
+          "rows": [
+            [
+              "Furniture",
+              "Items, quantities, dimensions and finishes"
+            ],
+            [
+              "Appliances",
+              "Models or agreed specification and installation scope"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "For a hypothetical comparison, one proposal might describe a furnished apartment while another lists only kitchen fittings. Do not fill the gaps with assumptions. Ask each provider to identify what is included in the quoted amount and what needs a separate order. This is an editorial comparison exercise, not a description of any current Zanzibar offer.",
+          "Walk through the rooms on your floor plan and list beds, seating, storage, window coverings and lighting you want to discuss. Add appliances and everyday items separately. Mark each line included, excluded or unresolved, and keep the dated response. Ask how substitutions would be agreed rather than assuming every item in an illustration is the item to be supplied."
+        ]
+      },
+      {
+        "heading": "Compare the work needed to make the home usable",
+        "answer": "Ask who handles delivery, assembly, installation, testing and removal of packaging. Compare responsibilities as well as the list of objects.",
+        "evidence": {
+          "caption": "Furnishing comparison — editorial checklist",
+          "headers": [
+            "Compare",
+            "Written detail to request"
+          ],
+          "rows": [
+            [
+              "Delivery",
+              "Access arrangements and who receives items"
+            ],
+            [
+              "Installation",
+              "Assembly, connection and demonstration responsibilities"
+            ],
+            [
+              "Completion",
+              "Inventory check and outstanding-item procedure"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "If you live abroad, identify the person who would receive a delivery and check it against your order. Ask what happens if the property is not accessible on the proposed date, or an item arrives damaged. Keep those questions in the comparison even when the purchase proposal uses the word turnkey. Request the actual scope behind that description.",
+          "Use your intended first stay as a planning exercise: ask which tasks must be completed before you can use the rooms as planned. For a rental proposal, request the operator’s furnishing requirements separately. This checklist does not establish that a home is ready for occupation or rental, or that any item meets a particular technical standard."
+        ]
+      },
+      {
+        "heading": "Build a cost sheet that keeps unknown amounts visible",
+        "answer": "Separate the property price, any furnishing package and the additional work or items you still need quoted. Record the source and date of each confirmed amount.",
+        "evidence": {
+          "caption": "Furnishing comparison — editorial checklist",
+          "headers": [
+            "Compare",
+            "Written detail to request"
+          ],
+          "rows": [
+            [
+              "Quoted scope",
+              "Property inclusions and furnishing package shown separately"
+            ],
+            [
+              "Additional work",
+              "Delivery, assembly and installation quotations"
+            ],
+            [
+              "Unresolved items",
+              "Unquoted lines kept open rather than entered as zero"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "Put the two options beside the same inventory. If one option excludes an item, request a comparable quotation before concluding that it costs less overall. Avoid adding the same appliance twice when it appears both in the property specification and a furnishing package. Ask for clarification of overlapping descriptions and record where each item is counted.",
+          "Keep ongoing care separate from the initial setup. Ask for available product information, cleaning instructions and the process for reporting a problem. If a proposed rental arrangement requires a specific furnishing specification or replacement process, request those documents. This is a budgeting checklist with no assumed prices, fees, savings or rental returns."
+        ]
+      },
+      {
+        "heading": "Match the furnishing decision to your timetable and use",
+        "answer": "Compare your preferred level of choice with the tasks you would need to organise from abroad. Request written sequencing for access, measurement, delivery and final checks.",
+        "evidence": {
+          "caption": "Furnishing comparison — editorial checklist",
+          "headers": [
+            "Compare",
+            "Written detail to request"
+          ],
+          "rows": [
+            [
+              "Personal stays",
+              "Storage, working space and furniture dimensions"
+            ],
+            [
+              "Managed rental plans",
+              "Proposed operator requirements and approvals"
+            ],
+            [
+              "Timing",
+              "What must happen before each delivery or check"
+            ]
+          ]
+        },
+        "paragraphs": [
+          "For an unfurnished proposal, ask what can be measured before completion and what must wait for access to the finished unit. For a furnished proposal, ask when the final inventory is agreed and how you can review it before handover. Treat suggested dates as questions to confirm, not a promise of a particular lead time.",
+          "Choose using the full scope and unresolved actions, not the furnishing label alone. Keep a short list of who is responsible for each remaining task and how completion will be checked while you are overseas. Use Get Prices & Payment Plans to share your budget and intended use, then ask for the inventory and written inclusions for the option you consider."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does furnished mean every household item is included?",
+        "answer": "Request the full inventory and exclusions. Do not assume the label specifies kitchenware, linen, appliances or any other particular item."
+      },
+      {
+        "question": "Is an unfurnished apartment necessarily cheaper to prepare?",
+        "answer": "Compare the complete written scope and quotations. Keep unquoted items visible before reaching a cost conclusion."
+      },
+      {
+        "question": "Does this checklist confirm rental readiness?",
+        "answer": "No. Confirm the requirements for your proposed use and obtain the relevant independent advice and unit-specific documents."
+      }
+    ],
+    "sources": [],
+    "related": [
+      "/guides/zanzibar-property-costs",
+      "/guides/zanzibar-off-plan-floor-plan",
+      "/guides/zanzibar-managed-holiday-homes"
+    ],
+    "published": "2026-11-26",
+    "modified": "2026-11-26"
   }
 ]
