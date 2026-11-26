@@ -170,6 +170,26 @@ export default function Index() {
                 <a className="hero-email" href="mailto:info@zanzibaba.com" onClick={() => window.gtag?.("event", "enquiry_email_click", { placement: "hero" })}>Prefer email? Write to our Zanzibar team <Mail size={18} aria-hidden="true" /></a>
               </div>
             </section>
+            <section className="budget-section landing-container" aria-labelledby="budget-heading">
+              <p className="eyebrow">A starting point for your budget</p>
+              <h2 id="budget-heading">What could your Zanzibar home cost?</h2>
+              <p className="budget-intro">These developer brochure examples help you frame an enquiry. Request a current quote for your preferred unit and payment plan.</p>
+              <div className="budget-grid">
+                <article className="budget-card">
+                  <h3>Serviced apartment</h3>
+                  <p className="budget-price">From USD 88,333</p>
+                  <p>Brochure example: 33 m² net area. Managed operation or self-use options are described in the developer material.</p>
+                  <a href="#enquiry" onClick={() => trackEnquiryEntry("budget")}>Ask for apartment prices <ArrowRight size={18} aria-hidden="true" /></a>
+                </article>
+                <article className="budget-card">
+                  <h3>Semi-detached villa</h3>
+                  <p className="budget-price">From USD 385,800</p>
+                  <p>Brochure example: 55 m² gross area and 97 m² garden area. Ask for the selected villa’s layout, inclusions and payment terms.</p>
+                  <a href="#enquiry" onClick={() => trackEnquiryEntry("budget")}>Ask for villa prices <ArrowRight size={18} aria-hidden="true" /></a>
+                </article>
+              </div>
+              <p className="budget-source">Source: Skylong developer brochure, reviewed 26 November 2026. Brochure examples are not live availability or a current quotation. Confirm unit price, taxes, fees, inclusions and handover directly with the developer.</p>
+            </section>
             <section
               id="how-it-works"
               className="how-section landing-container"

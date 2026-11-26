@@ -1,5 +1,5 @@
 /** GA4 – same ID as index.html gtag config */
-export const GA_MEASUREMENT_ID = "G-6H99SDKXN5";
+export const GA_MEASUREMENT_ID = "G-0KKQDFRETC";
 
 declare global {
   interface Window {
@@ -43,7 +43,7 @@ export function currentAiReferral(): string | undefined {
 }
 
 /** Counts enquiry entry clicks, not submissions; contains no contact data. */
-export function trackEnquiryEntry(placement: "hero" | "faq") {
+export function trackEnquiryEntry(placement: "hero" | "faq" | "budget") {
   if (typeof window === "undefined") return;
   const engine = currentAiReferral();
   window.gtag?.("event", "enquiry_cta_click", {
